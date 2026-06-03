@@ -53,7 +53,7 @@ function footer() {
           <p>${data.address}<br>${data.email}<br>${data.domain}</p>
         </div>
         <div>
-          <strong>Website links / 第三文件链接</strong>
+          <strong>Website links / \u7b2c\u4e09\u6587\u4ef6\u94fe\u63a5</strong>
           <p>${data.externalLinks.map(([name, url]) => `<a href="${url}" target="_blank" rel="noreferrer">${name}</a>`).join("<br>")}</p>
         </div>
       </div>
@@ -85,7 +85,7 @@ function brandCard(brand) {
   const extra = `
     <p><strong>Location:</strong> ${brand.location}</p>
     <div class="button-row">
-      <a class="button light" href="brand-${brand.slug}.html">Learn More / 了解更多</a>
+      <a class="button light" href="brand-${brand.slug}.html">Learn More / \u4e86\u89e3\u66f4\u591a</a>
       ${brand.url ? `<a class="button light" href="${brand.url}" target="_blank" rel="noreferrer">Official Site</a>` : ""}
     </div>`;
   return `
@@ -116,7 +116,7 @@ function renderHome() {
         </div>
         <div class="hero-card">
           <img src="images/sequoia-education-group-red-logo.jpg" alt="Sequoia Education Group logo">
-          <h3>Official Positioning / 官方定位</h3>
+          <h3>Official Positioning / \u5b98\u65b9\u5b9a\u4f4d</h3>
           <p>${data.positioning.en}</p>
           <p>${data.positioning.zh}</p>
         </div>
@@ -128,10 +128,10 @@ function renderHome() {
     <section class="section">
       <div class="section-head">
         <div>
-          <p class="eyebrow">About Snapshot / 关于快照</p>
+          <p class="eyebrow">About Snapshot / \u5173\u4e8e\u5feb\u7167</p>
           <h2>A ten-year Southern California education ecosystem</h2>
           <p>Started in Walnut in 2015, Sequoia has grown from one Montessori preschool into a multi-brand education group spanning preschool, after-school learning, teacher training, academic planning, community service, wellness, and future AI education.</p>
-          <p>Sequoia 于 2015 年从 Walnut 的第一所蒙特梭利幼儿园起步,十年发展为覆盖幼儿教育、课后教育、教师培训、升学规划、公益社区、身心健康与未来 AI 教育的多品牌教育生态。</p>
+          <p>Sequoia \u4e8e 2015 \u5e74\u4ece Walnut \u7684\u7b2c\u4e00\u6240\u8499\u7279\u68ad\u5229\u5e7c\u513f\u56ed\u8d77\u6b65,\u5341\u5e74\u53d1\u5c55\u4e3a\u8986\u76d6\u5e7c\u513f\u6559\u80b2\u3001\u8bfe\u540e\u6559\u80b2\u3001\u6559\u5e08\u57f9\u8bad\u3001\u5347\u5b66\u89c4\u5212\u3001\u516c\u76ca\u793e\u533a\u3001\u8eab\u5fc3\u5065\u5eb7\u4e0e\u672a\u6765 AI \u6559\u80b2\u7684\u591a\u54c1\u724c\u6559\u80b2\u751f\u6001\u3002</p>
         </div>
       </div>
       <div class="program-grid">
@@ -139,7 +139,7 @@ function renderHome() {
       </div>
     </section>
     <section class="section alt"><div class="section-inner">
-      <div class="section-head"><div><p class="eyebrow">Brand Matrix / 品牌矩阵</p><h2>Schools, programs, foundation, wellness, and future learning</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow">Brand Matrix / \u54c1\u724c\u77e9\u9635</p><h2>Schools, programs, foundation, wellness, and future learning</h2></div></div>
       <div class="card-grid">${data.brands.map(brandCard).join("")}</div>
     </div></section>
     <section class="section">
@@ -148,7 +148,7 @@ function renderHome() {
           <img src="images/agentech-education-logo.png" alt="Agentech Education logo">
         </div>
         <div class="feature-content">
-          <p class="eyebrow">Agentech Education Preview / AI 未来学习预览</p>
+          <p class="eyebrow">Agentech Education Preview / AI \u672a\u6765\u5b66\u4e60\u9884\u89c8</p>
           <h2>AI literacy, robotics, and future-ready learning for K-12</h2>
           <p>${data.agentech.role}</p>
           <p>${data.agentech.zhRole}</p>
@@ -157,15 +157,15 @@ function renderHome() {
       </div>
     </section>
     <section class="section">
-      <div class="section-head"><div><p class="eyebrow">10-Year Timeline / 十年时间线</p><h2>Rooted growth</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow">10-Year Timeline / \u5341\u5e74\u65f6\u95f4\u7ebf</p><h2>Rooted growth</h2></div></div>
       <div class="timeline">
         ${[
-          ["2015", "Walnut International Montessori Preschool founded / Walnut 创校"],
-          ["2019", "Learning Tree Montessori of Arcadia / Arcadia 校区"],
-          ["2020", "Learning Tree Walnut Education Center / Walnut 课后教育中心"],
-          ["2023", "Montessori of Anaheim / Anaheim 校区"],
-          ["2024", "Montessori Teacher Preparation of California / 教师培训"],
-          ["2025", "Nuts Education Institute and Yoga Me & Beyond / 学术规划与身心健康"],
+          ["2015", "Walnut International Montessori Preschool founded / Walnut \u521b\u6821"],
+          ["2019", "Learning Tree Montessori of Arcadia / Arcadia \u6821\u533a"],
+          ["2020", "Learning Tree Walnut Education Center / Walnut \u8bfe\u540e\u6559\u80b2\u4e2d\u5fc3"],
+          ["2023", "Montessori of Anaheim / Anaheim \u6821\u533a"],
+          ["2024", "Montessori Teacher Preparation of California / \u6559\u5e08\u57f9\u8bad"],
+          ["2025", "Nuts Education Institute and Yoga Me & Beyond / \u5b66\u672f\u89c4\u5212\u4e0e\u8eab\u5fc3\u5065\u5eb7"],
           ["Coming Next", "Agentech Education / AI Future Learning"]
         ].map(([year, text]) => `<div class="timeline-item"><strong>${year}</strong><p>${text}</p></div>`).join("")}
       </div>
@@ -173,13 +173,13 @@ function renderHome() {
     <section class="section alt"><div class="section-inner">
       <div class="split">
         <div>
-          <p class="eyebrow">Founder Message / 创始人寄语</p>
+          <p class="eyebrow">Founder Message / \u521b\u59cb\u4eba\u5bc4\u8bed</p>
           <h2>Rooted in care, growing with families</h2>
           <p>Connie's message should be a short, warm note about ten years of building schools with teachers, families, and communities. A professional photo and bio should be added before launch.</p>
-          <p>Connie 的寄语应简短温暖,讲述十年来与老师、家庭和社区共同建设学校的初心。上线前需补充专业照片与 founder bio。</p>
+          <p>Connie \u7684\u5bc4\u8bed\u5e94\u7b80\u77ed\u6e29\u6696,\u8bb2\u8ff0\u5341\u5e74\u6765\u4e0e\u8001\u5e08\u3001\u5bb6\u5ead\u548c\u793e\u533a\u5171\u540c\u5efa\u8bbe\u5b66\u6821\u7684\u521d\u5fc3\u3002\u4e0a\u7ebf\u524d\u9700\u8865\u5145\u4e13\u4e1a\u7167\u7247\u4e0e founder bio\u3002</p>
         </div>
         <div class="card">
-          <p class="eyebrow">Final CTA / 行动入口</p>
+          <p class="eyebrow">Final CTA / \u884c\u52a8\u5165\u53e3</p>
           <h3>Enroll Now / Join Our Team / Partner With Us</h3>
           <div class="button-row">
             <a class="button" href="contact.html">Enroll Now</a>
@@ -193,11 +193,11 @@ function renderHome() {
 
 function renderAbout() {
   return `
-    ${pageHeader("About Sequoia Education Group", "关于红杉教育集团", "Our Story, Mission & Values, 10-Year Milestone, Founder Message, Leadership/Team, Awards & Recognition.", "包含集团故事、使命价值、十年里程碑、创始人寄语、领导团队、奖项荣誉。")}
+    ${pageHeader("About Sequoia Education Group", "\u5173\u4e8e\u7ea2\u6749\u6559\u80b2\u96c6\u56e2", "Our Story, Mission & Values, 10-Year Milestone, Founder Message, Leadership/Team, Awards & Recognition.", "\u5305\u542b\u96c6\u56e2\u6545\u4e8b\u3001\u4f7f\u547d\u4ef7\u503c\u3001\u5341\u5e74\u91cc\u7a0b\u7891\u3001\u521b\u59cb\u4eba\u5bc4\u8bed\u3001\u9886\u5bfc\u56e2\u961f\u3001\u5956\u9879\u8363\u8a89\u3002")}
     <section class="section alt"><div class="section-inner">
       <div class="section-head">
         <div>
-          <p class="eyebrow">Group Story Gallery / 集团故事轮播</p>
+          <p class="eyebrow">Group Story Gallery / \u96c6\u56e2\u6545\u4e8b\u8f6e\u64ad</p>
           <h2>Sequoia at a glance</h2>
         </div>
       </div>
@@ -216,16 +216,16 @@ function renderAbout() {
     <section class="section">
       <div class="split">
         <div>
-          <h2>Mission & Values / 使命与价值</h2>
+          <h2>Mission & Values / \u4f7f\u547d\u4e0e\u4ef7\u503c</h2>
           <p>${data.keywords}</p>
           <p>${data.zhKeywords}</p>
           <p>Sequoia should present itself as a trusted education group with local roots, a growing ecosystem, and a careful future-learning vision.</p>
-          <p>Sequoia 应呈现为有本地根基、不断成长、并谨慎布局未来学习的可信教育集团。</p>
+          <p>Sequoia \u5e94\u5448\u73b0\u4e3a\u6709\u672c\u5730\u6839\u57fa\u3001\u4e0d\u65ad\u6210\u957f\u3001\u5e76\u8c28\u614e\u5e03\u5c40\u672a\u6765\u5b66\u4e60\u7684\u53ef\u4fe1\u6559\u80b2\u96c6\u56e2\u3002</p>
         </div>
         <ul class="detail-list">
-          <li><strong>Founder Message:</strong> Connie short message and professional photo needed. / 需要 Connie 专业头像与简短寄语。</li>
-          <li><strong>Leadership/Team:</strong> add real leadership and team profiles. / 补充真实领导团队资料。</li>
-          <li><strong>Awards & Recognition:</strong> add certificate and Walnut city honor photos only after verification. / 奖项证书与城市荣誉需核实后上线。</li>
+          <li><strong>Founder Message:</strong> Connie short message and professional photo needed. / \u9700\u8981 Connie \u4e13\u4e1a\u5934\u50cf\u4e0e\u7b80\u77ed\u5bc4\u8bed\u3002</li>
+          <li><strong>Leadership/Team:</strong> add real leadership and team profiles. / \u8865\u5145\u771f\u5b9e\u9886\u5bfc\u56e2\u961f\u8d44\u6599\u3002</li>
+          <li><strong>Awards & Recognition:</strong> add certificate and Walnut city honor photos only after verification. / \u5956\u9879\u8bc1\u4e66\u4e0e\u57ce\u5e02\u8363\u8a89\u9700\u6838\u5b9e\u540e\u4e0a\u7ebf\u3002</li>
         </ul>
       </div>
     </section>`;
@@ -233,13 +233,13 @@ function renderAbout() {
 
 function renderSchools() {
   return `
-    ${pageHeader("Our Schools & Brands", "旗下学校与品牌", "Filter-ready cards for schools, programs, foundation, wellness, and future initiatives. Each brand has its own detail page.", "展示所有学校、项目、基金会、身心健康品牌和未来教育项目;每个品牌都有独立详情页。")}
+    ${pageHeader("Our Schools & Brands", "\u65d7\u4e0b\u5b66\u6821\u4e0e\u54c1\u724c", "Filter-ready cards for schools, programs, foundation, wellness, and future initiatives. Each brand has its own detail page.", "\u5c55\u793a\u6240\u6709\u5b66\u6821\u3001\u9879\u76ee\u3001\u57fa\u91d1\u4f1a\u3001\u8eab\u5fc3\u5065\u5eb7\u54c1\u724c\u548c\u672a\u6765\u6559\u80b2\u9879\u76ee;\u6bcf\u4e2a\u54c1\u724c\u90fd\u6709\u72ec\u7acb\u8be6\u60c5\u9875\u3002")}
     <section class="section schools-surface"><div class="section-inner"><div class="card-grid">${data.brands.map(brandCard).join("")}</div></div></section>`;
 }
 
 function renderPrograms() {
   return `
-    ${pageHeader("Programs", "教育项目", "Programs are organized by audience and learning need, from Montessori preschool to AI future learning.", "教育项目按服务对象和学习需求分类,从蒙特梭利幼儿教育到 AI 未来学习。")}
+    ${pageHeader("Programs", "\u6559\u80b2\u9879\u76ee", "Programs are organized by audience and learning need, from Montessori preschool to AI future learning.", "\u6559\u80b2\u9879\u76ee\u6309\u670d\u52a1\u5bf9\u8c61\u548c\u5b66\u4e60\u9700\u6c42\u5206\u7c7b,\u4ece\u8499\u7279\u68ad\u5229\u5e7c\u513f\u6559\u80b2\u5230 AI \u672a\u6765\u5b66\u4e60\u3002")}
     <section class="section alt"><div class="section-inner">
       <div class="program-grid">${data.programs.map((p) => card(p[0], p[1], p[2], p[3])).join("")}</div>
     </div></section>`;
@@ -247,32 +247,32 @@ function renderPrograms() {
 
 function renderAgentech() {
   return `
-    ${pageHeader("Agentech Education", "Agentech Education / AI 未来学习", "AI Literacy, Robotics, and Future-Ready Learning for K-12.", "让孩子理解 AI、创造项目、面向未来学习。")}
+    ${pageHeader("Agentech Education", "Agentech Education / AI \u672a\u6765\u5b66\u4e60", "AI Literacy, Robotics, and Future-Ready Learning for K-12.", "\u8ba9\u5b69\u5b50\u7406\u89e3 AI\u3001\u521b\u9020\u9879\u76ee\u3001\u9762\u5411\u672a\u6765\u5b66\u4e60\u3002")}
     <section class="section alt"><div class="section-inner">
-      <div class="notice"><strong>Role / 页面角色:</strong> ${data.agentech.role}<br>${data.agentech.zhRole}</div>
+      <div class="notice"><strong>Role / \u9875\u9762\u89d2\u8272:</strong> ${data.agentech.role}<br>${data.agentech.zhRole}</div>
       <div class="card-grid" style="margin-top:22px">${data.agentech.modules.map((m) => card(m[0], m[2], m[1], m[3])).join("")}</div>
     </div></section>
     <section class="section">
       <div class="split">
-        <div>${card("Avoid / 必须避免", "Safety", data.agentech.avoid.join(" "), data.agentech.zhAvoid.join(" "))}</div>
-        <div>${card("Future expansion / 未来扩展", "Roadmap", data.agentech.future.join(", "), "AI Club 独立页、AI Camp 独立页、Student Showcase、Curriculum for Schools、Parent Workshop。")}</div>
+        <div>${card("Avoid / \u5fc5\u987b\u907f\u514d", "Safety", data.agentech.avoid.join(" "), data.agentech.zhAvoid.join(" "))}</div>
+        <div>${card("Future expansion / \u672a\u6765\u6269\u5c55", "Roadmap", data.agentech.future.join(", "), "AI Club \u72ec\u7acb\u9875\u3001AI Camp \u72ec\u7acb\u9875\u3001Student Showcase\u3001Curriculum for Schools\u3001Parent Workshop\u3002")}</div>
       </div>
     </section>`;
 }
 
 function renderAiClub() {
   return `
-    ${pageHeader("AI Club / Robotics & Data Lab", "AI Club / 机器人与数据实验室", "Optional secondary page for AI Club, robotics, data labs, project-based learning, and student showcase once programs are stable.", "可选二级页;当课程稳定后用于展示 AI Club、机器人、数据实验室、项目制学习和学生作品。")}
+    ${pageHeader("AI Club / Robotics & Data Lab", "AI Club / \u673a\u5668\u4eba\u4e0e\u6570\u636e\u5b9e\u9a8c\u5ba4", "Optional secondary page for AI Club, robotics, data labs, project-based learning, and student showcase once programs are stable.", "\u53ef\u9009\u4e8c\u7ea7\u9875;\u5f53\u8bfe\u7a0b\u7a33\u5b9a\u540e\u7528\u4e8e\u5c55\u793a AI Club\u3001\u673a\u5668\u4eba\u3001\u6570\u636e\u5b9e\u9a8c\u5ba4\u3001\u9879\u76ee\u5236\u5b66\u4e60\u548c\u5b66\u751f\u4f5c\u54c1\u3002")}
     <section class="section alt"><div class="section-inner">
       <div class="program-grid">
-        ${["K-2", "Grades 3-5", "Grades 6-8", "Grades 9-12"].map((age) => card(age, "Age Track / 年龄段", "Show goals, project outcomes, student fit, and course length.", "写学习目标、项目产出、适合孩子、课程时长。")).join("")}
+        ${["K-2", "Grades 3-5", "Grades 6-8", "Grades 9-12"].map((age) => card(age, "Age Track / \u5e74\u9f84\u6bb5", "Show goals, project outcomes, student fit, and course length.", "\u5199\u5b66\u4e60\u76ee\u6807\u3001\u9879\u76ee\u4ea7\u51fa\u3001\u9002\u5408\u5b69\u5b50\u3001\u8bfe\u7a0b\u65f6\u957f\u3002")).join("")}
       </div>
     </div></section>`;
 }
 
 function renderNews() {
   return `
-    ${pageHeader("News & Events", "新闻活动", "CMS model for group news, school events, community events, student highlights, teacher stories, parent workshops, and media coverage.", "集团新闻、校园活动、社区活动、学生亮点、教师故事、家长课堂、媒体报道;需要 CMS 管理。")}
+    ${pageHeader("News & Events", "\u65b0\u95fb\u6d3b\u52a8", "CMS model for group news, school events, community events, student highlights, teacher stories, parent workshops, and media coverage.", "\u96c6\u56e2\u65b0\u95fb\u3001\u6821\u56ed\u6d3b\u52a8\u3001\u793e\u533a\u6d3b\u52a8\u3001\u5b66\u751f\u4eae\u70b9\u3001\u6559\u5e08\u6545\u4e8b\u3001\u5bb6\u957f\u8bfe\u5802\u3001\u5a92\u4f53\u62a5\u9053;\u9700\u8981 CMS \u7ba1\u7406\u3002")}
     <section class="section alt"><div class="section-inner">
       <div class="card-grid">${data.newsFields.map((f) => card(f[0], `${f[4]} / ${f[2]}`, f[1], f[3])).join("")}</div>
     </div></section>`;
@@ -280,15 +280,15 @@ function renderNews() {
 
 function renderCommunity() {
   return `
-    ${pageHeader("Community Impact", "社区影响力", "Sequoia Forest Foundation, volunteer service, city honors, activity photos, and community news.", "Sequoia Forest Foundation、志愿服务、公益活动、政府/社区荣誉、照片与新闻。")}
+    ${pageHeader("Community Impact", "\u793e\u533a\u5f71\u54cd\u529b", "Sequoia Forest Foundation, volunteer service, city honors, activity photos, and community news.", "Sequoia Forest Foundation\u3001\u5fd7\u613f\u670d\u52a1\u3001\u516c\u76ca\u6d3b\u52a8\u3001\u653f\u5e9c/\u793e\u533a\u8363\u8a89\u3001\u7167\u7247\u4e0e\u65b0\u95fb\u3002")}
     <section class="section alt"><div class="section-inner">
       <div class="feature-panel">
         <img src="images/sequoia-forest-foundation-logo.jpg" alt="Sequoia Forest Foundation">
         <div class="feature-content">
-          <h2>Foundation and service pathway / 基金会与志愿服务路径</h2>
+          <h2>Foundation and service pathway / \u57fa\u91d1\u4f1a\u4e0e\u5fd7\u613f\u670d\u52a1\u8def\u5f84</h2>
           <p>Student volunteering, community participation, social responsibility, civic awareness, and leadership should connect to news and event pages.</p>
-          <p>学生志愿服务、社区参与、社会责任感、公民意识与领导力,应与新闻活动页面打通。</p>
-          <p class="notice">Confirm nonprofit registration before publishing formal nonprofit claims. / 正式公益资质与非营利注册信息需上线前确认。</p>
+          <p>\u5b66\u751f\u5fd7\u613f\u670d\u52a1\u3001\u793e\u533a\u53c2\u4e0e\u3001\u793e\u4f1a\u8d23\u4efb\u611f\u3001\u516c\u6c11\u610f\u8bc6\u4e0e\u9886\u5bfc\u529b,\u5e94\u4e0e\u65b0\u95fb\u6d3b\u52a8\u9875\u9762\u6253\u901a\u3002</p>
+          <p class="notice">Confirm nonprofit registration before publishing formal nonprofit claims. / \u6b63\u5f0f\u516c\u76ca\u8d44\u8d28\u4e0e\u975e\u8425\u5229\u6ce8\u518c\u4fe1\u606f\u9700\u4e0a\u7ebf\u524d\u786e\u8ba4\u3002</p>
         </div>
       </div>
     </div></section>`;
@@ -296,43 +296,43 @@ function renderCommunity() {
 
 function renderPartnership() {
   return `
-    ${pageHeader("Partnership & Strategic Growth", "合作与战略发展", "A quiet page for VC investors, partners, employers, and education institutions.", "给 VC、合作方、雇主、教育机构看的低调页面;建议放 footer 和首页按钮,不一定放主导航。")}
+    ${pageHeader("Partnership & Strategic Growth", "\u5408\u4f5c\u4e0e\u6218\u7565\u53d1\u5c55", "A quiet page for VC investors, partners, employers, and education institutions.", "\u7ed9 VC\u3001\u5408\u4f5c\u65b9\u3001\u96c7\u4e3b\u3001\u6559\u80b2\u673a\u6784\u770b\u7684\u4f4e\u8c03\u9875\u9762;\u5efa\u8bae\u653e footer \u548c\u9996\u9875\u6309\u94ae,\u4e0d\u4e00\u5b9a\u653e\u4e3b\u5bfc\u822a\u3002")}
     <section class="section alt"><div class="section-inner">
       <div class="card-grid">
-        ${card("Education ecosystem", "Investor angle / 投资人角度", "Sequoia is a Southern California multi-brand, multi-stage education ecosystem, not a single preschool.", "Sequoia 不是单一幼儿园,而是南加州多品牌、多阶段教育生态。")}
-        ${card("Partnership form fields", "Form / 表单", "Organization, Contact Person, Role, Partnership Type, Budget/Timeline optional, Message.", "Organization、Contact Person、Role、Partnership Type、Budget/Timeline(可选)、Message。")}
-        ${card("Agentech partnerships", "Future learning / 未来学习", "Partner for school programs, camps, curriculum pilots, or community workshops.", "学校项目、营地、课程试点、社区工作坊合作入口。")}
+        ${card("Education ecosystem", "Investor angle / \u6295\u8d44\u4eba\u89d2\u5ea6", "Sequoia is a Southern California multi-brand, multi-stage education ecosystem, not a single preschool.", "Sequoia \u4e0d\u662f\u5355\u4e00\u5e7c\u513f\u56ed,\u800c\u662f\u5357\u52a0\u5dde\u591a\u54c1\u724c\u3001\u591a\u9636\u6bb5\u6559\u80b2\u751f\u6001\u3002")}
+        ${card("Partnership form fields", "Form / \u8868\u5355", "Organization, Contact Person, Role, Partnership Type, Budget/Timeline optional, Message.", "Organization\u3001Contact Person\u3001Role\u3001Partnership Type\u3001Budget/Timeline(\u53ef\u9009)\u3001Message\u3002")}
+        ${card("Agentech partnerships", "Future learning / \u672a\u6765\u5b66\u4e60", "Partner for school programs, camps, curriculum pilots, or community workshops.", "\u5b66\u6821\u9879\u76ee\u3001\u8425\u5730\u3001\u8bfe\u7a0b\u8bd5\u70b9\u3001\u793e\u533a\u5de5\u4f5c\u574a\u5408\u4f5c\u5165\u53e3\u3002")}
       </div>
     </div></section>`;
 }
 
 function renderCareers() {
   return `
-    ${pageHeader("Careers", "招聘", "Career page for role categories, team culture, growth opportunities, and application fields.", "职位类别、团队文化、成长机会、申请表单/邮箱。")}
+    ${pageHeader("Careers", "\u62db\u8058", "Career page for role categories, team culture, growth opportunities, and application fields.", "\u804c\u4f4d\u7c7b\u522b\u3001\u56e2\u961f\u6587\u5316\u3001\u6210\u957f\u673a\u4f1a\u3001\u7533\u8bf7\u8868\u5355/\u90ae\u7bb1\u3002")}
     <section class="section alt"><div class="section-inner">
       <div class="card-grid">
-        ${card("Teaching roles", "Schools / 学校", "Montessori teachers, assistants, after-school instructors, Chinese teachers, camp teachers.", "蒙特梭利老师、助教、课后老师、中文老师、营地老师。")}
-        ${card("Program and operations roles", "Group / 集团", "Campus operations, admissions, marketing, curriculum support, community events.", "校区运营、招生、市场、课程支持、社区活动。")}
-        ${card("Application fields", "Form / 表单", "Role Interest, Resume Upload, Credentials/Permit optional, Availability.", "Role Interest、Resume Upload、Credentials/Permit(可选)、Availability。")}
+        ${card("Teaching roles", "Schools / \u5b66\u6821", "Montessori teachers, assistants, after-school instructors, Chinese teachers, camp teachers.", "\u8499\u7279\u68ad\u5229\u8001\u5e08\u3001\u52a9\u6559\u3001\u8bfe\u540e\u8001\u5e08\u3001\u4e2d\u6587\u8001\u5e08\u3001\u8425\u5730\u8001\u5e08\u3002")}
+        ${card("Program and operations roles", "Group / \u96c6\u56e2", "Campus operations, admissions, marketing, curriculum support, community events.", "\u6821\u533a\u8fd0\u8425\u3001\u62db\u751f\u3001\u5e02\u573a\u3001\u8bfe\u7a0b\u652f\u6301\u3001\u793e\u533a\u6d3b\u52a8\u3002")}
+        ${card("Application fields", "Form / \u8868\u5355", "Role Interest, Resume Upload, Credentials/Permit optional, Availability.", "Role Interest\u3001Resume Upload\u3001Credentials/Permit(\u53ef\u9009)\u3001Availability\u3002")}
       </div>
     </div></section>`;
 }
 
 function renderContact() {
   return `
-    ${pageHeader("Contact", "联系我们", "Inquiry routing for admissions, teacher training, partnerships, careers, media, and foundation/donation.", "按咨询类型分流:招生、教师培训、合作、招聘、媒体、公益。")}
+    ${pageHeader("Contact", "\u8054\u7cfb\u6211\u4eec", "Inquiry routing for admissions, teacher training, partnerships, careers, media, and foundation/donation.", "\u6309\u54a8\u8be2\u7c7b\u578b\u5206\u6d41:\u62db\u751f\u3001\u6559\u5e08\u57f9\u8bad\u3001\u5408\u4f5c\u3001\u62db\u8058\u3001\u5a92\u4f53\u3001\u516c\u76ca\u3002")}
     <section class="section alt"><div class="section-inner">
       <div class="split">
         <div class="card">
           <h2>Sequoia Education Group</h2>
           <p>${data.address}<br>${data.email}<br>${data.domain}</p>
-          <p class="notice">Before launch, verify each entity's legal name, license, address, phone, and email. / 上线前核实每个实体的 legal name、license、地址、电话、邮箱。</p>
+          <p class="notice">Before launch, verify each entity's legal name, license, address, phone, and email. / \u4e0a\u7ebf\u524d\u6838\u5b9e\u6bcf\u4e2a\u5b9e\u4f53\u7684 legal name\u3001license\u3001\u5730\u5740\u3001\u7535\u8bdd\u3001\u90ae\u7bb1\u3002</p>
         </div>
-        <div class="card-grid">${data.formFields.map((f) => card(f[0], "Form / 表单", f[1], f[2])).join("")}</div>
+        <div class="card-grid">${data.formFields.map((f) => card(f[0], "Form / \u8868\u5355", f[1], f[2])).join("")}</div>
       </div>
     </div></section>
     <section class="section">
-      <div class="section-head"><div><p class="eyebrow">External Links / 第三文件链接</p><h2>Official school and organization links</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow">External Links / \u7b2c\u4e09\u6587\u4ef6\u94fe\u63a5</p><h2>Official school and organization links</h2></div></div>
       <div class="link-grid">${data.externalLinks.map(([name, url]) => card(name, "Official link", url, "", `<a class="button light" href="${url}" target="_blank" rel="noreferrer">Open Website</a>`)).join("")}</div>
     </section>`;
 }
@@ -341,18 +341,18 @@ function renderTechnical() {
   return `
     <section class="section alt"><div class="section-inner">
       <div class="section-head"><div><p class="eyebrow">Technical / CMS / SEO</p><h2>Developer requirements from the brief</h2></div></div>
-      <div class="card-grid">${data.technical.map((t) => card(t[0], "Requirement / 需求", t[1], t[2])).join("")}</div>
+      <div class="card-grid">${data.technical.map((t) => card(t[0], "Requirement / \u9700\u6c42", t[1], t[2])).join("")}</div>
     </div></section>
     <section class="section">
-      <div class="section-head"><div><p class="eyebrow">Launch Checklist / 上线前核实</p><h2>Must confirm before publishing</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow">Launch Checklist / \u4e0a\u7ebf\u524d\u6838\u5b9e</p><h2>Must confirm before publishing</h2></div></div>
       <div class="card-grid">${data.checklist.map((c) => card(c[0], c[2], c[1], c[3])).join("")}</div>
     </section>
     <section class="section alt"><div class="section-inner">
-      <div class="section-head"><div><p class="eyebrow">Reference Websites / 参考网站</p><h2>15 reference site notes</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow">Reference Websites / \u53c2\u8003\u7f51\u7ad9</p><h2>15 reference site notes</h2></div></div>
       <div class="card-grid">${data.referenceSites.map((r) => card(r[0], r[2], r[3], "", `<a href="${r[1]}" target="_blank" rel="noreferrer">${r[1]}</a>`)).join("")}</div>
     </div></section>
     <section class="section">
-      <div class="section-head"><div><p class="eyebrow">Implementation Phases / 实现顺序</p><h2>Recommended build order</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow">Implementation Phases / \u5b9e\u73b0\u987a\u5e8f</p><h2>Recommended build order</h2></div></div>
       <div class="timeline">${data.phases.map((p) => `<div class="timeline-item"><strong>${p[0]}</strong><p>${p[1]}</p><p>${p[2]}</p></div>`).join("")}</div>
     </section>`;
 }
@@ -378,12 +378,12 @@ function renderBrand() {
           <h2>${brand.type}</h2>
           <p>${brand.zhType}</p>
           <ul class="detail-list">
-            <li><strong>Services / 服务:</strong> add age range, programs, address, contact, photos, related news, and tour CTA for each campus or brand.</li>
-            <li><strong>Required check / 必须核实:</strong> legal name, license, exact address, phone, email, student numbers, credential claims, and photo permission.</li>
-            <li><strong>CTA / 行动入口:</strong> Schedule a Tour, Enrollment Inquiry, Contact the Campus.</li>
+            <li><strong>Services / \u670d\u52a1:</strong> add age range, programs, address, contact, photos, related news, and tour CTA for each campus or brand.</li>
+            <li><strong>Required check / \u5fc5\u987b\u6838\u5b9e:</strong> legal name, license, exact address, phone, email, student numbers, credential claims, and photo permission.</li>
+            <li><strong>CTA / \u884c\u52a8\u5165\u53e3:</strong> Schedule a Tour, Enrollment Inquiry, Contact the Campus.</li>
           </ul>
           <div class="button-row">
-            <a class="button" href="contact.html">Contact / 联系</a>
+            <a class="button" href="contact.html">Contact / \u8054\u7cfb</a>
             ${brand.url ? `<a class="button light" href="${brand.url}" target="_blank" rel="noreferrer">Official Website</a>` : ""}
           </div>
         </div>
@@ -394,21 +394,21 @@ function renderBrand() {
 function renderRoutes() {
   return `
     <section class="section">
-      <div class="section-head"><div><p class="eyebrow">Required Pages & Routes / 必需页面与路由</p><h2>Information architecture from the brief</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow">Required Pages & Routes / \u5fc5\u9700\u9875\u9762\u4e0e\u8def\u7531</p><h2>Information architecture from the brief</h2></div></div>
       <div class="card-grid">${data.routes.map((r) => card(r[1], r[0], r[2], "")).join("")}</div>
     </section>`;
 }
 
 function renderAgentech() {
   return `
-    ${pageHeader("Agentech Education", "Agentech Education / AI Future Learning", "AI Literacy, Robotics, and Future-Ready Learning for K-12.", "让孩子理解 AI、创造项目、面向未来学习。")}
+    ${pageHeader("Agentech Education", "Agentech Education / AI Future Learning", "AI Literacy, Robotics, and Future-Ready Learning for K-12.", "\u8ba9\u5b69\u5b50\u7406\u89e3 AI\u3001\u521b\u9020\u9879\u76ee\u3001\u9762\u5411\u672a\u6765\u5b66\u4e60\u3002")}
     <section class="section alt"><div class="section-inner">
       <div class="feature-panel">
         <div class="feature-content">
           <div class="inline-logo-panel"><img class="agentech-logo" src="images/agentech-education-logo.png" alt="Agentech Education logo"></div>
           <h2>AI imagination, robotics, and project-based future learning</h2>
           <p>Agentech Education introduces students to age-appropriate AI, creativity, robotics, drones, computer vision, and hands-on engineering challenges.</p>
-          <p>Agentech Education 面向不同年龄段学生提供适龄 AI、创造力、机器人、无人机、计算机视觉与动手工程挑战。</p>
+          <p>Agentech Education \u9762\u5411\u4e0d\u540c\u5e74\u9f84\u6bb5\u5b66\u751f\u63d0\u4f9b\u9002\u9f84 AI\u3001\u521b\u9020\u529b\u3001\u673a\u5668\u4eba\u3001\u65e0\u4eba\u673a\u3001\u8ba1\u7b97\u673a\u89c6\u89c9\u4e0e\u52a8\u624b\u5de5\u7a0b\u6311\u6218\u3002</p>
           <div class="button-row">
             <a class="button" href="https://www.agent-tech.ai/talents" target="_blank" rel="noreferrer">AI Robotics Club</a>
             <a class="button light" href="contact.html">Request Program Info</a>
@@ -421,16 +421,16 @@ function renderAgentech() {
       </div>
     </div></section>
     <section class="section">
-      <div class="section-head"><div><p class="eyebrow">Walnut 2026 Programs / Walnut 2026 课程</p><h2>Summer AI tracks from Agentech Education</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow">Walnut 2026 Programs / Walnut 2026 \u8bfe\u7a0b</p><h2>Summer AI tracks from Agentech Education</h2></div></div>
       <div class="card-grid">
-        ${data.agentech.courses.map((course) => card(course[1], `${course[0]} / ${course[3]} / ${course[4]}`, course[2], "Walnut 校区 2026 Summer 项目。")).join("")}
+        ${data.agentech.courses.map((course) => card(course[1], `${course[0]} / ${course[3]} / ${course[4]}`, course[2], "Walnut \u6821\u533a 2026 Summer \u9879\u76ee\u3002")).join("")}
       </div>
     </section>`;
 }
 
 function renderAiClub() {
   return `
-    ${pageHeader("AI Robotics Club", "AI 机器人俱乐部", "Robotics Competition & Engineering Membership Program.", "机器人竞赛与工程研发会员计划。")}
+    ${pageHeader("AI Robotics Club", "AI \u673a\u5668\u4eba\u4ff1\u4e50\u90e8", "Robotics Competition & Engineering Membership Program.", "\u673a\u5668\u4eba\u7ade\u8d5b\u4e0e\u5de5\u7a0b\u7814\u53d1\u4f1a\u5458\u8ba1\u5212\u3002")}
     <section class="section alt"><div class="section-inner">
       <div class="feature-panel">
         <div class="feature-logo-panel">
@@ -446,7 +446,7 @@ function renderAiClub() {
       </div>
       <div class="split" style="margin-top:34px">
         <div>
-          <p class="eyebrow">Main Introduction / 主介绍</p>
+          <p class="eyebrow">Main Introduction / \u4e3b\u4ecb\u7ecd</p>
           <h2>Understand why robots work, why they fail, and how to improve them.</h2>
         </div>
         <div>
@@ -454,33 +454,33 @@ function renderAiClub() {
           <p>${data.roboticsClub.zhMain}</p>
         </div>
       </div>
-      <div class="section-head" style="margin-top:34px"><div><p class="eyebrow">What Students Learn / 学生将学习什么</p><h2>Engineering and AI skills</h2></div></div>
+      <div class="section-head" style="margin-top:34px"><div><p class="eyebrow">What Students Learn / \u5b66\u751f\u5c06\u5b66\u4e60\u4ec0\u4e48</p><h2>Engineering and AI skills</h2></div></div>
       <div class="card-grid">
         ${data.roboticsClub.learnSections.map((item) => card(item[0], item[2], item[1], item[3])).join("")}
       </div>
-      <div class="section-head" style="margin-top:34px"><div><p class="eyebrow">Student Growth / 学生成长</p><h2>Core abilities</h2></div></div>
+      <div class="section-head" style="margin-top:34px"><div><p class="eyebrow">Student Growth / \u5b66\u751f\u6210\u957f</p><h2>Core abilities</h2></div></div>
       <div class="program-grid">
         ${data.roboticsClub.abilities.map((item) => card(item[0], item[2], item[1], item[3])).join("")}
       </div>
-      <div class="section-head" style="margin-top:34px"><div><p class="eyebrow">Project Outputs / 项目产出</p><h2>Portfolio-ready work</h2></div></div>
+      <div class="section-head" style="margin-top:34px"><div><p class="eyebrow">Project Outputs / \u9879\u76ee\u4ea7\u51fa</p><h2>Portfolio-ready work</h2></div></div>
       <div class="program-grid">
-        ${data.roboticsClub.outputs.map((item) => card(item, "Output / 成果", "Students document and present milestone work.", "学生记录并展示阶段性项目成果。")).join("")}
+        ${data.roboticsClub.outputs.map((item) => card(item, "Output / \u6210\u679c", "Students document and present milestone work.", "\u5b66\u751f\u8bb0\u5f55\u5e76\u5c55\u793a\u9636\u6bb5\u6027\u9879\u76ee\u6210\u679c\u3002")).join("")}
       </div>
     </div></section>`;
 }
 
 function renderNews() {
   const categories = [
-    ["Group News", "集团新闻", "Milestones, strategic updates, anniversaries, awards, and group-wide announcements.", "集团里程碑、战略更新、周年活动、奖项荣誉与集团公告。"],
-    ["School Events", "校园活动", "Campus activities, open houses, seasonal celebrations, classroom moments, and family events.", "校区活动、开放日、节日庆祝、课堂瞬间与家庭活动。"],
-    ["Community Events", "社区活动", "Volunteer service, foundation activities, civic engagement, and local partnerships.", "志愿服务、基金会活动、社区参与与本地合作。"],
-    ["Student Highlights", "学生亮点", "Student work, presentations, camp showcases, robotics demos, and growth stories.", "学生作品、展示活动、营地成果、机器人 demo 与成长故事。"],
-    ["Teacher Stories", "教师故事", "Teacher recognition, classroom practice, professional growth, and team culture.", "教师表彰、课堂实践、专业成长与团队文化。"],
-    ["Parent Workshops", "家长课堂", "Parent education, wellness, academic planning, AI literacy, and school-family partnership.", "家长教育、身心健康、学术规划、AI 素养与家校合作。"]
+    ["Group News", "\u96c6\u56e2\u65b0\u95fb", "Milestones, strategic updates, anniversaries, awards, and group-wide announcements.", "\u96c6\u56e2\u91cc\u7a0b\u7891\u3001\u6218\u7565\u66f4\u65b0\u3001\u5468\u5e74\u6d3b\u52a8\u3001\u5956\u9879\u8363\u8a89\u4e0e\u96c6\u56e2\u516c\u544a\u3002"],
+    ["School Events", "\u6821\u56ed\u6d3b\u52a8", "Campus activities, open houses, seasonal celebrations, classroom moments, and family events.", "\u6821\u533a\u6d3b\u52a8\u3001\u5f00\u653e\u65e5\u3001\u8282\u65e5\u5e86\u795d\u3001\u8bfe\u5802\u77ac\u95f4\u4e0e\u5bb6\u5ead\u6d3b\u52a8\u3002"],
+    ["Community Events", "\u793e\u533a\u6d3b\u52a8", "Volunteer service, foundation activities, civic engagement, and local partnerships.", "\u5fd7\u613f\u670d\u52a1\u3001\u57fa\u91d1\u4f1a\u6d3b\u52a8\u3001\u793e\u533a\u53c2\u4e0e\u4e0e\u672c\u5730\u5408\u4f5c\u3002"],
+    ["Student Highlights", "\u5b66\u751f\u4eae\u70b9", "Student work, presentations, camp showcases, robotics demos, and growth stories.", "\u5b66\u751f\u4f5c\u54c1\u3001\u5c55\u793a\u6d3b\u52a8\u3001\u8425\u5730\u6210\u679c\u3001\u673a\u5668\u4eba demo \u4e0e\u6210\u957f\u6545\u4e8b\u3002"],
+    ["Teacher Stories", "\u6559\u5e08\u6545\u4e8b", "Teacher recognition, classroom practice, professional growth, and team culture.", "\u6559\u5e08\u8868\u5f70\u3001\u8bfe\u5802\u5b9e\u8df5\u3001\u4e13\u4e1a\u6210\u957f\u4e0e\u56e2\u961f\u6587\u5316\u3002"],
+    ["Parent Workshops", "\u5bb6\u957f\u8bfe\u5802", "Parent education, wellness, academic planning, AI literacy, and school-family partnership.", "\u5bb6\u957f\u6559\u80b2\u3001\u8eab\u5fc3\u5065\u5eb7\u3001\u5b66\u672f\u89c4\u5212\u3001AI \u7d20\u517b\u4e0e\u5bb6\u6821\u5408\u4f5c\u3002"]
   ];
 
   return `
-    ${pageHeader("News & Events", "新闻活动", "Stories from Sequoia's group growth, schools, classrooms, teachers, students, families, and community events.", "展示集团发展、学校活动、课堂故事、教师故事、学生亮点、家长课堂与社区活动。")}
+    ${pageHeader("News & Events", "\u65b0\u95fb\u6d3b\u52a8", "Stories from Sequoia's group growth, schools, classrooms, teachers, students, families, and community events.", "\u5c55\u793a\u96c6\u56e2\u53d1\u5c55\u3001\u5b66\u6821\u6d3b\u52a8\u3001\u8bfe\u5802\u6545\u4e8b\u3001\u6559\u5e08\u6545\u4e8b\u3001\u5b66\u751f\u4eae\u70b9\u3001\u5bb6\u957f\u8bfe\u5802\u4e0e\u793e\u533a\u6d3b\u52a8\u3002")}
     <section class="section alt"><div class="section-inner">
       <div class="card-grid">
         ${categories.map((item) => card(item[0], item[1], item[2], item[3])).join("")}
