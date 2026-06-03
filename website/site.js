@@ -1,4 +1,4 @@
-﻿const data = window.SEQUOIA_DATA;
+const data = window.SEQUOIA_DATA;
 
 const pages = [
   ["index.html", "Home"],
@@ -53,7 +53,7 @@ function footer() {
           <p>${data.address}<br>${data.email}<br>${data.domain}</p>
         </div>
         <div>
-          <strong>Website links / ç¬¬ä¸‰æ–‡ä»¶é“¾æŽ¥</strong>
+          <strong>Website links / 第三文件链接</strong>
           <p>${data.externalLinks.map(([name, url]) => `<a href="${url}" target="_blank" rel="noreferrer">${name}</a>`).join("<br>")}</p>
         </div>
       </div>
@@ -85,7 +85,7 @@ function brandCard(brand) {
   const extra = `
     <p><strong>Location:</strong> ${brand.location}</p>
     <div class="button-row">
-      <a class="button light" href="brand-${brand.slug}.html">Learn More / äº†è§£æ›´å¤š</a>
+      <a class="button light" href="brand-${brand.slug}.html">Learn More / 了解更多</a>
       ${brand.url ? `<a class="button light" href="${brand.url}" target="_blank" rel="noreferrer">Official Site</a>` : ""}
     </div>`;
   return `
@@ -116,7 +116,7 @@ function renderHome() {
         </div>
         <div class="hero-card">
           <img src="images/sequoia-education-group-red-logo.jpg" alt="Sequoia Education Group logo">
-          <h3>Official Positioning / å®˜æ–¹å®šä½</h3>
+          <h3>Official Positioning / 官方定位</h3>
           <p>${data.positioning.en}</p>
           <p>${data.positioning.zh}</p>
         </div>
@@ -128,10 +128,10 @@ function renderHome() {
     <section class="section">
       <div class="section-head">
         <div>
-          <p class="eyebrow">About Snapshot / å…³äºŽå¿«ç…§</p>
+          <p class="eyebrow">About Snapshot / 关于快照</p>
           <h2>A ten-year Southern California education ecosystem</h2>
           <p>Started in Walnut in 2015, Sequoia has grown from one Montessori preschool into a multi-brand education group spanning preschool, after-school learning, teacher training, academic planning, community service, wellness, and future AI education.</p>
-          <p>Sequoia äºŽ 2015 å¹´ä»Ž Walnut çš„ç¬¬ä¸€æ‰€è’™ç‰¹æ¢­åˆ©å¹¼å„¿å›­èµ·æ­¥ï¼Œåå¹´å‘å±•ä¸ºè¦†ç›–å¹¼å„¿æ•™è‚²ã€è¯¾åŽæ•™è‚²ã€æ•™å¸ˆåŸ¹è®­ã€å‡å­¦è§„åˆ’ã€å…¬ç›Šç¤¾åŒºã€èº«å¿ƒå¥åº·ä¸Žæœªæ¥ AI æ•™è‚²çš„å¤šå“ç‰Œæ•™è‚²ç”Ÿæ€ã€‚</p>
+          <p>Sequoia 于 2015 年从 Walnut 的第一所蒙特梭利幼儿园起步,十年发展为覆盖幼儿教育、课后教育、教师培训、升学规划、公益社区、身心健康与未来 AI 教育的多品牌教育生态。</p>
         </div>
       </div>
       <div class="program-grid">
@@ -139,7 +139,7 @@ function renderHome() {
       </div>
     </section>
     <section class="section alt"><div class="section-inner">
-      <div class="section-head"><div><p class="eyebrow">Brand Matrix / å“ç‰ŒçŸ©é˜µ</p><h2>Schools, programs, foundation, wellness, and future learning</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow">Brand Matrix / 品牌矩阵</p><h2>Schools, programs, foundation, wellness, and future learning</h2></div></div>
       <div class="card-grid">${data.brands.map(brandCard).join("")}</div>
     </div></section>
     <section class="section">
@@ -148,7 +148,7 @@ function renderHome() {
           <img src="images/agentech-education-logo.png" alt="Agentech Education logo">
         </div>
         <div class="feature-content">
-          <p class="eyebrow">Agentech Education Preview / AI æœªæ¥å­¦ä¹ é¢„è§ˆ</p>
+          <p class="eyebrow">Agentech Education Preview / AI 未来学习预览</p>
           <h2>AI literacy, robotics, and future-ready learning for K-12</h2>
           <p>${data.agentech.role}</p>
           <p>${data.agentech.zhRole}</p>
@@ -157,15 +157,15 @@ function renderHome() {
       </div>
     </section>
     <section class="section">
-      <div class="section-head"><div><p class="eyebrow">10-Year Timeline / åå¹´æ—¶é—´çº¿</p><h2>Rooted growth</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow">10-Year Timeline / 十年时间线</p><h2>Rooted growth</h2></div></div>
       <div class="timeline">
         ${[
-          ["2015", "Walnut International Montessori Preschool founded / Walnut åˆ›æ ¡"],
-          ["2019", "Learning Tree Montessori of Arcadia / Arcadia æ ¡åŒº"],
-          ["2020", "Learning Tree Walnut Education Center / Walnut è¯¾åŽæ•™è‚²ä¸­å¿ƒ"],
-          ["2023", "Montessori of Anaheim / Anaheim æ ¡åŒº"],
-          ["2024", "Montessori Teacher Preparation of California / æ•™å¸ˆåŸ¹è®­"],
-          ["2025", "Nuts Education Institute and Yoga Me & Beyond / å­¦æœ¯è§„åˆ’ä¸Žèº«å¿ƒå¥åº·"],
+          ["2015", "Walnut International Montessori Preschool founded / Walnut 创校"],
+          ["2019", "Learning Tree Montessori of Arcadia / Arcadia 校区"],
+          ["2020", "Learning Tree Walnut Education Center / Walnut 课后教育中心"],
+          ["2023", "Montessori of Anaheim / Anaheim 校区"],
+          ["2024", "Montessori Teacher Preparation of California / 教师培训"],
+          ["2025", "Nuts Education Institute and Yoga Me & Beyond / 学术规划与身心健康"],
           ["Coming Next", "Agentech Education / AI Future Learning"]
         ].map(([year, text]) => `<div class="timeline-item"><strong>${year}</strong><p>${text}</p></div>`).join("")}
       </div>
@@ -173,13 +173,13 @@ function renderHome() {
     <section class="section alt"><div class="section-inner">
       <div class="split">
         <div>
-          <p class="eyebrow">Founder Message / åˆ›å§‹äººå¯„è¯­</p>
+          <p class="eyebrow">Founder Message / 创始人寄语</p>
           <h2>Rooted in care, growing with families</h2>
           <p>Connie's message should be a short, warm note about ten years of building schools with teachers, families, and communities. A professional photo and bio should be added before launch.</p>
-          <p>Connie çš„å¯„è¯­åº”ç®€çŸ­æ¸©æš–ï¼Œè®²è¿°åå¹´æ¥ä¸Žè€å¸ˆã€å®¶åº­å’Œç¤¾åŒºå…±åŒå»ºè®¾å­¦æ ¡çš„åˆå¿ƒã€‚ä¸Šçº¿å‰éœ€è¡¥å……ä¸“ä¸šç…§ç‰‡ä¸Ž founder bioã€‚</p>
+          <p>Connie 的寄语应简短温暖,讲述十年来与老师、家庭和社区共同建设学校的初心。上线前需补充专业照片与 founder bio。</p>
         </div>
         <div class="card">
-          <p class="eyebrow">Final CTA / è¡ŒåŠ¨å…¥å£</p>
+          <p class="eyebrow">Final CTA / 行动入口</p>
           <h3>Enroll Now / Join Our Team / Partner With Us</h3>
           <div class="button-row">
             <a class="button" href="contact.html">Enroll Now</a>
@@ -193,11 +193,11 @@ function renderHome() {
 
 function renderAbout() {
   return `
-    ${pageHeader("About Sequoia Education Group", "å…³äºŽçº¢è¡«æ•™è‚²é›†å›¢", "Our Story, Mission & Values, 10-Year Milestone, Founder Message, Leadership/Team, Awards & Recognition.", "åŒ…å«é›†å›¢æ•…äº‹ã€ä½¿å‘½ä»·å€¼ã€åå¹´é‡Œç¨‹ç¢‘ã€åˆ›å§‹äººå¯„è¯­ã€é¢†å¯¼å›¢é˜Ÿã€å¥–é¡¹è£èª‰ã€‚")}
+    ${pageHeader("About Sequoia Education Group", "关于红杉教育集团", "Our Story, Mission & Values, 10-Year Milestone, Founder Message, Leadership/Team, Awards & Recognition.", "包含集团故事、使命价值、十年里程碑、创始人寄语、领导团队、奖项荣誉。")}
     <section class="section alt"><div class="section-inner">
       <div class="section-head">
         <div>
-          <p class="eyebrow">Group Story Gallery / é›†å›¢æ•…äº‹è½®æ’­</p>
+          <p class="eyebrow">Group Story Gallery / 集团故事轮播</p>
           <h2>Sequoia at a glance</h2>
         </div>
       </div>
@@ -216,16 +216,16 @@ function renderAbout() {
     <section class="section">
       <div class="split">
         <div>
-          <h2>Mission & Values / ä½¿å‘½ä¸Žä»·å€¼</h2>
+          <h2>Mission & Values / 使命与价值</h2>
           <p>${data.keywords}</p>
           <p>${data.zhKeywords}</p>
           <p>Sequoia should present itself as a trusted education group with local roots, a growing ecosystem, and a careful future-learning vision.</p>
-          <p>Sequoia åº”å‘ˆçŽ°ä¸ºæœ‰æœ¬åœ°æ ¹åŸºã€ä¸æ–­æˆé•¿ã€å¹¶è°¨æ…Žå¸ƒå±€æœªæ¥å­¦ä¹ çš„å¯ä¿¡æ•™è‚²é›†å›¢ã€‚</p>
+          <p>Sequoia 应呈现为有本地根基、不断成长、并谨慎布局未来学习的可信教育集团。</p>
         </div>
         <ul class="detail-list">
-          <li><strong>Founder Message:</strong> Connie short message and professional photo needed. / éœ€è¦ Connie ä¸“ä¸šå¤´åƒä¸Žç®€çŸ­å¯„è¯­ã€‚</li>
-          <li><strong>Leadership/Team:</strong> add real leadership and team profiles. / è¡¥å……çœŸå®žé¢†å¯¼å›¢é˜Ÿèµ„æ–™ã€‚</li>
-          <li><strong>Awards & Recognition:</strong> add certificate and Walnut city honor photos only after verification. / å¥–é¡¹è¯ä¹¦ä¸ŽåŸŽå¸‚è£èª‰éœ€æ ¸å®žåŽä¸Šçº¿ã€‚</li>
+          <li><strong>Founder Message:</strong> Connie short message and professional photo needed. / 需要 Connie 专业头像与简短寄语。</li>
+          <li><strong>Leadership/Team:</strong> add real leadership and team profiles. / 补充真实领导团队资料。</li>
+          <li><strong>Awards & Recognition:</strong> add certificate and Walnut city honor photos only after verification. / 奖项证书与城市荣誉需核实后上线。</li>
         </ul>
       </div>
     </section>`;
@@ -233,13 +233,13 @@ function renderAbout() {
 
 function renderSchools() {
   return `
-    ${pageHeader("Our Schools & Brands", "æ——ä¸‹å­¦æ ¡ä¸Žå“ç‰Œ", "Filter-ready cards for schools, programs, foundation, wellness, and future initiatives. Each brand has its own detail page.", "å±•ç¤ºæ‰€æœ‰å­¦æ ¡ã€é¡¹ç›®ã€åŸºé‡‘ä¼šã€èº«å¿ƒå¥åº·å“ç‰Œå’Œæœªæ¥æ•™è‚²é¡¹ç›®ï¼›æ¯ä¸ªå“ç‰Œéƒ½æœ‰ç‹¬ç«‹è¯¦æƒ…é¡µã€‚")}
+    ${pageHeader("Our Schools & Brands", "旗下学校与品牌", "Filter-ready cards for schools, programs, foundation, wellness, and future initiatives. Each brand has its own detail page.", "展示所有学校、项目、基金会、身心健康品牌和未来教育项目;每个品牌都有独立详情页。")}
     <section class="section schools-surface"><div class="section-inner"><div class="card-grid">${data.brands.map(brandCard).join("")}</div></div></section>`;
 }
 
 function renderPrograms() {
   return `
-    ${pageHeader("Programs", "æ•™è‚²é¡¹ç›®", "Programs are organized by audience and learning need, from Montessori preschool to AI future learning.", "æ•™è‚²é¡¹ç›®æŒ‰æœåŠ¡å¯¹è±¡å’Œå­¦ä¹ éœ€æ±‚åˆ†ç±»ï¼Œä»Žè’™ç‰¹æ¢­åˆ©å¹¼å„¿æ•™è‚²åˆ° AI æœªæ¥å­¦ä¹ ã€‚")}
+    ${pageHeader("Programs", "教育项目", "Programs are organized by audience and learning need, from Montessori preschool to AI future learning.", "教育项目按服务对象和学习需求分类,从蒙特梭利幼儿教育到 AI 未来学习。")}
     <section class="section alt"><div class="section-inner">
       <div class="program-grid">${data.programs.map((p) => card(p[0], p[1], p[2], p[3])).join("")}</div>
     </div></section>`;
@@ -247,32 +247,32 @@ function renderPrograms() {
 
 function renderAgentech() {
   return `
-    ${pageHeader("Agentech Education", "Agentech Education / AI æœªæ¥å­¦ä¹ ", "AI Literacy, Robotics, and Future-Ready Learning for K-12.", "è®©å­©å­ç†è§£ AIã€åˆ›é€ é¡¹ç›®ã€é¢å‘æœªæ¥å­¦ä¹ ã€‚")}
+    ${pageHeader("Agentech Education", "Agentech Education / AI 未来学习", "AI Literacy, Robotics, and Future-Ready Learning for K-12.", "让孩子理解 AI、创造项目、面向未来学习。")}
     <section class="section alt"><div class="section-inner">
-      <div class="notice"><strong>Role / é¡µé¢è§’è‰²:</strong> ${data.agentech.role}<br>${data.agentech.zhRole}</div>
+      <div class="notice"><strong>Role / 页面角色:</strong> ${data.agentech.role}<br>${data.agentech.zhRole}</div>
       <div class="card-grid" style="margin-top:22px">${data.agentech.modules.map((m) => card(m[0], m[2], m[1], m[3])).join("")}</div>
     </div></section>
     <section class="section">
       <div class="split">
-        <div>${card("Avoid / å¿…é¡»é¿å…", "Safety", data.agentech.avoid.join(" "), data.agentech.zhAvoid.join(" "))}</div>
-        <div>${card("Future expansion / æœªæ¥æ‰©å±•", "Roadmap", data.agentech.future.join(", "), "AI Club ç‹¬ç«‹é¡µã€AI Camp ç‹¬ç«‹é¡µã€Student Showcaseã€Curriculum for Schoolsã€Parent Workshopã€‚")}</div>
+        <div>${card("Avoid / 必须避免", "Safety", data.agentech.avoid.join(" "), data.agentech.zhAvoid.join(" "))}</div>
+        <div>${card("Future expansion / 未来扩展", "Roadmap", data.agentech.future.join(", "), "AI Club 独立页、AI Camp 独立页、Student Showcase、Curriculum for Schools、Parent Workshop。")}</div>
       </div>
     </section>`;
 }
 
 function renderAiClub() {
   return `
-    ${pageHeader("AI Club / Robotics & Data Lab", "AI Club / æœºå™¨äººä¸Žæ•°æ®å®žéªŒå®¤", "Optional secondary page for AI Club, robotics, data labs, project-based learning, and student showcase once programs are stable.", "å¯é€‰äºŒçº§é¡µï¼›å½“è¯¾ç¨‹ç¨³å®šåŽç”¨äºŽå±•ç¤º AI Clubã€æœºå™¨äººã€æ•°æ®å®žéªŒå®¤ã€é¡¹ç›®åˆ¶å­¦ä¹ å’Œå­¦ç”Ÿä½œå“ã€‚")}
+    ${pageHeader("AI Club / Robotics & Data Lab", "AI Club / 机器人与数据实验室", "Optional secondary page for AI Club, robotics, data labs, project-based learning, and student showcase once programs are stable.", "可选二级页;当课程稳定后用于展示 AI Club、机器人、数据实验室、项目制学习和学生作品。")}
     <section class="section alt"><div class="section-inner">
       <div class="program-grid">
-        ${["K-2", "Grades 3-5", "Grades 6-8", "Grades 9-12"].map((age) => card(age, "Age Track / å¹´é¾„æ®µ", "Show goals, project outcomes, student fit, and course length.", "å†™å­¦ä¹ ç›®æ ‡ã€é¡¹ç›®äº§å‡ºã€é€‚åˆå­©å­ã€è¯¾ç¨‹æ—¶é•¿ã€‚")).join("")}
+        ${["K-2", "Grades 3-5", "Grades 6-8", "Grades 9-12"].map((age) => card(age, "Age Track / 年龄段", "Show goals, project outcomes, student fit, and course length.", "写学习目标、项目产出、适合孩子、课程时长。")).join("")}
       </div>
     </div></section>`;
 }
 
 function renderNews() {
   return `
-    ${pageHeader("News & Events", "æ–°é—»æ´»åŠ¨", "CMS model for group news, school events, community events, student highlights, teacher stories, parent workshops, and media coverage.", "é›†å›¢æ–°é—»ã€æ ¡å›­æ´»åŠ¨ã€ç¤¾åŒºæ´»åŠ¨ã€å­¦ç”Ÿäº®ç‚¹ã€æ•™å¸ˆæ•…äº‹ã€å®¶é•¿è¯¾å ‚ã€åª’ä½“æŠ¥é“ï¼›éœ€è¦ CMS ç®¡ç†ã€‚")}
+    ${pageHeader("News & Events", "新闻活动", "CMS model for group news, school events, community events, student highlights, teacher stories, parent workshops, and media coverage.", "集团新闻、校园活动、社区活动、学生亮点、教师故事、家长课堂、媒体报道;需要 CMS 管理。")}
     <section class="section alt"><div class="section-inner">
       <div class="card-grid">${data.newsFields.map((f) => card(f[0], `${f[4]} / ${f[2]}`, f[1], f[3])).join("")}</div>
     </div></section>`;
@@ -280,15 +280,15 @@ function renderNews() {
 
 function renderCommunity() {
   return `
-    ${pageHeader("Community Impact", "ç¤¾åŒºå½±å“åŠ›", "Sequoia Forest Foundation, volunteer service, city honors, activity photos, and community news.", "Sequoia Forest Foundationã€å¿—æ„¿æœåŠ¡ã€å…¬ç›Šæ´»åŠ¨ã€æ”¿åºœ/ç¤¾åŒºè£èª‰ã€ç…§ç‰‡ä¸Žæ–°é—»ã€‚")}
+    ${pageHeader("Community Impact", "社区影响力", "Sequoia Forest Foundation, volunteer service, city honors, activity photos, and community news.", "Sequoia Forest Foundation、志愿服务、公益活动、政府/社区荣誉、照片与新闻。")}
     <section class="section alt"><div class="section-inner">
       <div class="feature-panel">
         <img src="images/sequoia-forest-foundation-logo.jpg" alt="Sequoia Forest Foundation">
         <div class="feature-content">
-          <h2>Foundation and service pathway / åŸºé‡‘ä¼šä¸Žå¿—æ„¿æœåŠ¡è·¯å¾„</h2>
+          <h2>Foundation and service pathway / 基金会与志愿服务路径</h2>
           <p>Student volunteering, community participation, social responsibility, civic awareness, and leadership should connect to news and event pages.</p>
-          <p>å­¦ç”Ÿå¿—æ„¿æœåŠ¡ã€ç¤¾åŒºå‚ä¸Žã€ç¤¾ä¼šè´£ä»»æ„Ÿã€å…¬æ°‘æ„è¯†ä¸Žé¢†å¯¼åŠ›ï¼Œåº”ä¸Žæ–°é—»æ´»åŠ¨é¡µé¢æ‰“é€šã€‚</p>
-          <p class="notice">Confirm nonprofit registration before publishing formal nonprofit claims. / æ­£å¼å…¬ç›Šèµ„è´¨ä¸Žéžè¥åˆ©æ³¨å†Œä¿¡æ¯éœ€ä¸Šçº¿å‰ç¡®è®¤ã€‚</p>
+          <p>学生志愿服务、社区参与、社会责任感、公民意识与领导力,应与新闻活动页面打通。</p>
+          <p class="notice">Confirm nonprofit registration before publishing formal nonprofit claims. / 正式公益资质与非营利注册信息需上线前确认。</p>
         </div>
       </div>
     </div></section>`;
@@ -296,43 +296,43 @@ function renderCommunity() {
 
 function renderPartnership() {
   return `
-    ${pageHeader("Partnership & Strategic Growth", "åˆä½œä¸Žæˆ˜ç•¥å‘å±•", "A quiet page for VC investors, partners, employers, and education institutions.", "ç»™ VCã€åˆä½œæ–¹ã€é›‡ä¸»ã€æ•™è‚²æœºæž„çœ‹çš„ä½Žè°ƒé¡µé¢ï¼›å»ºè®®æ”¾ footer å’Œé¦–é¡µæŒ‰é’®ï¼Œä¸ä¸€å®šæ”¾ä¸»å¯¼èˆªã€‚")}
+    ${pageHeader("Partnership & Strategic Growth", "合作与战略发展", "A quiet page for VC investors, partners, employers, and education institutions.", "给 VC、合作方、雇主、教育机构看的低调页面;建议放 footer 和首页按钮,不一定放主导航。")}
     <section class="section alt"><div class="section-inner">
       <div class="card-grid">
-        ${card("Education ecosystem", "Investor angle / æŠ•èµ„äººè§’åº¦", "Sequoia is a Southern California multi-brand, multi-stage education ecosystem, not a single preschool.", "Sequoia ä¸æ˜¯å•ä¸€å¹¼å„¿å›­ï¼Œè€Œæ˜¯å—åŠ å·žå¤šå“ç‰Œã€å¤šé˜¶æ®µæ•™è‚²ç”Ÿæ€ã€‚")}
-        ${card("Partnership form fields", "Form / è¡¨å•", "Organization, Contact Person, Role, Partnership Type, Budget/Timeline optional, Message.", "Organizationã€Contact Personã€Roleã€Partnership Typeã€Budget/Timelineï¼ˆå¯é€‰ï¼‰ã€Messageã€‚")}
-        ${card("Agentech partnerships", "Future learning / æœªæ¥å­¦ä¹ ", "Partner for school programs, camps, curriculum pilots, or community workshops.", "å­¦æ ¡é¡¹ç›®ã€è¥åœ°ã€è¯¾ç¨‹è¯•ç‚¹ã€ç¤¾åŒºå·¥ä½œåŠåˆä½œå…¥å£ã€‚")}
+        ${card("Education ecosystem", "Investor angle / 投资人角度", "Sequoia is a Southern California multi-brand, multi-stage education ecosystem, not a single preschool.", "Sequoia 不是单一幼儿园,而是南加州多品牌、多阶段教育生态。")}
+        ${card("Partnership form fields", "Form / 表单", "Organization, Contact Person, Role, Partnership Type, Budget/Timeline optional, Message.", "Organization、Contact Person、Role、Partnership Type、Budget/Timeline(可选)、Message。")}
+        ${card("Agentech partnerships", "Future learning / 未来学习", "Partner for school programs, camps, curriculum pilots, or community workshops.", "学校项目、营地、课程试点、社区工作坊合作入口。")}
       </div>
     </div></section>`;
 }
 
 function renderCareers() {
   return `
-    ${pageHeader("Careers", "æ‹›è˜", "Career page for role categories, team culture, growth opportunities, and application fields.", "èŒä½ç±»åˆ«ã€å›¢é˜Ÿæ–‡åŒ–ã€æˆé•¿æœºä¼šã€ç”³è¯·è¡¨å•/é‚®ç®±ã€‚")}
+    ${pageHeader("Careers", "招聘", "Career page for role categories, team culture, growth opportunities, and application fields.", "职位类别、团队文化、成长机会、申请表单/邮箱。")}
     <section class="section alt"><div class="section-inner">
       <div class="card-grid">
-        ${card("Teaching roles", "Schools / å­¦æ ¡", "Montessori teachers, assistants, after-school instructors, Chinese teachers, camp teachers.", "è’™ç‰¹æ¢­åˆ©è€å¸ˆã€åŠ©æ•™ã€è¯¾åŽè€å¸ˆã€ä¸­æ–‡è€å¸ˆã€è¥åœ°è€å¸ˆã€‚")}
-        ${card("Program and operations roles", "Group / é›†å›¢", "Campus operations, admissions, marketing, curriculum support, community events.", "æ ¡åŒºè¿è¥ã€æ‹›ç”Ÿã€å¸‚åœºã€è¯¾ç¨‹æ”¯æŒã€ç¤¾åŒºæ´»åŠ¨ã€‚")}
-        ${card("Application fields", "Form / è¡¨å•", "Role Interest, Resume Upload, Credentials/Permit optional, Availability.", "Role Interestã€Resume Uploadã€Credentials/Permitï¼ˆå¯é€‰ï¼‰ã€Availabilityã€‚")}
+        ${card("Teaching roles", "Schools / 学校", "Montessori teachers, assistants, after-school instructors, Chinese teachers, camp teachers.", "蒙特梭利老师、助教、课后老师、中文老师、营地老师。")}
+        ${card("Program and operations roles", "Group / 集团", "Campus operations, admissions, marketing, curriculum support, community events.", "校区运营、招生、市场、课程支持、社区活动。")}
+        ${card("Application fields", "Form / 表单", "Role Interest, Resume Upload, Credentials/Permit optional, Availability.", "Role Interest、Resume Upload、Credentials/Permit(可选)、Availability。")}
       </div>
     </div></section>`;
 }
 
 function renderContact() {
   return `
-    ${pageHeader("Contact", "è”ç³»æˆ‘ä»¬", "Inquiry routing for admissions, teacher training, partnerships, careers, media, and foundation/donation.", "æŒ‰å’¨è¯¢ç±»åž‹åˆ†æµï¼šæ‹›ç”Ÿã€æ•™å¸ˆåŸ¹è®­ã€åˆä½œã€æ‹›è˜ã€åª’ä½“ã€å…¬ç›Šã€‚")}
+    ${pageHeader("Contact", "联系我们", "Inquiry routing for admissions, teacher training, partnerships, careers, media, and foundation/donation.", "按咨询类型分流:招生、教师培训、合作、招聘、媒体、公益。")}
     <section class="section alt"><div class="section-inner">
       <div class="split">
         <div class="card">
           <h2>Sequoia Education Group</h2>
           <p>${data.address}<br>${data.email}<br>${data.domain}</p>
-          <p class="notice">Before launch, verify each entity's legal name, license, address, phone, and email. / ä¸Šçº¿å‰æ ¸å®žæ¯ä¸ªå®žä½“çš„ legal nameã€licenseã€åœ°å€ã€ç”µè¯ã€é‚®ç®±ã€‚</p>
+          <p class="notice">Before launch, verify each entity's legal name, license, address, phone, and email. / 上线前核实每个实体的 legal name、license、地址、电话、邮箱。</p>
         </div>
-        <div class="card-grid">${data.formFields.map((f) => card(f[0], "Form / è¡¨å•", f[1], f[2])).join("")}</div>
+        <div class="card-grid">${data.formFields.map((f) => card(f[0], "Form / 表单", f[1], f[2])).join("")}</div>
       </div>
     </div></section>
     <section class="section">
-      <div class="section-head"><div><p class="eyebrow">External Links / ç¬¬ä¸‰æ–‡ä»¶é“¾æŽ¥</p><h2>Official school and organization links</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow">External Links / 第三文件链接</p><h2>Official school and organization links</h2></div></div>
       <div class="link-grid">${data.externalLinks.map(([name, url]) => card(name, "Official link", url, "", `<a class="button light" href="${url}" target="_blank" rel="noreferrer">Open Website</a>`)).join("")}</div>
     </section>`;
 }
@@ -341,18 +341,18 @@ function renderTechnical() {
   return `
     <section class="section alt"><div class="section-inner">
       <div class="section-head"><div><p class="eyebrow">Technical / CMS / SEO</p><h2>Developer requirements from the brief</h2></div></div>
-      <div class="card-grid">${data.technical.map((t) => card(t[0], "Requirement / éœ€æ±‚", t[1], t[2])).join("")}</div>
+      <div class="card-grid">${data.technical.map((t) => card(t[0], "Requirement / 需求", t[1], t[2])).join("")}</div>
     </div></section>
     <section class="section">
-      <div class="section-head"><div><p class="eyebrow">Launch Checklist / ä¸Šçº¿å‰æ ¸å®ž</p><h2>Must confirm before publishing</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow">Launch Checklist / 上线前核实</p><h2>Must confirm before publishing</h2></div></div>
       <div class="card-grid">${data.checklist.map((c) => card(c[0], c[2], c[1], c[3])).join("")}</div>
     </section>
     <section class="section alt"><div class="section-inner">
-      <div class="section-head"><div><p class="eyebrow">Reference Websites / å‚è€ƒç½‘ç«™</p><h2>15 reference site notes</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow">Reference Websites / 参考网站</p><h2>15 reference site notes</h2></div></div>
       <div class="card-grid">${data.referenceSites.map((r) => card(r[0], r[2], r[3], "", `<a href="${r[1]}" target="_blank" rel="noreferrer">${r[1]}</a>`)).join("")}</div>
     </div></section>
     <section class="section">
-      <div class="section-head"><div><p class="eyebrow">Implementation Phases / å®žçŽ°é¡ºåº</p><h2>Recommended build order</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow">Implementation Phases / 实现顺序</p><h2>Recommended build order</h2></div></div>
       <div class="timeline">${data.phases.map((p) => `<div class="timeline-item"><strong>${p[0]}</strong><p>${p[1]}</p><p>${p[2]}</p></div>`).join("")}</div>
     </section>`;
 }
@@ -378,12 +378,12 @@ function renderBrand() {
           <h2>${brand.type}</h2>
           <p>${brand.zhType}</p>
           <ul class="detail-list">
-            <li><strong>Services / æœåŠ¡:</strong> add age range, programs, address, contact, photos, related news, and tour CTA for each campus or brand.</li>
-            <li><strong>Required check / å¿…é¡»æ ¸å®ž:</strong> legal name, license, exact address, phone, email, student numbers, credential claims, and photo permission.</li>
-            <li><strong>CTA / è¡ŒåŠ¨å…¥å£:</strong> Schedule a Tour, Enrollment Inquiry, Contact the Campus.</li>
+            <li><strong>Services / 服务:</strong> add age range, programs, address, contact, photos, related news, and tour CTA for each campus or brand.</li>
+            <li><strong>Required check / 必须核实:</strong> legal name, license, exact address, phone, email, student numbers, credential claims, and photo permission.</li>
+            <li><strong>CTA / 行动入口:</strong> Schedule a Tour, Enrollment Inquiry, Contact the Campus.</li>
           </ul>
           <div class="button-row">
-            <a class="button" href="contact.html">Contact / è”ç³»</a>
+            <a class="button" href="contact.html">Contact / 联系</a>
             ${brand.url ? `<a class="button light" href="${brand.url}" target="_blank" rel="noreferrer">Official Website</a>` : ""}
           </div>
         </div>
@@ -394,21 +394,21 @@ function renderBrand() {
 function renderRoutes() {
   return `
     <section class="section">
-      <div class="section-head"><div><p class="eyebrow">Required Pages & Routes / å¿…éœ€é¡µé¢ä¸Žè·¯ç”±</p><h2>Information architecture from the brief</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow">Required Pages & Routes / 必需页面与路由</p><h2>Information architecture from the brief</h2></div></div>
       <div class="card-grid">${data.routes.map((r) => card(r[1], r[0], r[2], "")).join("")}</div>
     </section>`;
 }
 
 function renderAgentech() {
   return `
-    ${pageHeader("Agentech Education", "Agentech Education / AI Future Learning", "AI Literacy, Robotics, and Future-Ready Learning for K-12.", "è®©å­©å­ç†è§£ AIã€åˆ›é€ é¡¹ç›®ã€é¢å‘æœªæ¥å­¦ä¹ ã€‚")}
+    ${pageHeader("Agentech Education", "Agentech Education / AI Future Learning", "AI Literacy, Robotics, and Future-Ready Learning for K-12.", "让孩子理解 AI、创造项目、面向未来学习。")}
     <section class="section alt"><div class="section-inner">
       <div class="feature-panel">
         <div class="feature-content">
           <div class="inline-logo-panel"><img class="agentech-logo" src="images/agentech-education-logo.png" alt="Agentech Education logo"></div>
           <h2>AI imagination, robotics, and project-based future learning</h2>
           <p>Agentech Education introduces students to age-appropriate AI, creativity, robotics, drones, computer vision, and hands-on engineering challenges.</p>
-          <p>Agentech Education é¢å‘ä¸åŒå¹´é¾„æ®µå­¦ç”Ÿæä¾›é€‚é¾„ AIã€åˆ›é€ åŠ›ã€æœºå™¨äººã€æ— äººæœºã€è®¡ç®—æœºè§†è§‰ä¸ŽåŠ¨æ‰‹å·¥ç¨‹æŒ‘æˆ˜ã€‚</p>
+          <p>Agentech Education 面向不同年龄段学生提供适龄 AI、创造力、机器人、无人机、计算机视觉与动手工程挑战。</p>
           <div class="button-row">
             <a class="button" href="https://www.agent-tech.ai/talents" target="_blank" rel="noreferrer">AI Robotics Club</a>
             <a class="button light" href="contact.html">Request Program Info</a>
@@ -421,16 +421,16 @@ function renderAgentech() {
       </div>
     </div></section>
     <section class="section">
-      <div class="section-head"><div><p class="eyebrow">Walnut 2026 Programs / Walnut 2026 è¯¾ç¨‹</p><h2>Summer AI tracks from Agentech Education</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow">Walnut 2026 Programs / Walnut 2026 课程</p><h2>Summer AI tracks from Agentech Education</h2></div></div>
       <div class="card-grid">
-        ${data.agentech.courses.map((course) => card(course[1], `${course[0]} / ${course[3]} / ${course[4]}`, course[2], "Walnut æ ¡åŒº 2026 Summer é¡¹ç›®ã€‚")).join("")}
+        ${data.agentech.courses.map((course) => card(course[1], `${course[0]} / ${course[3]} / ${course[4]}`, course[2], "Walnut 校区 2026 Summer 项目。")).join("")}
       </div>
     </section>`;
 }
 
 function renderAiClub() {
   return `
-    ${pageHeader("AI Robotics Club", "AI æœºå™¨äººä¿±ä¹éƒ¨", "Robotics Competition & Engineering Membership Program.", "æœºå™¨äººç«žèµ›ä¸Žå·¥ç¨‹ç ”å‘ä¼šå‘˜è®¡åˆ’ã€‚")}
+    ${pageHeader("AI Robotics Club", "AI 机器人俱乐部", "Robotics Competition & Engineering Membership Program.", "机器人竞赛与工程研发会员计划。")}
     <section class="section alt"><div class="section-inner">
       <div class="feature-panel">
         <div class="feature-logo-panel">
@@ -446,7 +446,7 @@ function renderAiClub() {
       </div>
       <div class="split" style="margin-top:34px">
         <div>
-          <p class="eyebrow">Main Introduction / ä¸»ä»‹ç»</p>
+          <p class="eyebrow">Main Introduction / 主介绍</p>
           <h2>Understand why robots work, why they fail, and how to improve them.</h2>
         </div>
         <div>
@@ -454,33 +454,33 @@ function renderAiClub() {
           <p>${data.roboticsClub.zhMain}</p>
         </div>
       </div>
-      <div class="section-head" style="margin-top:34px"><div><p class="eyebrow">What Students Learn / å­¦ç”Ÿå°†å­¦ä¹ ä»€ä¹ˆ</p><h2>Engineering and AI skills</h2></div></div>
+      <div class="section-head" style="margin-top:34px"><div><p class="eyebrow">What Students Learn / 学生将学习什么</p><h2>Engineering and AI skills</h2></div></div>
       <div class="card-grid">
         ${data.roboticsClub.learnSections.map((item) => card(item[0], item[2], item[1], item[3])).join("")}
       </div>
-      <div class="section-head" style="margin-top:34px"><div><p class="eyebrow">Student Growth / å­¦ç”Ÿæˆé•¿</p><h2>Core abilities</h2></div></div>
+      <div class="section-head" style="margin-top:34px"><div><p class="eyebrow">Student Growth / 学生成长</p><h2>Core abilities</h2></div></div>
       <div class="program-grid">
         ${data.roboticsClub.abilities.map((item) => card(item[0], item[2], item[1], item[3])).join("")}
       </div>
-      <div class="section-head" style="margin-top:34px"><div><p class="eyebrow">Project Outputs / é¡¹ç›®äº§å‡º</p><h2>Portfolio-ready work</h2></div></div>
+      <div class="section-head" style="margin-top:34px"><div><p class="eyebrow">Project Outputs / 项目产出</p><h2>Portfolio-ready work</h2></div></div>
       <div class="program-grid">
-        ${data.roboticsClub.outputs.map((item) => card(item, "Output / æˆæžœ", "Students document and present milestone work.", "å­¦ç”Ÿè®°å½•å¹¶å±•ç¤ºé˜¶æ®µæ€§é¡¹ç›®æˆæžœã€‚")).join("")}
+        ${data.roboticsClub.outputs.map((item) => card(item, "Output / 成果", "Students document and present milestone work.", "学生记录并展示阶段性项目成果。")).join("")}
       </div>
     </div></section>`;
 }
 
 function renderNews() {
   const categories = [
-    ["Group News", "é›†å›¢æ–°é—»", "Milestones, strategic updates, anniversaries, awards, and group-wide announcements.", "é›†å›¢é‡Œç¨‹ç¢‘ã€æˆ˜ç•¥æ›´æ–°ã€å‘¨å¹´æ´»åŠ¨ã€å¥–é¡¹è£èª‰ä¸Žé›†å›¢å…¬å‘Šã€‚"],
-    ["School Events", "æ ¡å›­æ´»åŠ¨", "Campus activities, open houses, seasonal celebrations, classroom moments, and family events.", "æ ¡åŒºæ´»åŠ¨ã€å¼€æ”¾æ—¥ã€èŠ‚æ—¥åº†ç¥ã€è¯¾å ‚çž¬é—´ä¸Žå®¶åº­æ´»åŠ¨ã€‚"],
-    ["Community Events", "ç¤¾åŒºæ´»åŠ¨", "Volunteer service, foundation activities, civic engagement, and local partnerships.", "å¿—æ„¿æœåŠ¡ã€åŸºé‡‘ä¼šæ´»åŠ¨ã€ç¤¾åŒºå‚ä¸Žä¸Žæœ¬åœ°åˆä½œã€‚"],
-    ["Student Highlights", "å­¦ç”Ÿäº®ç‚¹", "Student work, presentations, camp showcases, robotics demos, and growth stories.", "å­¦ç”Ÿä½œå“ã€å±•ç¤ºæ´»åŠ¨ã€è¥åœ°æˆæžœã€æœºå™¨äºº demo ä¸Žæˆé•¿æ•…äº‹ã€‚"],
-    ["Teacher Stories", "æ•™å¸ˆæ•…äº‹", "Teacher recognition, classroom practice, professional growth, and team culture.", "æ•™å¸ˆè¡¨å½°ã€è¯¾å ‚å®žè·µã€ä¸“ä¸šæˆé•¿ä¸Žå›¢é˜Ÿæ–‡åŒ–ã€‚"],
-    ["Parent Workshops", "å®¶é•¿è¯¾å ‚", "Parent education, wellness, academic planning, AI literacy, and school-family partnership.", "å®¶é•¿æ•™è‚²ã€èº«å¿ƒå¥åº·ã€å­¦æœ¯è§„åˆ’ã€AI ç´ å…»ä¸Žå®¶æ ¡åˆä½œã€‚"]
+    ["Group News", "集团新闻", "Milestones, strategic updates, anniversaries, awards, and group-wide announcements.", "集团里程碑、战略更新、周年活动、奖项荣誉与集团公告。"],
+    ["School Events", "校园活动", "Campus activities, open houses, seasonal celebrations, classroom moments, and family events.", "校区活动、开放日、节日庆祝、课堂瞬间与家庭活动。"],
+    ["Community Events", "社区活动", "Volunteer service, foundation activities, civic engagement, and local partnerships.", "志愿服务、基金会活动、社区参与与本地合作。"],
+    ["Student Highlights", "学生亮点", "Student work, presentations, camp showcases, robotics demos, and growth stories.", "学生作品、展示活动、营地成果、机器人 demo 与成长故事。"],
+    ["Teacher Stories", "教师故事", "Teacher recognition, classroom practice, professional growth, and team culture.", "教师表彰、课堂实践、专业成长与团队文化。"],
+    ["Parent Workshops", "家长课堂", "Parent education, wellness, academic planning, AI literacy, and school-family partnership.", "家长教育、身心健康、学术规划、AI 素养与家校合作。"]
   ];
 
   return `
-    ${pageHeader("News & Events", "æ–°é—»æ´»åŠ¨", "Stories from Sequoia's group growth, schools, classrooms, teachers, students, families, and community events.", "å±•ç¤ºé›†å›¢å‘å±•ã€å­¦æ ¡æ´»åŠ¨ã€è¯¾å ‚æ•…äº‹ã€æ•™å¸ˆæ•…äº‹ã€å­¦ç”Ÿäº®ç‚¹ã€å®¶é•¿è¯¾å ‚ä¸Žç¤¾åŒºæ´»åŠ¨ã€‚")}
+    ${pageHeader("News & Events", "新闻活动", "Stories from Sequoia's group growth, schools, classrooms, teachers, students, families, and community events.", "展示集团发展、学校活动、课堂故事、教师故事、学生亮点、家长课堂与社区活动。")}
     <section class="section alt"><div class="section-inner">
       <div class="card-grid">
         ${categories.map((item) => card(item[0], item[1], item[2], item[3])).join("")}

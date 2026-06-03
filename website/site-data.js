@@ -1,45 +1,45 @@
-﻿window.SEQUOIA_DATA = {
+window.SEQUOIA_DATA = {
   name: "Sequoia Education Group",
-  zhName: "çº¢è¡«æ•™è‚²é›†å›¢",
+  zhName: "红杉教育集团",
   domain: "www.sequoia-edu.com",
   slogan: "Rooted in Education. Growing Futures.",
-  zhSlogan: "æ·±è€•æ•™è‚²åå¹´ï¼Œé™ªä¼´å­©å­ä¸Žå®¶åº­å…±åŒæˆé•¿",
+  zhSlogan: "深耕教育十年,陪伴孩子与家庭共同成长",
   keywords: "Professional, warm, rooted, scalable, and future-facing.",
-  zhKeywords: "ä¸“ä¸šã€æ¸©æš–ã€æœ‰æ ¹åŸºã€æœ‰è§„æ¨¡ã€æœ‰æœªæ¥æ„Ÿã€‚",
+  zhKeywords: "专业、温暖、有根基、有规模、有未来感。",
   address: "20781 Amar Road Unit 7, Walnut, CA 91789",
   email: "Sequoiaedugroup@gmail.com",
   positioning: {
     en: "Official group website for Sequoia Education Group: show the strength of the education group, centralize news and activities from each school brand, build trust with parents, and present a scalable education ecosystem for future partners and VC investors.",
-    zh: "Sequoia Education Group å®˜æ–¹é›†å›¢å“ç‰Œç½‘ç«™ï¼šå±•ç¤ºæ•™è‚²é›†å›¢å®žåŠ›ã€é›†ä¸­æ›å…‰å„å®žä½“å­¦æ ¡æ–°é—»æ´»åŠ¨ã€å»ºç«‹å®¶é•¿ä¿¡ä»»ï¼Œå¹¶ä¸ºæœªæ¥åˆä½œæ–¹ä¸Ž VC æŠ•èµ„æ–¹å±•ç¤ºå¯æ‰©å±•çš„æ•™è‚²ç”Ÿæ€ã€‚"
+    zh: "Sequoia Education Group 官方集团品牌网站:展示教育集团实力、集中曝光各实体学校新闻活动、建立家长信任,并为未来合作方与 VC 投资方展示可扩展的教育生态。"
   },
   facts: [
-    ["Group origin", "Founded by Connie Sun in Walnut on May 18, 2015, beginning with Walnut International Montessori Preschool.", "é›†å›¢èµ·ç‚¹", "2015 å¹´ 5 æœˆ 18 æ—¥ï¼ŒConnie Sun åœ¨ Walnut åˆ›åŠž Walnut International Montessori Preschoolã€‚ä¸Šçº¿å‰å»ºè®®ä¸Žè¥ä¸š/è®¸å¯èµ„æ–™æ ¸å¯¹ã€‚"],
-    ["Growth story", "The founding school began with about 35 students and grew to about 135 full enrollment within 1-2 years.", "å‘å±•æ•…äº‹", "åˆ›æ ¡åˆæœŸçº¦ 35 åå­¦ç”Ÿï¼Œ1-2 å¹´å†…å‘å±•è‡³çº¦ 135 åæ»¡å‘˜ã€‚æ•°å­—å»ºè®®ä¿ç•™çº¦æ•°æˆ–ä¸Šçº¿å‰ç¡®è®¤ã€‚"],
-    ["Group stage", "After ten years, Sequoia has built an ecosystem across early childhood, after-school education, teacher training, academic planning, community service, wellness, and future AI education.", "é›†å›¢é˜¶æ®µ", "åå¹´å‘å±•åŽå½¢æˆå¹¼å„¿æ•™è‚²ã€è¯¾åŽæ•™è‚²ã€æ•™å¸ˆåŸ¹è®­ã€å‡å­¦è§„åˆ’ã€å…¬ç›Šç¤¾åŒºã€èº«å¿ƒå¥åº·ã€æœªæ¥ AI æ•™è‚²å¸ƒå±€ã€‚"],
-    ["Team scale", "The 10-year celebration mentioned nearly 80 employees plus more than 50 family members and friends.", "å›¢é˜Ÿè§„æ¨¡", "åå‘¨å¹´æ´»åŠ¨æåˆ°è¿‘ 80 ä½å‘˜å·¥ã€50 å¤šä½å®¶å±žåŠäº²å‹å‚ä¸Žã€‚ç½‘ç«™å»ºè®®å†™ Nearly 80 team membersã€‚"],
-    ["Headquarters / contact", "Sequoia Education Group, 20781 Amar Road Unit 7, Walnut, CA 91789.", "æ€»éƒ¨/è”ç³»åœ°å€", "Sequoia Education Group, 20781 Amar Road Unit 7, Walnut, CA 91789ã€‚ä¸Šçº¿å‰æ ¸å¯¹é‚®å¯„/åŠžå…¬ç”¨é€”ã€‚"],
-    ["Current email", "Sequoiaedugroup@gmail.com. A company email such as info@sequoia-edu.com is recommended.", "å½“å‰é‚®ç®±", "Sequoiaedugroup@gmail.comã€‚å»ºè®®å°½å¿«å¯ç”¨ info@sequoia-edu.com ç­‰ä¼ä¸šé‚®ç®±ã€‚"],
-    ["Investor angle", "Sequoia is not a single preschool. It is a Southern California multi-brand, multi-stage education ecosystem.", "æŠ•èµ„äººè§’åº¦", "ä¸æ˜¯å•ä¸€å¹¼å„¿å›­ï¼Œè€Œæ˜¯å—åŠ å·žå¤šå“ç‰Œã€å¤šé˜¶æ®µæ•™è‚²ç”Ÿæ€ã€‚éœ€è¦åœ¨é¦–é¡µã€Aboutã€Partnership ä¸‰å¤„é‡å¤å¼ºåŒ–ã€‚"]
+    ["Group origin", "Founded by Connie Sun in Walnut on May 18, 2015, beginning with Walnut International Montessori Preschool.", "集团起点", "2015 年 5 月 18 日,Connie Sun 在 Walnut 创办 Walnut International Montessori Preschool。上线前建议与营业/许可资料核对。"],
+    ["Growth story", "The founding school began with about 35 students and grew to about 135 full enrollment within 1-2 years.", "发展故事", "创校初期约 35 名学生,1-2 年内发展至约 135 名满员。数字建议保留约数或上线前确认。"],
+    ["Group stage", "After ten years, Sequoia has built an ecosystem across early childhood, after-school education, teacher training, academic planning, community service, wellness, and future AI education.", "集团阶段", "十年发展后形成幼儿教育、课后教育、教师培训、升学规划、公益社区、身心健康、未来 AI 教育布局。"],
+    ["Team scale", "The 10-year celebration mentioned nearly 80 employees plus more than 50 family members and friends.", "团队规模", "十周年活动提到近 80 位员工、50 多位家属及亲友参与。网站建议写 Nearly 80 team members。"],
+    ["Headquarters / contact", "Sequoia Education Group, 20781 Amar Road Unit 7, Walnut, CA 91789.", "总部/联系地址", "Sequoia Education Group, 20781 Amar Road Unit 7, Walnut, CA 91789。上线前核对邮寄/办公用途。"],
+    ["Current email", "Sequoiaedugroup@gmail.com. A company email such as info@sequoia-edu.com is recommended.", "当前邮箱", "Sequoiaedugroup@gmail.com。建议尽快启用 info@sequoia-edu.com 等企业邮箱。"],
+    ["Investor angle", "Sequoia is not a single preschool. It is a Southern California multi-brand, multi-stage education ecosystem.", "投资人角度", "不是单一幼儿园,而是南加州多品牌、多阶段教育生态。需要在首页、About、Partnership 三处重复强化。"]
   ],
   stats: [
-    ["10+ Years", "åå¹´ä»¥ä¸Šæ•™è‚²ç§¯ç´¯"],
-    ["Multiple Schools & Brands", "å¤šä¸ªå­¦æ ¡ä¸Žå“ç‰Œ"],
-    ["Nearly 80 Team Members", "è¿‘ 80 ä½å›¢é˜Ÿæˆå‘˜"],
-    ["Serving Southern California Families", "æœåŠ¡å—åŠ å·žå®¶åº­"],
-    ["Preschool to Teacher Training Pathway", "ä»Žå¹¼å„¿å›­åˆ°æ•™å¸ˆåŸ¹è®­çš„è·¯å¾„"]
+    ["10+ Years", "十年以上教育积累"],
+    ["Multiple Schools & Brands", "多个学校与品牌"],
+    ["Nearly 80 Team Members", "近 80 位团队成员"],
+    ["Serving Southern California Families", "服务南加州家庭"],
+    ["Preschool to Teacher Training Pathway", "从幼儿园到教师培训的路径"]
   ],
   homeModules: [
-    ["Hero", "Sequoia Education Group / Rooted in Education. Growing Futures. Buttons: Explore Our Schools, News & Events, Partner With Us.", "é¦–é¡µé¦–å±", "Sequoia Education Group / Rooted in Education. Growing Futures. ä¸‰ä¸ªæŒ‰é’® Explore Our Schoolsã€News & Eventsã€Partner With Usã€‚"],
-    ["About Snapshot", "Tell the 2015 Walnut founding story and ten-year education ecosystem in one paragraph. Do not write it as a founder resume.", "å…³äºŽå¿«ç…§", "ä¸€å¥è¯è®² 2015 Walnut èµ·æ­¥å’Œåå¹´æ•™è‚²ç”Ÿæ€ï¼Œä¸è¦å†™æˆåˆ›å§‹äººç®€åŽ†ã€‚"],
-    ["Key Numbers", "10+ Years, Multiple Schools & Brands, Nearly 80 Team Members, Serving Southern California Families, Preschool to Teacher Training Pathway.", "æ ¸å¿ƒæ•°å­—", "10+ Yearsã€Multiple Schools & Brandsã€Nearly 80 Team Membersã€Serving Southern California Familiesã€Preschool to Teacher Training Pathwayã€‚"],
-    ["Education Ecosystem", "Early Childhood, After-School, Teacher Training, Academic Planning, Community Service, Wellness, Agentech Education / AI Future Learning.", "æ•™è‚²ç”Ÿæ€", "å¹¼å„¿æ•™è‚²ã€è¯¾åŽæ•™è‚²ã€æ•™å¸ˆåŸ¹è®­ã€å‡å­¦è§„åˆ’ã€å…¬ç›Šç¤¾åŒºã€èº«å¿ƒå¥åº·ã€Agentech Education / AI Future Learningã€‚"],
-    ["Brand Matrix", "Nine brand/project cards with logo, type, year, short positioning, and Learn More links.", "å“ç‰ŒçŸ©é˜µ", "9 ä¸ªå“ç‰Œ/é¡¹ç›®å¡ç‰‡ï¼Œæ¯ä¸ªå¡ç‰‡æœ‰ logoã€ç±»åž‹ã€å¹´ä»½ã€çŸ­å®šä½ã€Learn Moreã€‚"],
-    ["Agentech Education Teaser", "Use a small homepage preview for AI literacy, robotics, and future-ready learning without overpowering the group story.", "Agentech Education é¢„è§ˆ", "é¦–é¡µå¯ç”¨ä¸€å°å— preview å±•ç¤º AI literacyã€roboticsã€future-ready learningï¼Œä½†ä¸è¦ç›–è¿‡é›†å›¢ä¸»å™äº‹ã€‚"],
-    ["10-Year Timeline", "2015, 2019, 2020, 2023, 2024, 2025, Coming Next.", "åå¹´æ—¶é—´çº¿", "2015ã€2019ã€2020ã€2023ã€2024ã€2025ã€Coming Nextã€‚"],
-    ["News & Events Preview", "Show the latest three posts with filters for Group News, School Events, and Community Events.", "æ–°é—»æ´»åŠ¨é¢„è§ˆ", "æœ€æ–° 3 ç¯‡ï¼Œå¯ç­›é€‰ Group News / School Events / Community Eventsã€‚"],
-    ["Community Impact", "Foundation, volunteer service, city honors, and team or long-term employee recognition.", "ç¤¾åŒºå½±å“åŠ›", "åŸºé‡‘ä¼šã€å¿—æ„¿æœåŠ¡ã€åŸŽå¸‚è£èª‰ã€å›¢é˜Ÿ/è€å‘˜å·¥è¡¨å½°ã€‚"],
-    ["Founder Message", "A short message from Connie and a professional photo.", "åˆ›å§‹äººå¯„è¯­", "Connie ä¸€æ®µçŸ­å¯„è¯­å’Œä¸“ä¸šç…§ç‰‡ã€‚"],
-    ["Final CTA", "Enroll Now, Join Our Team, Partner With Us.", "æœ€ç»ˆè¡ŒåŠ¨å…¥å£", "Enroll Nowã€Join Our Teamã€Partner With Usã€‚"]
+    ["Hero", "Sequoia Education Group / Rooted in Education. Growing Futures. Buttons: Explore Our Schools, News & Events, Partner With Us.", "首页首屏", "Sequoia Education Group / Rooted in Education. Growing Futures. 三个按钮 Explore Our Schools、News & Events、Partner With Us。"],
+    ["About Snapshot", "Tell the 2015 Walnut founding story and ten-year education ecosystem in one paragraph. Do not write it as a founder resume.", "关于快照", "一句话讲 2015 Walnut 起步和十年教育生态,不要写成创始人简历。"],
+    ["Key Numbers", "10+ Years, Multiple Schools & Brands, Nearly 80 Team Members, Serving Southern California Families, Preschool to Teacher Training Pathway.", "核心数字", "10+ Years、Multiple Schools & Brands、Nearly 80 Team Members、Serving Southern California Families、Preschool to Teacher Training Pathway。"],
+    ["Education Ecosystem", "Early Childhood, After-School, Teacher Training, Academic Planning, Community Service, Wellness, Agentech Education / AI Future Learning.", "教育生态", "幼儿教育、课后教育、教师培训、升学规划、公益社区、身心健康、Agentech Education / AI Future Learning。"],
+    ["Brand Matrix", "Nine brand/project cards with logo, type, year, short positioning, and Learn More links.", "品牌矩阵", "9 个品牌/项目卡片,每个卡片有 logo、类型、年份、短定位、Learn More。"],
+    ["Agentech Education Teaser", "Use a small homepage preview for AI literacy, robotics, and future-ready learning without overpowering the group story.", "Agentech Education 预览", "首页可用一小块 preview 展示 AI literacy、robotics、future-ready learning,但不要盖过集团主叙事。"],
+    ["10-Year Timeline", "2015, 2019, 2020, 2023, 2024, 2025, Coming Next.", "十年时间线", "2015、2019、2020、2023、2024、2025、Coming Next。"],
+    ["News & Events Preview", "Show the latest three posts with filters for Group News, School Events, and Community Events.", "新闻活动预览", "最新 3 篇,可筛选 Group News / School Events / Community Events。"],
+    ["Community Impact", "Foundation, volunteer service, city honors, and team or long-term employee recognition.", "社区影响力", "基金会、志愿服务、城市荣誉、团队/老员工表彰。"],
+    ["Founder Message", "A short message from Connie and a professional photo.", "创始人寄语", "Connie 一段短寄语和专业照片。"],
+    ["Final CTA", "Enroll Now, Join Our Team, Partner With Us.", "最终行动入口", "Enroll Now、Join Our Team、Partner With Us。"]
   ],
   brands: [
     {
@@ -48,13 +48,13 @@
       zhName: "Walnut International Montessori Preschool",
       year: "2015",
       type: "Montessori Preschool / Founding School",
-      zhType: "è’™ç‰¹æ¢­åˆ©å¹¼å„¿å›­ / é›†å›¢ç¬¬ä¸€æ‰€å­¦æ ¡",
+      zhType: "蒙特梭利幼儿园 / 集团第一所学校",
       location: "Walnut, CA",
       image: "images/walnut-international-montessori-logo.png",
       galleryImages: ["images/walnut-international-montessori-logo.png", "images/walnut-quality-business-awards-2025-badge.png", "images/walnut-best-montessori-school-2025-certificate.jpg"],
       url: "https://walnutmontessori.com/",
       summary: "The founding school of Sequoia Education Group. It began with about 35 students and grew to about 135 full enrollment. Best Montessori Preschool in Walnut may be used only with certificate/source support.",
-      zhSummary: "é›†å›¢ç¬¬ä¸€æ‰€å­¦æ ¡ï¼›ä»Žçº¦ 35 åå­¦ç”Ÿèµ·æ­¥ï¼Œå‘å±•è‡³çº¦ 135 åæ»¡å‘˜ã€‚å¯å¼ºè°ƒ Best Montessori Preschool in Walnutï¼Œä½†éœ€è¦æ”¾è¯ä¹¦/æ¥æºã€‚"
+      zhSummary: "集团第一所学校;从约 35 名学生起步,发展至约 135 名满员。可强调 Best Montessori Preschool in Walnut,但需要放证书/来源。"
     },
     {
       slug: "learning-tree-arcadia",
@@ -62,12 +62,12 @@
       zhName: "Learning Tree Montessori of Arcadia",
       year: "2019",
       type: "Montessori Preschool",
-      zhType: "è’™ç‰¹æ¢­åˆ©å¹¼å„¿å›­",
+      zhType: "蒙特梭利幼儿园",
       location: "Arcadia, CA",
       image: "images/learning-tree-montessori-arcadia-logo.jpg",
       url: "https://www.montessori-arcadia.com/",
       summary: "Arcadia community campus with campus rebuilding, a stable teaching team, and approximately 85 students. Student numbers should be verified before launch.",
-      zhSummary: "Arcadia ç¤¾åŒºæ ¡åŒºï¼›å¯å†™æ ¡å›­é‡å»ºã€ç¨³å®šæ•™å¸ˆå›¢é˜Ÿã€çº¦ 85 åå­¦ç”Ÿã€‚ä¸Šçº¿å‰éœ€æ ¸å®žæ•°å­—ã€‚"
+      zhSummary: "Arcadia 社区校区;可写校园重建、稳定教师团队、约 85 名学生。上线前需核实数字。"
     },
     {
       slug: "learning-tree-walnut",
@@ -75,12 +75,12 @@
       zhName: "Learning Tree Walnut Education Center",
       year: "2020",
       type: "After-School / Enrichment Center",
-      zhType: "è¯¾åŽæ•™è‚² / ç»¼åˆæˆé•¿ä¸­å¿ƒ",
+      zhType: "课后教育 / 综合成长中心",
       location: "Walnut, CA",
       image: "images/learning-tree-walnut-education-center-logo.png",
       url: "https://www.learningtrees.us/",
       summary: "Serves TK-8 students with after-school support, Chinese language learning, camps, and enrichment. It began from K-2 and expanded.",
-      zhSummary: "æœåŠ¡ TK-8ï¼›è¯¾åŽè¾…å¯¼ã€ä¸­æ–‡ã€è¥åœ°ã€ç»¼åˆæˆé•¿è¯¾ç¨‹ï¼›ä»Ž K-2 èµ·æ­¥å¹¶æ‰©å±•ã€‚"
+      zhSummary: "服务 TK-8;课后辅导、中文、营地、综合成长课程;从 K-2 起步并扩展。"
     },
     {
       slug: "montessori-of-anaheim",
@@ -88,12 +88,12 @@
       zhName: "Montessori of Anaheim",
       year: "2023",
       type: "Montessori Campus",
-      zhType: "è’™ç‰¹æ¢­åˆ©æ ¡åŒº",
+      zhType: "蒙特梭利校区",
       location: "Anaheim, CA",
       image: "images/montessori-of-anaheim-logo.jpg",
       url: "https://www.montessorianaheim.com/",
       summary: "Campus renovation and Montessori environment building. The brief notes growth from 1 student to about 45 students; numbers should be verified before launch.",
-      zhSummary: "å¯å¼ºè°ƒæ ¡å›­æ”¹é€ ã€è’™ç‰¹æ¢­åˆ©çŽ¯å¢ƒå»ºè®¾ã€ä»Ž 1 åå­¦ç”Ÿå‘å±•è‡³çº¦ 45 åã€‚ä¸Šçº¿å‰éœ€æ ¸å®žæ•°å­—ã€‚"
+      zhSummary: "可强调校园改造、蒙特梭利环境建设、从 1 名学生发展至约 45 名。上线前需核实数字。"
     },
     {
       slug: "montessori-teacher-preparation",
@@ -101,12 +101,12 @@
       zhName: "Montessori Teacher Preparation of California",
       year: "2024",
       type: "Montessori Teacher Training",
-      zhType: "è’™ç‰¹æ¢­åˆ©æ•™å¸ˆåŸ¹è®­",
+      zhType: "蒙特梭利教师培训",
       location: "California",
       image: "images/montessori-teacher-preparation-california-logo.png",
       url: "https://www.calmtc.org/",
       summary: "Develops professional Montessori teachers. Any I-20 or compliance-related claims must be verified before publishing.",
-      zhSummary: "åŸ¹å…»ä¸“ä¸šè’™ç‰¹æ¢­åˆ©æ•™å¸ˆï¼›I-20 æˆ–åˆè§„èµ„è´¨å¦‚è¦å†™å¿…é¡»å…ˆæ ¸å®žã€‚"
+      zhSummary: "培养专业蒙特梭利教师;I-20 或合规资质如要写必须先核实。"
     },
     {
       slug: "nuts-education-institute",
@@ -114,12 +114,12 @@
       zhName: "Nuts Education Institute",
       year: "2025",
       type: "Academic Development / High School Planning / College Counseling",
-      zhType: "å­¦æœ¯å‘å±• / é«˜ä¸­è§„åˆ’ / å‡å­¦å’¨è¯¢",
+      zhType: "学术发展 / 高中规划 / 升学咨询",
       location: "TBD",
       image: "images/nuts-education-institute-logo-crop.jpg",
       url: "",
       summary: "Academic development, high school planning, and personalized counseling. The service scope and teacher credentials need to be completed.",
-      zhSummary: "Academic developmentã€high school planningã€personalized counselingï¼›éœ€è¡¥å……å…·ä½“æœåŠ¡èŒƒå›´ã€è€å¸ˆèµ„è´¨ã€‚"
+      zhSummary: "Academic development、high school planning、personalized counseling;需补充具体服务范围、老师资质。"
     },
     {
       slug: "sequoia-forest-foundation",
@@ -127,12 +127,12 @@
       zhName: "Sequoia Forest Foundation",
       year: "TBD",
       type: "Community Service / Student Volunteering",
-      zhType: "ç¤¾åŒºå…¬ç›Š / å­¦ç”Ÿå¿—æ„¿æœåŠ¡",
+      zhType: "社区公益 / 学生志愿服务",
       location: "TBD",
       image: "images/sequoia-forest-foundation-logo.jpg",
       url: "",
       summary: "Student volunteer service, community participation, social responsibility, civic awareness, and leadership. Nonprofit registration should be confirmed.",
-      zhSummary: "å­¦ç”Ÿå¿—æ„¿æœåŠ¡ã€ç¤¾åŒºå‚ä¸Žã€ç¤¾ä¼šè´£ä»»æ„Ÿã€å…¬æ°‘æ„è¯†ä¸Žé¢†å¯¼åŠ›ï¼›éœ€ç¡®è®¤éžè¥åˆ©æ³¨å†Œä¿¡æ¯ã€‚"
+      zhSummary: "学生志愿服务、社区参与、社会责任感、公民意识与领导力;需确认非营利注册信息。"
     },
     {
       slug: "yoga-me-beyond",
@@ -140,12 +140,12 @@
       zhName: "Yoga Me & Beyond",
       year: "2025",
       type: "Affiliated Wellness Brand",
-      zhType: "å…³è”èº«å¿ƒå¥åº·å“ç‰Œ",
+      zhType: "关联身心健康品牌",
       location: "TBD",
       image: "images/yoga-me-beyond-logo.jpg",
       url: "",
       summary: "An affiliated wellness brand for parents, teachers, and community members. It should be grouped as wellness, not under schools.",
-      zhSummary: "å»ºè®®å½’ç±»ä¸º Affiliated Wellness Brandï¼Œä¸æ”¾åœ¨ School ä¸‹ï¼›æœåŠ¡å®¶é•¿ã€æ•™å¸ˆã€ç¤¾åŒºæˆå‘˜èº«å¿ƒå¥åº·ã€‚"
+      zhSummary: "建议归类为 Affiliated Wellness Brand,不放在 School 下;服务家长、教师、社区成员身心健康。"
     },
     {
       slug: "agentech-education",
@@ -153,61 +153,61 @@
       zhName: "Agentech Education / Agentech EDU",
       year: "Coming next",
       type: "AI Education / Robotics / Future Learning",
-      zhType: "AI æ•™è‚² / æœºå™¨äºº / æœªæ¥å­¦ä¹ ",
+      zhType: "AI 教育 / 机器人 / 未来学习",
       location: "TBD",
       image: "images/agentech-education-logo.png",
       url: "",
       summary: "A future-ready learning initiative or affiliated education technology project for K-12 AI literacy, robotics, data thinking, and project-based learning. Legal and brand relationship must be confirmed.",
-      zhSummary: "å»ºè®®ä½œä¸º Sequoia çš„ future-ready learning initiative æˆ–å…³è”æ•™è‚²ç§‘æŠ€é¡¹ç›®ï¼›é¢å‘ K-12 çš„ AI literacyã€roboticsã€data/project learningã€‚ä¸Šçº¿å‰éœ€ç¡®è®¤ä¸Žé›†å›¢çš„æ³•å¾‹/å“ç‰Œå…³ç³»ã€‚"
+      zhSummary: "建议作为 Sequoia 的 future-ready learning initiative 或关联教育科技项目;面向 K-12 的 AI literacy、robotics、data/project learning。上线前需确认与集团的法律/品牌关系。"
     }
   ],
   routes: [
-    ["/", "Home", "é›†å›¢å®šä½ã€åå¹´æ•…äº‹ã€æ ¸å¿ƒæ•°æ®ã€æ•™è‚²ç”Ÿæ€ã€å“ç‰ŒçŸ©é˜µã€æ—¶é—´çº¿ã€æ–°é—»é¢„è§ˆã€ç¤¾åŒºå½±å“åŠ›ã€Founder Messageã€Enroll/Partner CTA"],
-    ["/about", "About Us", "Our Storyã€Mission & Valuesã€10-Year Milestoneã€Founder Messageã€Leadership/Teamã€Awards & Recognition"],
-    ["/schools-brands", "Our Schools & Brands", "æ‰€æœ‰å“ç‰Œå¡ç‰‡ï¼›å¯ç­›é€‰ School / Program / Foundation / Wellness / Future Initiativeï¼›æ¯å¼ å¡ç‰‡é“¾æŽ¥è¯¦æƒ…é¡µ"],
-    ["/schools-brands/walnut-international-montessori", "Brand Detail", "æ¯ä¸ªæ ¡åŒº/å“ç‰Œç‹¬ç«‹é¡µé¢ï¼šå®šä½ã€å¹´é¾„æ®µ/æœåŠ¡ã€åœ°å€ã€è”ç³»æ–¹å¼ã€ç…§ç‰‡ã€é¡¹ç›®ã€æ–°é—»ã€é¢„çº¦å‚è§‚ CTA"],
-    ["/programs", "Programs", "Montessori Preschoolã€After-Schoolã€Chineseã€Campsã€Teacher Trainingã€Academic Planningã€Community Serviceã€AI Future Learning"],
-    ["/agentech-education", "Agentech Education / AI Future Learning", "AI literacyã€roboticsã€future-ready learningã€age tracksã€AI Club/Campã€é¡¹ç›®ä½œå“ã€åˆä½œå…¥å£"],
-    ["/agentech-education/ai-club", "AI Club / Robotics & Data Lab", "AI Clubã€æœºå™¨äººã€æ•°æ®å®žéªŒå®¤ã€é¡¹ç›®åˆ¶å­¦ä¹ ã€å­¦ç”Ÿä½œå“ showcase"],
-    ["/news-events", "News & Events", "é›†å›¢æ–°é—»ã€æ ¡å›­æ´»åŠ¨ã€ç¤¾åŒºæ´»åŠ¨ã€å­¦ç”Ÿäº®ç‚¹ã€æ•™å¸ˆæ•…äº‹ã€å®¶é•¿è¯¾å ‚ã€åª’ä½“æŠ¥é“ï¼›éœ€è¦ CMS ç®¡ç†"],
-    ["/community-impact", "Community Impact", "Sequoia Forest Foundationã€å¿—æ„¿æœåŠ¡ã€å…¬ç›Šæ´»åŠ¨ã€æ”¿åºœ/ç¤¾åŒºè£èª‰ã€ç…§ç‰‡ä¸Žæ–°é—»"],
-    ["/partnership", "Partnership & Strategic Growth", "ç»™ VCã€åˆä½œæ–¹ã€é›‡ä¸»ã€æ•™è‚²æœºæž„çœ‹çš„ä½Žè°ƒé¡µé¢ï¼›å»ºè®®æ”¾ footer å’Œé¦–é¡µæŒ‰é’®"],
-    ["/careers", "Careers", "èŒä½ç±»åˆ«ã€å›¢é˜Ÿæ–‡åŒ–ã€æˆé•¿æœºä¼šã€ç”³è¯·è¡¨å•/é‚®ç®±"],
-    ["/contact", "Contact", "æŒ‰å’¨è¯¢ç±»åž‹åˆ†æµï¼šæ‹›ç”Ÿã€æ•™å¸ˆåŸ¹è®­ã€åˆä½œã€æ‹›è˜ã€åª’ä½“ã€å…¬ç›Šï¼›æ€»åœ°å€å’Œé‚®ç®±"]
+    ["/", "Home", "集团定位、十年故事、核心数据、教育生态、品牌矩阵、时间线、新闻预览、社区影响力、Founder Message、Enroll/Partner CTA"],
+    ["/about", "About Us", "Our Story、Mission & Values、10-Year Milestone、Founder Message、Leadership/Team、Awards & Recognition"],
+    ["/schools-brands", "Our Schools & Brands", "所有品牌卡片;可筛选 School / Program / Foundation / Wellness / Future Initiative;每张卡片链接详情页"],
+    ["/schools-brands/walnut-international-montessori", "Brand Detail", "每个校区/品牌独立页面:定位、年龄段/服务、地址、联系方式、照片、项目、新闻、预约参观 CTA"],
+    ["/programs", "Programs", "Montessori Preschool、After-School、Chinese、Camps、Teacher Training、Academic Planning、Community Service、AI Future Learning"],
+    ["/agentech-education", "Agentech Education / AI Future Learning", "AI literacy、robotics、future-ready learning、age tracks、AI Club/Camp、项目作品、合作入口"],
+    ["/agentech-education/ai-club", "AI Club / Robotics & Data Lab", "AI Club、机器人、数据实验室、项目制学习、学生作品 showcase"],
+    ["/news-events", "News & Events", "集团新闻、校园活动、社区活动、学生亮点、教师故事、家长课堂、媒体报道;需要 CMS 管理"],
+    ["/community-impact", "Community Impact", "Sequoia Forest Foundation、志愿服务、公益活动、政府/社区荣誉、照片与新闻"],
+    ["/partnership", "Partnership & Strategic Growth", "给 VC、合作方、雇主、教育机构看的低调页面;建议放 footer 和首页按钮"],
+    ["/careers", "Careers", "职位类别、团队文化、成长机会、申请表单/邮箱"],
+    ["/contact", "Contact", "按咨询类型分流:招生、教师培训、合作、招聘、媒体、公益;总地址和邮箱"]
   ],
   programs: [
-    ["Montessori Preschool Programs", "Toddler / Preschool / Pre-K / Kindergarten Readiness", "Montessori curriculum, language, math, sensorial learning, practical life, culture, and social-emotional development. Each campus page should list age ranges and tour CTAs.", "è’™ç‰¹æ¢­åˆ©æ•™å­¦ã€è¯­è¨€ã€æ•°å­¦ã€æ„Ÿå®˜ã€æ—¥å¸¸ç”Ÿæ´»ã€æ–‡åŒ–ã€ç¤¾äº¤æƒ…ç»ªå‘å±•ï¼›æ¯ä¸ªæ ¡åŒºé¡µé¢éœ€åˆ—å¹´é¾„æ®µå’Œå‚è§‚å…¥å£ã€‚"],
-    ["After-School Programs", "TK-8", "Homework support, English reading and writing, math, Chinese, arts, and whole-child enrichment. Separate weekday after-school from enrichment classes.", "ä½œä¸šè¾…å¯¼ã€è‹±æ–‡é˜…è¯»å†™ä½œã€æ•°å­¦ã€ä¸­æ–‡ã€è‰ºæœ¯ã€ç»¼åˆç´ è´¨è¯¾ç¨‹ï¼›è¦åŒºåˆ† weekday after-school ä¸Ž enrichment classesã€‚"],
-    ["Chinese Language & Culture", "K-8 or actual age range", "Immersive Chinese, reading, writing, and cultural activities. Clarify whether classes are grouped by level.", "æ²‰æµ¸å¼ä¸­æ–‡ã€é˜…è¯»ã€å†™ä½œã€æ–‡åŒ–æ´»åŠ¨ï¼›éœ€è¦æ˜Žç¡®æ˜¯å¦æŒ‰æ°´å¹³åˆ†ç­ã€‚"],
-    ["Camps & Enrichment", "K-8 or actual age range", "Summer camp, winter camp, STEAM, art, outdoor activities, and theme-based classes. Each session can connect to News/Events and registration pages.", "Summer Campã€Winter Campã€STEAMã€è‰ºæœ¯ã€æˆ·å¤–æ´»åŠ¨ã€ä¸»é¢˜è¯¾ç¨‹ï¼›æ¯æœŸå¯è½åˆ° News/Events å’ŒæŠ¥åé¡µã€‚"],
-    ["Teacher Training", "Adults / Teachers", "Montessori teacher preparation, classroom observation, internship, and career development. All certificate and compliance claims must be verified.", "è’™ç‰¹æ¢­åˆ©æ•™å¸ˆåŸ¹å…»ã€è¯¾å ‚è§‚å¯Ÿã€å®žä¹ ã€èŒä¸šå‘å±•ï¼›æ‰€æœ‰è¯ä¹¦å’Œåˆè§„è¡¨è¿°ä¸Šçº¿å‰å¿…é¡»æ ¸å®žã€‚"],
-    ["Academic & College Planning", "Middle / High School", "Academic diagnostics, high school planning, college preparation, and personalized counseling. Avoid promising admission results.", "å­¦æœ¯è¯Šæ–­ã€é«˜ä¸­è§„åˆ’ã€å‡å­¦å‡†å¤‡ã€ä¸ªæ€§åŒ–å’¨è¯¢ï¼›è¦é¿å…æ‰¿è¯ºå½•å–ç»“æžœã€‚"],
-    ["Community Service", "Students and Families", "Volunteering, social practice, community participation, and leadership growth. Connect this to the foundation and News & Events.", "å¿—æ„¿æœåŠ¡ã€ç¤¾ä¼šå®žè·µã€ç¤¾åŒºå‚ä¸Žã€é¢†å¯¼åŠ›æˆé•¿ï¼›å¯ä¸ŽåŸºé‡‘ä¼šé¡µé¢å’Œæ–°é—»æ´»åŠ¨æ‰“é€šã€‚"],
-    ["Agentech Education / AI & Future Learning", "K-12 / Coming soon", "AI literacy, robotics, data, and project-based technology practice. Use coming next / initiative language and emphasize age-appropriate, ethical, privacy-aware, teacher-guided learning.", "é¢å‘ K-12 çš„ AI literacyã€æœºå™¨äººã€æ•°æ®ä¸Žé¡¹ç›®åˆ¶ç§‘æŠ€å®žè·µè¯¾ç¨‹ï¼›å»ºè®®å†™ coming next / initiativeï¼Œå¹¶è¯´æ˜Ž age-appropriateã€ethicsã€privacy ä¸Ž teacher-guided learningã€‚"]
+    ["Montessori Preschool Programs", "Toddler / Preschool / Pre-K / Kindergarten Readiness", "Montessori curriculum, language, math, sensorial learning, practical life, culture, and social-emotional development. Each campus page should list age ranges and tour CTAs.", "蒙特梭利教学、语言、数学、感官、日常生活、文化、社交情绪发展;每个校区页面需列年龄段和参观入口。"],
+    ["After-School Programs", "TK-8", "Homework support, English reading and writing, math, Chinese, arts, and whole-child enrichment. Separate weekday after-school from enrichment classes.", "作业辅导、英文阅读写作、数学、中文、艺术、综合素质课程;要区分 weekday after-school 与 enrichment classes。"],
+    ["Chinese Language & Culture", "K-8 or actual age range", "Immersive Chinese, reading, writing, and cultural activities. Clarify whether classes are grouped by level.", "沉浸式中文、阅读、写作、文化活动;需要明确是否按水平分班。"],
+    ["Camps & Enrichment", "K-8 or actual age range", "Summer camp, winter camp, STEAM, art, outdoor activities, and theme-based classes. Each session can connect to News/Events and registration pages.", "Summer Camp、Winter Camp、STEAM、艺术、户外活动、主题课程;每期可落到 News/Events 和报名页。"],
+    ["Teacher Training", "Adults / Teachers", "Montessori teacher preparation, classroom observation, internship, and career development. All certificate and compliance claims must be verified.", "蒙特梭利教师培养、课堂观察、实习、职业发展;所有证书和合规表述上线前必须核实。"],
+    ["Academic & College Planning", "Middle / High School", "Academic diagnostics, high school planning, college preparation, and personalized counseling. Avoid promising admission results.", "学术诊断、高中规划、升学准备、个性化咨询;要避免承诺录取结果。"],
+    ["Community Service", "Students and Families", "Volunteering, social practice, community participation, and leadership growth. Connect this to the foundation and News & Events.", "志愿服务、社会实践、社区参与、领导力成长;可与基金会页面和新闻活动打通。"],
+    ["Agentech Education / AI & Future Learning", "K-12 / Coming soon", "AI literacy, robotics, data, and project-based technology practice. Use coming next / initiative language and emphasize age-appropriate, ethical, privacy-aware, teacher-guided learning.", "面向 K-12 的 AI literacy、机器人、数据与项目制科技实践课程;建议写 coming next / initiative,并说明 age-appropriate、ethics、privacy 与 teacher-guided learning。"]
   ],
   agentech: {
     role: "Agentech Education should be Sequoia's future-ready learning / AI education page. It may live under Programs or as a standalone page. Before launch, confirm the legal, brand, and operating relationship between Agentech and Sequoia.",
-    zhRole: "Agentech Education åº”ä½œä¸º Sequoia ç½‘ç«™é‡Œçš„ future-ready learning / AI education é‡ç‚¹é¡µé¢ã€‚å¯æ”¾åœ¨ Programs ä¸‹ï¼Œä¹Ÿå¯ä½œä¸ºé¦–é¡µ CTA è¿›å…¥çš„ç‹¬ç«‹é¡µé¢ï¼›ä¸Šçº¿å‰å¿…é¡»ç¡®è®¤ Agentech ä¸Ž Sequoia çš„å“ç‰Œã€æ³•å¾‹å’Œè¿è¥å…³ç³»ã€‚",
+    zhRole: "Agentech Education 应作为 Sequoia 网站里的 future-ready learning / AI education 重点页面。可放在 Programs 下,也可作为首页 CTA 进入的独立页面;上线前必须确认 Agentech 与 Sequoia 的品牌、法律和运营关系。",
     modules: [
-      ["Page positioning", "Agentech Education is Sequoia Education Group's future-ready learning initiative for K-12 students.", "é¡µé¢å®šä½", "Agentech Education æ˜¯çº¢è¡«æ•™è‚²é›†å›¢é¢å‘ K-12 å­¦ç”Ÿçš„æœªæ¥æ•™è‚²é¡¹ç›®ï¼Œèšç„¦ AI ç´ å…»ã€æœºå™¨äººã€æ•°æ®æ€ç»´ä¸Žé¡¹ç›®åˆ¶ç§‘æŠ€å®žè·µã€‚"],
-      ["Brand relationship", "Use A Sequoia Education Group Initiative if confirmed; use Affiliated Future Learning Initiative if it is an associated brand.", "å“ç‰Œå…³ç³»", "å¿…é¡»ç¡®è®¤ Agentech Education ä¸Ž Sequoia Education Group çš„æ³•å¾‹/å“ç‰Œå…³ç³»ã€‚"],
-      ["Hero copy", "AI Literacy, Robotics, and Future-Ready Learning for K-12. Buttons: Join Waitlist, View Programs, Partner With Us.", "Hero æ–‡æ¡ˆ", "è®©å­©å­ç†è§£ AIã€åˆ›é€ é¡¹ç›®ã€é¢å‘æœªæ¥å­¦ä¹ ã€‚æŒ‰é’®ï¼šJoin Waitlist / View Programs / Partner With Usã€‚"],
-      ["Age tracks", "K-2, Grades 3-5, Grades 6-8, Grades 9-12. Each track should show goals, project outcomes, student fit, and course length.", "Age Tracks", "æ¯ä¸ªå¹´é¾„æ®µå†™å­¦ä¹ ç›®æ ‡ã€é¡¹ç›®äº§å‡ºã€é€‚åˆå­©å­ã€è¯¾ç¨‹æ—¶é•¿ï¼›ä¸è¦åªå†™â€œAIè¯¾â€ã€‚"],
-      ["Program cards", "AI Club, AI Camp, Robotics & Data Lab, AI + Math, Parent Workshops, School Partnership Programs.", "Program Cards", "å¦‚æžœéƒ¨åˆ†é¡¹ç›®æœªæˆç†Ÿï¼Œæ ‡æ³¨ Coming Soon / Pilot Programã€‚"],
-      ["Learning outcomes", "AI literacy, computational thinking, robotics logic, data awareness, creative problem-solving, presentation/project portfolio.", "Learning Outcomes", "é‡ç‚¹å†™å­©å­èƒ½åšå‡ºä»€ä¹ˆä½œå“ã€èƒ½å»ºç«‹ä»€ä¹ˆæ€ç»´ï¼Œè€Œä¸æ˜¯å †æŠ€æœ¯åè¯ã€‚"],
-      ["Safety & ethics", "Age-appropriate AI use, teacher-guided learning, privacy awareness, digital citizenship, human creativity first.", "Safety & Ethics", "å®¶é•¿å’Œå­¦æ ¡ä¼šå…³å¿ƒ AI å®‰å…¨ã€éšç§å’Œå­©å­ä½¿ç”¨è¾¹ç•Œã€‚"],
-      ["Student showcase", "Projects, classroom photos, demo video, final presentation, and parent open house.", "Student Showcase", "æœªæ¥å¯å’Œ News & Events æ‰“é€šï¼Œæ¯æœŸ camp/club ç»“æŸåŽå‘å¸ƒ showcase æ–°é—»ã€‚"],
-      ["Partnership CTA", "Partner With Us for school programs, camps, curriculum pilots, or community workshops.", "Partnership CTA", "ç»™å­¦æ ¡ã€æ•™è‚²æœºæž„ã€VC/åˆä½œæ–¹çœ‹çš„å…¥å£ï¼Œå¯é“¾æŽ¥ Partnership é¡µé¢ã€‚"],
-      ["Pre-launch materials", "Agentech logo, curriculum outline, age schedule, teacher bio, student project photos, classroom safety statement, registration form.", "ä¸Šçº¿å‰ç´ æ", "æœªç¡®è®¤çš„ä¿¡æ¯ä¸è¦ä¸Šçº¿ï¼›å°¤å…¶ä»·æ ¼ã€æ—¶é—´ã€è€å¸ˆèµ„è´¨ã€å­¦ç”Ÿç…§ç‰‡æŽˆæƒã€‚"]
+      ["Page positioning", "Agentech Education is Sequoia Education Group's future-ready learning initiative for K-12 students.", "页面定位", "Agentech Education 是红杉教育集团面向 K-12 学生的未来教育项目,聚焦 AI 素养、机器人、数据思维与项目制科技实践。"],
+      ["Brand relationship", "Use A Sequoia Education Group Initiative if confirmed; use Affiliated Future Learning Initiative if it is an associated brand.", "品牌关系", "必须确认 Agentech Education 与 Sequoia Education Group 的法律/品牌关系。"],
+      ["Hero copy", "AI Literacy, Robotics, and Future-Ready Learning for K-12. Buttons: Join Waitlist, View Programs, Partner With Us.", "Hero 文案", "让孩子理解 AI、创造项目、面向未来学习。按钮:Join Waitlist / View Programs / Partner With Us。"],
+      ["Age tracks", "K-2, Grades 3-5, Grades 6-8, Grades 9-12. Each track should show goals, project outcomes, student fit, and course length.", "Age Tracks", "每个年龄段写学习目标、项目产出、适合孩子、课程时长;不要只写\"AI课\"。"],
+      ["Program cards", "AI Club, AI Camp, Robotics & Data Lab, AI + Math, Parent Workshops, School Partnership Programs.", "Program Cards", "如果部分项目未成熟,标注 Coming Soon / Pilot Program。"],
+      ["Learning outcomes", "AI literacy, computational thinking, robotics logic, data awareness, creative problem-solving, presentation/project portfolio.", "Learning Outcomes", "重点写孩子能做出什么作品、能建立什么思维,而不是堆技术名词。"],
+      ["Safety & ethics", "Age-appropriate AI use, teacher-guided learning, privacy awareness, digital citizenship, human creativity first.", "Safety & Ethics", "家长和学校会关心 AI 安全、隐私和孩子使用边界。"],
+      ["Student showcase", "Projects, classroom photos, demo video, final presentation, and parent open house.", "Student Showcase", "未来可和 News & Events 打通,每期 camp/club 结束后发布 showcase 新闻。"],
+      ["Partnership CTA", "Partner With Us for school programs, camps, curriculum pilots, or community workshops.", "Partnership CTA", "给学校、教育机构、VC/合作方看的入口,可链接 Partnership 页面。"],
+      ["Pre-launch materials", "Agentech logo, curriculum outline, age schedule, teacher bio, student project photos, classroom safety statement, registration form.", "上线前素材", "未确认的信息不要上线;尤其价格、时间、老师资质、学生照片授权。"]
     ],
     avoid: ["Do not exaggerate AI outcomes.", "Do not promise admission or competition results.", "Do not imply AI replaces teachers.", "Do not use student photos without authorization."],
-    zhAvoid: ["é¿å…å¤¸å¤§ AI ç»“æžœã€‚", "é¿å…æ‰¿è¯ºå‡å­¦/ç«žèµ›æˆç»©ã€‚", "é¿å…æš—ç¤º AI æ›¿ä»£è€å¸ˆã€‚", "é¿å…æœªç»æŽˆæƒä½¿ç”¨å­¦ç”Ÿç…§ç‰‡ã€‚"],
+    zhAvoid: ["避免夸大 AI 结果。", "避免承诺升学/竞赛成绩。", "避免暗示 AI 替代老师。", "避免未经授权使用学生照片。"],
     future: ["AI Club", "AI Camp", "Student Showcase", "Curriculum for Schools", "Parent Workshop"],
     gradeTracks: [
-      ["Grade K-2", "AI Imagination Summer Camp", "Young builders explore creativity, problem-solving, and beginner-friendly AI through hands-on activities.", "K-2 AI å¯è’™è¥ï¼šé€šè¿‡åŠ¨æ‰‹æ´»åŠ¨æŽ¢ç´¢åˆ›é€ åŠ›ã€é—®é¢˜è§£å†³ä¸Žé€‚é¾„ AI å…¥é—¨ã€‚"],
-      ["Grade 3-5", "AI Imagination Summer Camp", "Students explore AI, creativity, digital problem-solving, teamwork, and beginner-friendly coding through hands-on projects.", "3-5 å¹´çº§ AI åˆ›æƒ³è¥ï¼šé€šè¿‡é¡¹ç›®å­¦ä¹  AIã€åˆ›é€ åŠ›ã€æ•°å­—åŒ–é—®é¢˜è§£å†³ã€å›¢é˜Ÿåˆä½œä¸Žå…¥é—¨ç¼–ç¨‹ã€‚"],
-      ["Grade 6-8", "AI Creation Camp", "Students build AI-powered projects, explore robotics and drones, and practice coding, computer vision, and innovation challenges.", "6-8 å¹´çº§ AI åˆ›é€ è¥ï¼šåˆ¶ä½œ AI é¡¹ç›®ï¼ŒæŽ¢ç´¢æœºå™¨äººã€æ— äººæœºã€ä»£ç ã€è®¡ç®—æœºè§†è§‰ä¸Žåˆ›æ–°æŒ‘æˆ˜ã€‚"],
-      ["Grade 9-12", "Advanced AI & Robotics", "High school students work toward portfolio-ready engineering and AI projects.", "9-12 å¹´çº§é«˜çº§ AI ä¸Žæœºå™¨äººï¼šé¢å‘ä½œå“é›†çš„å·¥ç¨‹ä¸Ž AI é¡¹ç›®ã€‚"]
+      ["Grade K-2", "AI Imagination Summer Camp", "Young builders explore creativity, problem-solving, and beginner-friendly AI through hands-on activities.", "K-2 AI 启蒙营:通过动手活动探索创造力、问题解决与适龄 AI 入门。"],
+      ["Grade 3-5", "AI Imagination Summer Camp", "Students explore AI, creativity, digital problem-solving, teamwork, and beginner-friendly coding through hands-on projects.", "3-5 年级 AI 创想营:通过项目学习 AI、创造力、数字化问题解决、团队合作与入门编程。"],
+      ["Grade 6-8", "AI Creation Camp", "Students build AI-powered projects, explore robotics and drones, and practice coding, computer vision, and innovation challenges.", "6-8 年级 AI 创造营:制作 AI 项目,探索机器人、无人机、代码、计算机视觉与创新挑战。"],
+      ["Grade 9-12", "Advanced AI & Robotics", "High school students work toward portfolio-ready engineering and AI projects.", "9-12 年级高级 AI 与机器人:面向作品集的工程与 AI 项目。"]
     ],
     courses: [
       ["W001", "Walnut 2026 Summer K-2", "AI Imagination Summer Camp K-2", "Grades K-2", "$499"],
@@ -217,67 +217,67 @@
   },
   roboticsClub: {
     intro: "Join a real AI robotics engineering team. From robot construction to algorithms, testing, and competition, students learn how real robots work. This is not just a robotics class. It is a long-term engineering training program.",
-    zhIntro: "åŠ å…¥çœŸæ­£çš„ AI æœºå™¨äººç ”å‘å›¢é˜Ÿã€‚ä»Žæœºå™¨äººæ­å»ºåˆ°ç®—æ³•ã€æµ‹è¯•ä¸Žæ¯”èµ›ï¼Œå­¦ç”Ÿä¼šç†è§£çœŸå®žæœºå™¨äººå¦‚ä½•å·¥ä½œã€‚è¿™ä¸åªæ˜¯æœºå™¨äººå…´è¶£ç­ï¼Œè€Œæ˜¯ä¸€å¥—é•¿æœŸå·¥ç¨‹è®­ç»ƒè®¡åˆ’ã€‚",
+    zhIntro: "加入真正的 AI 机器人研发团队。从机器人搭建到算法、测试与比赛,学生会理解真实机器人如何工作。这不只是机器人兴趣班,而是一套长期工程训练计划。",
     main: "Many robotics classes simply teach students to follow instructions and assemble. At AI Robotics Club, students learn how robots perceive the environment, what sensor data represents, how algorithms make decisions, why robots fail, and how testing and debugging lead to improvement.",
-    zhMain: "å¾ˆå¤šæœºå™¨äººè¯¾ç¨‹åªæ˜¯è®©å­¦ç”Ÿç…§ç€æ­ã€è·Ÿç€åšã€‚AI Robotics Club æ›´é‡è§†è®©å­¦ç”ŸçœŸæ­£ç†è§£æœºå™¨äººå¦‚ä½•æ„ŸçŸ¥çŽ¯å¢ƒã€ä¼ æ„Ÿå™¨æ•°æ®ä»£è¡¨ä»€ä¹ˆã€ç®—æ³•å¦‚ä½•åšåˆ¤æ–­ã€æœºå™¨äººä¸ºä»€ä¹ˆå¤±è´¥ï¼Œä»¥åŠå¦‚ä½•é€šè¿‡æµ‹è¯•å’Œè°ƒè¯•ä¸æ–­ä¼˜åŒ–ã€‚",
+    zhMain: "很多机器人课程只是让学生照着搭、跟着做。AI Robotics Club 更重视让学生真正理解机器人如何感知环境、传感器数据代表什么、算法如何做判断、机器人为什么失败,以及如何通过测试和调试不断优化。",
     learnSections: [
-      ["Robotics System Architecture", "Students learn sensors, controllers, motors, mechanical structures, algorithms, and feedback systems.", "æœºå™¨äººç³»ç»Ÿç»“æž„", "ç†è§£ä¼ æ„Ÿå™¨ã€æŽ§åˆ¶å™¨ã€ç”µæœºã€æœºæ¢°ç»“æž„ã€ç®—æ³•ä¸Žåé¦ˆç³»ç»Ÿå¦‚ä½•ååŒå·¥ä½œã€‚"],
-      ["Sensor Sampling & Data Analysis", "Students use distance sensors, color sensors, gyroscopes, cameras, testing logs, error analysis, and threshold tuning.", "ä¼ æ„Ÿå™¨é‡‡æ ·ä¸Žæ•°æ®åˆ†æž", "å­¦ä¹ ä¼ æ„Ÿå™¨é‡‡æ ·ã€æµ‹è¯•è®°å½•ã€è¯¯å·®åˆ†æžä¸Žé˜ˆå€¼è°ƒæ•´ã€‚"],
-      ["Control Logic & Algorithm Testing", "Students practice if/else logic, state machines, path planning, obstacle avoidance, task sequencing, and automation algorithms.", "æŽ§åˆ¶é€»è¾‘ä¸Žç®—æ³•æµ‹è¯•", "ç»ƒä¹ æ¡ä»¶é€»è¾‘ã€çŠ¶æ€æœºã€è·¯å¾„è§„åˆ’ã€é¿éšœã€ä»»åŠ¡æµç¨‹ä¸Žè‡ªåŠ¨åŒ–ç®—æ³•ã€‚"],
-      ["AI-Assisted Development & Debugging", "Students use AI tools to brainstorm, explain errors, optimize code, and improve designs while keeping independent judgment.", "AI è¾…åŠ©å¼€å‘ä¸Žè°ƒè¯•", "ä½¿ç”¨ AI è¾…åŠ©ç”Ÿæˆæ€è·¯ã€è§£é‡Šé”™è¯¯ã€ä¼˜åŒ–ä»£ç ä¸Žæ”¹è¿›æ–¹æ¡ˆï¼ŒåŒæ—¶ä¿æŒç‹¬ç«‹åˆ¤æ–­ã€‚"],
-      ["Engineering Construction & Prototype Iteration", "Students assemble robots, improve structures, integrate sensors, manage wiring, optimize motor control, and combine subsystems.", "å·¥ç¨‹æ­å»ºä¸ŽåŽŸåž‹è¿­ä»£", "ä»Žæ­å»ºã€ç»“æž„ä¼˜åŒ–ã€ä¼ æ„Ÿå™¨å®‰è£…ã€çº¿è·¯ç®¡ç†åˆ°ç³»ç»Ÿæ•´åˆã€‚"],
-      ["Robotics Competition Strategy", "Students analyze rules, break down objectives, optimize scoring strategies, simulate matches, debug on-site, and coordinate team roles.", "æœºå™¨äººç«žèµ›ç­–ç•¥", "åˆ†æžè§„åˆ™ã€æ‹†è§£ç›®æ ‡ã€ä¼˜åŒ–å¾—åˆ†ç­–ç•¥ã€æ¨¡æ‹Ÿè®­ç»ƒã€çŽ°åœºè°ƒè¯•ä¸Žå›¢é˜Ÿåˆ†å·¥ã€‚"]
+      ["Robotics System Architecture", "Students learn sensors, controllers, motors, mechanical structures, algorithms, and feedback systems.", "机器人系统结构", "理解传感器、控制器、电机、机械结构、算法与反馈系统如何协同工作。"],
+      ["Sensor Sampling & Data Analysis", "Students use distance sensors, color sensors, gyroscopes, cameras, testing logs, error analysis, and threshold tuning.", "传感器采样与数据分析", "学习传感器采样、测试记录、误差分析与阈值调整。"],
+      ["Control Logic & Algorithm Testing", "Students practice if/else logic, state machines, path planning, obstacle avoidance, task sequencing, and automation algorithms.", "控制逻辑与算法测试", "练习条件逻辑、状态机、路径规划、避障、任务流程与自动化算法。"],
+      ["AI-Assisted Development & Debugging", "Students use AI tools to brainstorm, explain errors, optimize code, and improve designs while keeping independent judgment.", "AI 辅助开发与调试", "使用 AI 辅助生成思路、解释错误、优化代码与改进方案,同时保持独立判断。"],
+      ["Engineering Construction & Prototype Iteration", "Students assemble robots, improve structures, integrate sensors, manage wiring, optimize motor control, and combine subsystems.", "工程搭建与原型迭代", "从搭建、结构优化、传感器安装、线路管理到系统整合。"],
+      ["Robotics Competition Strategy", "Students analyze rules, break down objectives, optimize scoring strategies, simulate matches, debug on-site, and coordinate team roles.", "机器人竞赛策略", "分析规则、拆解目标、优化得分策略、模拟训练、现场调试与团队分工。"]
     ],
     abilities: [
-      ["Systems Thinking", "See the complete system behind a robot: input, processing, output, and where failure occurs.", "ç³»ç»Ÿæ€ç»´", "ä»Žè¾“å…¥ã€å¤„ç†ã€è¾“å‡ºå’Œæ•…éšœä½ç½®ç†è§£å®Œæ•´ç³»ç»Ÿã€‚"],
-      ["Data Literacy", "Use sensor sampling, testing logs, and error analysis to understand how robots act based on data.", "æ•°æ®ç†è§£", "é€šè¿‡ä¼ æ„Ÿå™¨é‡‡æ ·ã€æµ‹è¯•è®°å½•ä¸Žè¯¯å·®åˆ†æžç†è§£æœºå™¨äººå¦‚ä½•åŸºäºŽæ•°æ®è¡ŒåŠ¨ã€‚"],
-      ["Algorithmic Thinking", "Understand how rules drive intelligent behavior, path planning, and automation.", "ç®—æ³•ä¸Žé€»è¾‘", "ç†è§£è§„åˆ™å¦‚ä½•é©±åŠ¨æ™ºèƒ½è¡Œä¸ºã€è·¯å¾„è§„åˆ’ä¸Žè‡ªåŠ¨åŒ–ã€‚"],
-      ["Engineering Debugging", "Locate problems, record observations, test hypotheses, and improve solutions.", "å·¥ç¨‹è°ƒè¯•", "å®šä½é—®é¢˜ã€è®°å½•çŽ°è±¡ã€éªŒè¯å‡è®¾å¹¶æŒç»­ä¼˜åŒ–æ–¹æ¡ˆã€‚"],
-      ["Teamwork", "Take roles across structure, programming, sensor testing, algorithm optimization, strategy, and presentation.", "å›¢é˜Ÿåä½œ", "æ‰¿æ‹…ç»“æž„ã€ç¼–ç¨‹ã€ä¼ æ„Ÿå™¨æµ‹è¯•ã€ç®—æ³•ä¼˜åŒ–ã€ç­–ç•¥ä¸Žå±•ç¤ºç­‰è§’è‰²ã€‚"],
-      ["Communication", "Explain the problem solved, how the robot works, what failed, and how the system improved.", "è¡¨è¾¾å±•ç¤º", "æ¸…æ¥šè¯´æ˜Žé¡¹ç›®è§£å†³çš„é—®é¢˜ã€æœºå™¨äººå·¥ä½œåŽŸç†ã€å¤±è´¥åŽŸå› ä¸Žä¼˜åŒ–è¿‡ç¨‹ã€‚"]
+      ["Systems Thinking", "See the complete system behind a robot: input, processing, output, and where failure occurs.", "系统思维", "从输入、处理、输出和故障位置理解完整系统。"],
+      ["Data Literacy", "Use sensor sampling, testing logs, and error analysis to understand how robots act based on data.", "数据理解", "通过传感器采样、测试记录与误差分析理解机器人如何基于数据行动。"],
+      ["Algorithmic Thinking", "Understand how rules drive intelligent behavior, path planning, and automation.", "算法与逻辑", "理解规则如何驱动智能行为、路径规划与自动化。"],
+      ["Engineering Debugging", "Locate problems, record observations, test hypotheses, and improve solutions.", "工程调试", "定位问题、记录现象、验证假设并持续优化方案。"],
+      ["Teamwork", "Take roles across structure, programming, sensor testing, algorithm optimization, strategy, and presentation.", "团队协作", "承担结构、编程、传感器测试、算法优化、策略与展示等角色。"],
+      ["Communication", "Explain the problem solved, how the robot works, what failed, and how the system improved.", "表达展示", "清楚说明项目解决的问题、机器人工作原理、失败原因与优化过程。"]
     ],
     outputs: ["Engineering notebooks", "Technical posters", "Demo videos", "Testing logs", "Competition strategy plans", "Project presentation materials"]
   },
   newsFields: [
-    ["Title", "English title plus Chinese subtitle recommended.", "æ ‡é¢˜", "ä¸­è‹±æ–‡æ ‡é¢˜ï¼›å»ºè®®è‹±æ–‡ä¸»æ ‡é¢˜ + ä¸­æ–‡å‰¯æ ‡é¢˜ã€‚", "Required"],
-    ["Date", "Specific event or publish date; avoid only saying recently.", "æ—¥æœŸ", "æ´»åŠ¨æˆ–å‘å¸ƒçš„å…·ä½“æ—¥æœŸï¼›é¿å…åªå†™â€œrecentlyâ€ã€‚", "Required"],
-    ["Brand / School", "Walnut / Arcadia / Education Center / Anaheim / MTPCA / Nuts / Foundation / Agentech Education / Group.", "æ‰€å±žå®žä½“", "é€‰æ‹© Walnut / Arcadia / Education Center / Anaheim / MTPCA / Nuts / Foundation / Agentech Education / Groupã€‚", "Required"],
-    ["Category", "Group News, School Events, Community Events, Student Highlights, Teacher Stories, Parent Workshops, Media Coverage.", "åˆ†ç±»", "Group Newsã€School Eventsã€Community Eventsã€Student Highlightsã€Teacher Storiesã€Parent Workshopsã€Media Coverageã€‚", "Required"],
-    ["Location", "City, campus, or event venue.", "åœ°ç‚¹", "åŸŽå¸‚ã€æ ¡åŒºæˆ–æ´»åŠ¨åœ°ç‚¹ã€‚", "Required"],
-    ["Summary", "80-160 words explaining what happened, who participated, and why it matters.", "æ‘˜è¦", "80-160 å­—ï¼Œè¯´æ˜Žå‘ç”Ÿäº†ä»€ä¹ˆã€è°å‚ä¸Žã€æœ‰ä»€ä¹ˆæ„ä¹‰ã€‚", "Required"],
-    ["Highlights", "3-5 bullets for homepage and social reuse.", "äº®ç‚¹", "3-5 ä¸ª bulletï¼Œä¾¿äºŽé¦–é¡µå’Œç¤¾åª’å¤ç”¨ã€‚", "Recommended"],
-    ["Photo Gallery", "At least 3 photos with portrait authorization and alt text.", "å›¾ç‰‡", "è‡³å°‘ 3 å¼ ï¼Œå¿…é¡»ç¡®è®¤è‚–åƒæŽˆæƒï¼›ç»™æ¯å¼ å›¾ alt textã€‚", "Recommended"],
-    ["CTA", "Enroll / Contact / Join Next Event / Donate / Apply.", "è¡ŒåŠ¨å…¥å£", "Enroll / Contact / Join Next Event / Donate / Applyã€‚", "Required"],
-    ["SEO Fields", "slug, meta title, meta description, OG image.", "SEO å­—æ®µ", "slugã€meta titleã€meta descriptionã€OG imageã€‚", "Required"]
+    ["Title", "English title plus Chinese subtitle recommended.", "标题", "中英文标题;建议英文主标题 + 中文副标题。", "Required"],
+    ["Date", "Specific event or publish date; avoid only saying recently.", "日期", "活动或发布的具体日期;避免只写\"recently\"。", "Required"],
+    ["Brand / School", "Walnut / Arcadia / Education Center / Anaheim / MTPCA / Nuts / Foundation / Agentech Education / Group.", "所属实体", "选择 Walnut / Arcadia / Education Center / Anaheim / MTPCA / Nuts / Foundation / Agentech Education / Group。", "Required"],
+    ["Category", "Group News, School Events, Community Events, Student Highlights, Teacher Stories, Parent Workshops, Media Coverage.", "分类", "Group News、School Events、Community Events、Student Highlights、Teacher Stories、Parent Workshops、Media Coverage。", "Required"],
+    ["Location", "City, campus, or event venue.", "地点", "城市、校区或活动地点。", "Required"],
+    ["Summary", "80-160 words explaining what happened, who participated, and why it matters.", "摘要", "80-160 字,说明发生了什么、谁参与、有什么意义。", "Required"],
+    ["Highlights", "3-5 bullets for homepage and social reuse.", "亮点", "3-5 个 bullet,便于首页和社媒复用。", "Recommended"],
+    ["Photo Gallery", "At least 3 photos with portrait authorization and alt text.", "图片", "至少 3 张,必须确认肖像授权;给每张图 alt text。", "Recommended"],
+    ["CTA", "Enroll / Contact / Join Next Event / Donate / Apply.", "行动入口", "Enroll / Contact / Join Next Event / Donate / Apply。", "Required"],
+    ["SEO Fields", "slug, meta title, meta description, OG image.", "SEO 字段", "slug、meta title、meta description、OG image。", "Required"]
   ],
   formFields: [
-    ["General inquiry types", "Parent Inquiry, Enrollment, Teacher Training, Agentech Education / AI Programs, Partnership, Careers, Media, Foundation/Donation.", "æ€»è¡¨å• Inquiry Typeï¼šParent Inquiryã€Enrollmentã€Teacher Trainingã€Agentech Education / AI Programsã€Partnershipã€Careersã€Mediaã€Foundation/Donationã€‚"],
-    ["Enrollment form", "Parent Name, Email, Phone, Child Age/Grade, Preferred Campus/Program, Message.", "æ‹›ç”Ÿè¡¨å•å­—æ®µï¼šParent Nameã€Emailã€Phoneã€Child Age/Gradeã€Preferred Campus/Programã€Messageã€‚"],
-    ["Partnership form", "Organization, Contact Person, Role, Partnership Type, Budget/Timeline optional, Message.", "åˆä½œè¡¨å•å­—æ®µï¼šOrganizationã€Contact Personã€Roleã€Partnership Typeã€Budget/Timelineï¼ˆå¯é€‰ï¼‰ã€Messageã€‚"],
-    ["Careers form", "Role Interest, Resume Upload, Credentials/Permit optional, Availability.", "æ‹›è˜è¡¨å•å­—æ®µï¼šRole Interestã€Resume Uploadã€Credentials/Permitï¼ˆå¯é€‰ï¼‰ã€Availabilityã€‚"],
-    ["Submission requirements", "Email notification, backend record, anti-spam verification, and privacy statement after every form submission.", "æ‰€æœ‰è¡¨å•æäº¤åŽéœ€è¦é‚®ä»¶é€šçŸ¥ã€åŽå°è®°å½•ã€ååžƒåœ¾éªŒè¯å’Œéšç§è¯´æ˜Žã€‚"]
+    ["General inquiry types", "Parent Inquiry, Enrollment, Teacher Training, Agentech Education / AI Programs, Partnership, Careers, Media, Foundation/Donation.", "总表单 Inquiry Type:Parent Inquiry、Enrollment、Teacher Training、Agentech Education / AI Programs、Partnership、Careers、Media、Foundation/Donation。"],
+    ["Enrollment form", "Parent Name, Email, Phone, Child Age/Grade, Preferred Campus/Program, Message.", "招生表单字段:Parent Name、Email、Phone、Child Age/Grade、Preferred Campus/Program、Message。"],
+    ["Partnership form", "Organization, Contact Person, Role, Partnership Type, Budget/Timeline optional, Message.", "合作表单字段:Organization、Contact Person、Role、Partnership Type、Budget/Timeline(可选)、Message。"],
+    ["Careers form", "Role Interest, Resume Upload, Credentials/Permit optional, Availability.", "招聘表单字段:Role Interest、Resume Upload、Credentials/Permit(可选)、Availability。"],
+    ["Submission requirements", "Email notification, backend record, anti-spam verification, and privacy statement after every form submission.", "所有表单提交后需要邮件通知、后台记录、反垃圾验证和隐私说明。"]
   ],
   technical: [
-    ["Bilingual content", "English primary with Chinese switch recommended. Do not mix both languages in the same body paragraph.", "ä¸­è‹±åŒè¯­ï¼šå»ºè®®è‹±æ–‡ä¸ºä¸»ï¼Œä¸­æ–‡åˆ‡æ¢ï¼›ä¸è¦æŠŠä¸¤ç§è¯­è¨€æ··åœ¨åŒä¸€æ®µæ­£æ–‡é‡Œã€‚"],
-    ["CMS", "Brand entities, programs, Agentech age tracks, news/events, team members, awards, and testimonials should be editable.", "CMSï¼šå“ç‰Œå®žä½“ã€è¯¾ç¨‹é¡¹ç›®ã€Agentech age tracksã€æ–°é—»æ´»åŠ¨ã€å›¢é˜Ÿæˆå‘˜ã€å¥–é¡¹è£èª‰ã€Testimonials éƒ½åº”å¯åŽå°ç¼–è¾‘ã€‚"],
-    ["SEO", "Independent URL per brand page, sitemap.xml, robots.txt, Open Graph images, and ongoing news pages.", "SEOï¼šæ¯ä¸ªå“ç‰Œé¡µç‹¬ç«‹ URLï¼›ç”Ÿæˆ sitemap.xmlã€robots.txtã€Open Graph å›¾ç‰‡ï¼›æ–°é—»é¡µé¢å¯æŒç»­æ›´æ–°ã€‚"],
-    ["Structured data", "Organization, EducationalOrganization, LocalBusiness, Event, Article.", "ç»“æž„åŒ–æ•°æ®ï¼šOrganizationã€EducationalOrganizationã€LocalBusinessã€Eventã€Articleã€‚"],
-    ["Performance", "Compress images, prefer WebP/AVIF, and keep the first-screen photo high quality without slowing the page.", "æ€§èƒ½ï¼šå›¾ç‰‡ç»Ÿä¸€åŽ‹ç¼©ï¼ŒWebP/AVIF ä¼˜å…ˆï¼›é¦–å±ç…§ç‰‡éœ€è¦é«˜è´¨é‡ä½†ä¸èƒ½æ‹–æ…¢åŠ è½½ã€‚"],
-    ["Accessibility", "Alt text for images, clear button semantics, passing color contrast, and mobile-friendly forms.", "å¯è®¿é—®æ€§ï¼šæ‰€æœ‰å›¾ç‰‡ alt textï¼›æŒ‰é’®è¯­ä¹‰æ¸…æ¥šï¼›é¢œè‰²å¯¹æ¯”åˆæ ¼ï¼›ç§»åŠ¨ç«¯è¡¨å•æ˜“å¡«å†™ã€‚"],
-    ["Security & privacy", "Privacy statement for forms, child photo authorization process, and role-based admin permissions.", "å®‰å…¨ä¸Žéšç§ï¼šè¡¨å•éšç§è¯´æ˜Žï¼Œå„¿ç«¥ç…§ç‰‡æŽˆæƒæµç¨‹ï¼ŒåŽå°è´¦å·æƒé™åˆ†çº§ã€‚"],
-    ["Analytics", "GA4, Search Console, and conversion events for enroll click, contact submit, partner submit, career submit.", "åˆ†æžï¼šGA4 / Search Console / conversion eventsï¼šEnroll clickã€Contact submitã€Partner submitã€Career submitã€‚"]
+    ["Bilingual content", "English primary with Chinese switch recommended. Do not mix both languages in the same body paragraph.", "中英双语:建议英文为主,中文切换;不要把两种语言混在同一段正文里。"],
+    ["CMS", "Brand entities, programs, Agentech age tracks, news/events, team members, awards, and testimonials should be editable.", "CMS:品牌实体、课程项目、Agentech age tracks、新闻活动、团队成员、奖项荣誉、Testimonials 都应可后台编辑。"],
+    ["SEO", "Independent URL per brand page, sitemap.xml, robots.txt, Open Graph images, and ongoing news pages.", "SEO:每个品牌页独立 URL;生成 sitemap.xml、robots.txt、Open Graph 图片;新闻页面可持续更新。"],
+    ["Structured data", "Organization, EducationalOrganization, LocalBusiness, Event, Article.", "结构化数据:Organization、EducationalOrganization、LocalBusiness、Event、Article。"],
+    ["Performance", "Compress images, prefer WebP/AVIF, and keep the first-screen photo high quality without slowing the page.", "性能:图片统一压缩,WebP/AVIF 优先;首屏照片需要高质量但不能拖慢加载。"],
+    ["Accessibility", "Alt text for images, clear button semantics, passing color contrast, and mobile-friendly forms.", "可访问性:所有图片 alt text;按钮语义清楚;颜色对比合格;移动端表单易填写。"],
+    ["Security & privacy", "Privacy statement for forms, child photo authorization process, and role-based admin permissions.", "安全与隐私:表单隐私说明,儿童照片授权流程,后台账号权限分级。"],
+    ["Analytics", "GA4, Search Console, and conversion events for enroll click, contact submit, partner submit, career submit.", "分析:GA4 / Search Console / conversion events:Enroll click、Contact submit、Partner submit、Career submit。"]
   ],
   checklist: [
-    ["Legal names, licenses, addresses, phones, emails", "Needed for compliance and parent trust.", "Operations / Principals", "æ¯ä¸ªå®žä½“çš„ legal nameã€licenseã€åœ°å€ã€ç”µè¯ã€é‚®ç®±ï¼›æ•™è‚²ç½‘ç«™æ¶‰åŠåˆè§„ä¸Žå®¶é•¿ä¿¡ä»»ï¼Œä¸èƒ½æ¨¡ç³Šã€‚"],
-    ["High-resolution transparent logos", "Needed for a consistent brand matrix and detail pages.", "Design / Marketing", "æ¯ä¸ªå“ç‰Œ logo é«˜æ¸…é€æ˜Žç‰ˆï¼›å“ç‰ŒçŸ©é˜µå’Œè¯¦æƒ…é¡µå¿…é¡»ç»Ÿä¸€è§†è§‰è´¨é‡ã€‚"],
-    ["12-20 quality photos per campus", "Real campus, teacher, and activity photos build more trust than stock images.", "Marketing / Campuses", "æ¯ä¸ªæ ¡åŒº 12-20 å¼ é«˜è´¨é‡ç…§ç‰‡ï¼›çœŸå®žæ ¡å›­ã€è€å¸ˆã€æ´»åŠ¨ç…§ç‰‡æ¯” stock image æ›´èƒ½æ‰“åŠ¨å®¶é•¿å’ŒæŠ•èµ„äººã€‚"],
-    ["Connie professional headshot and founder bio", "Needed for About and Founder Message.", "Founder / Marketing", "Connie ä¸“ä¸šå¤´åƒä¸Ž founder bioï¼›About å’Œé¦–é¡µ Founder Message éœ€è¦çœŸå®žé¢†å¯¼åŠ›ã€‚"],
-    ["Awards, certificates, and Walnut city honors photos", "Awards & Recognition must be provable.", "Operations / Marketing", "å¥–é¡¹è¯ä¹¦å’Œ Walnut å¸‚æ”¿åºœè£èª‰ç…§ç‰‡ï¼›Awards & Recognition å¿…é¡»å¯è¯æ˜Žã€‚"],
-    ["Student and parent photo authorization", "Required before news/activity/gallery publication.", "Operations / Legal", "å­¦ç”Ÿ/å®¶é•¿ç…§ç‰‡æŽˆæƒï¼›æ–°é—»æ´»åŠ¨å’Œå®˜ç½‘å›¾åº“ä¸Šçº¿å‰å¿…é¡»ç¡®è®¤ã€‚"],
-    ["I-20, teacher training certificates, nonprofit registration", "Any compliance credential must be verified before publishing.", "Operations / Legal", "I-20ã€æ•™å¸ˆåŸ¹è®­è¯ä¹¦ã€éžè¥åˆ©æ³¨å†Œç­‰èµ„è´¨ï¼›ä»»ä½•åˆè§„èµ„è´¨å¿…é¡»æ ¸å®žåŽå†å†™ã€‚"],
-    ["Accurate student and family counts", "Partners and investors will check data credibility.", "Finance / Operations", "å‡†ç¡®å­¦ç”Ÿæ•°é‡/æœåŠ¡å®¶åº­æ•°é‡ï¼›VC å’Œåˆä½œæ–¹ä¼šçœ‹æ•°æ®å¯ä¿¡åº¦ã€‚"],
-    ["Company email", "Recommended addresses: info@, admissions@, careers@, partnership@.", "IT / Domain Admin", "ä¼ä¸šé‚®ç®±ï¼šinfo@ã€admissions@ã€careers@ã€partnership@ã€‚"],
-    ["Agentech relationship and materials", "Confirm legal relationship, logo authorization, curriculum outline, teacher bios, student work/photo permissions.", "Founder / Operations / Legal", "Agentech Education å“ç‰Œå…³ç³»ä¸Žç´ æï¼›ç¡®è®¤æ³•å¾‹å…³ç³»ã€logo æŽˆæƒã€è¯¾ç¨‹å¤§çº²ã€è€å¸ˆ bioã€å­¦ç”Ÿä½œå“/ç…§ç‰‡æŽˆæƒã€‚"]
+    ["Legal names, licenses, addresses, phones, emails", "Needed for compliance and parent trust.", "Operations / Principals", "每个实体的 legal name、license、地址、电话、邮箱;教育网站涉及合规与家长信任,不能模糊。"],
+    ["High-resolution transparent logos", "Needed for a consistent brand matrix and detail pages.", "Design / Marketing", "每个品牌 logo 高清透明版;品牌矩阵和详情页必须统一视觉质量。"],
+    ["12-20 quality photos per campus", "Real campus, teacher, and activity photos build more trust than stock images.", "Marketing / Campuses", "每个校区 12-20 张高质量照片;真实校园、老师、活动照片比 stock image 更能打动家长和投资人。"],
+    ["Connie professional headshot and founder bio", "Needed for About and Founder Message.", "Founder / Marketing", "Connie 专业头像与 founder bio;About 和首页 Founder Message 需要真实领导力。"],
+    ["Awards, certificates, and Walnut city honors photos", "Awards & Recognition must be provable.", "Operations / Marketing", "奖项证书和 Walnut 市政府荣誉照片;Awards & Recognition 必须可证明。"],
+    ["Student and parent photo authorization", "Required before news/activity/gallery publication.", "Operations / Legal", "学生/家长照片授权;新闻活动和官网图库上线前必须确认。"],
+    ["I-20, teacher training certificates, nonprofit registration", "Any compliance credential must be verified before publishing.", "Operations / Legal", "I-20、教师培训证书、非营利注册等资质;任何合规资质必须核实后再写。"],
+    ["Accurate student and family counts", "Partners and investors will check data credibility.", "Finance / Operations", "准确学生数量/服务家庭数量;VC 和合作方会看数据可信度。"],
+    ["Company email", "Recommended addresses: info@, admissions@, careers@, partnership@.", "IT / Domain Admin", "企业邮箱:info@、admissions@、careers@、partnership@。"],
+    ["Agentech relationship and materials", "Confirm legal relationship, logo authorization, curriculum outline, teacher bios, student work/photo permissions.", "Founder / Operations / Legal", "Agentech Education 品牌关系与素材;确认法律关系、logo 授权、课程大纲、老师 bio、学生作品/照片授权。"]
   ],
   referenceSites: [
     ["Spring Education Group", "https://www.springeducationgroup.com/", "Multi-brand private school group", "Shows school count, education stages, and brand matrix; useful for combining multiple school brands into one group story."],
@@ -297,11 +297,11 @@
     ["Cognita", "https://www.cognita.com/", "Global school group", "Good multi-audience homepage: parent, teacher, student, school owner."]
   ],
   phases: [
-    ["Phase 1", "Build Home, About, Schools & Brands, Programs, Contact so the group site can publish.", "æ­å»º Homeã€Aboutã€Schools & Brandsã€Programsã€Contactï¼Œå…ˆä¿è¯é›†å›¢ç½‘ç«™å¯å‘å¸ƒã€‚"],
-    ["Phase 2", "Create templates for the 8 existing brand entities plus Agentech Education; add photos, addresses, CTAs, and news links.", "ä¸º 8 ä¸ªçŽ°æœ‰å“ç‰Œå®žä½“ + Agentech Education å»ºç«‹è¯¦æƒ…é¡µ/é¡¹ç›®é¡µæ¨¡æ¿ï¼Œè¡¥ç…§ç‰‡ã€åœ°å€ã€CTAã€æ–°é—»å…³è”ã€‚"],
-    ["Phase 3", "Add News & Events CMS with category, gallery, SEO, and latest articles on the homepage.", "åŠ å…¥ News & Events CMSï¼Œæ”¯æŒåˆ†ç±»ã€å›¾åº“ã€SEOã€é¦–é¡µæœ€æ–°æ–‡ç« ã€‚"],
-    ["Phase 4", "Add Community Impact, Careers, Partnership & Strategic Growth.", "åŠ å…¥ Community Impactã€Careersã€Partnership & Strategic Growthã€‚"],
-    ["Phase 5", "Finish bilingual switch, structured data, SEO, Google Business Profile links, and analytics.", "å®Œå–„ä¸­è‹±åˆ‡æ¢ã€ç»“æž„åŒ–æ•°æ®ã€SEOã€Google Business Profile é“¾æŽ¥ã€æ•°æ®åˆ†æžã€‚"]
+    ["Phase 1", "Build Home, About, Schools & Brands, Programs, Contact so the group site can publish.", "搭建 Home、About、Schools & Brands、Programs、Contact,先保证集团网站可发布。"],
+    ["Phase 2", "Create templates for the 8 existing brand entities plus Agentech Education; add photos, addresses, CTAs, and news links.", "为 8 个现有品牌实体 + Agentech Education 建立详情页/项目页模板,补照片、地址、CTA、新闻关联。"],
+    ["Phase 3", "Add News & Events CMS with category, gallery, SEO, and latest articles on the homepage.", "加入 News & Events CMS,支持分类、图库、SEO、首页最新文章。"],
+    ["Phase 4", "Add Community Impact, Careers, Partnership & Strategic Growth.", "加入 Community Impact、Careers、Partnership & Strategic Growth。"],
+    ["Phase 5", "Finish bilingual switch, structured data, SEO, Google Business Profile links, and analytics.", "完善中英切换、结构化数据、SEO、Google Business Profile 链接、数据分析。"]
   ],
   externalLinks: [
     ["Learning Tree Walnut Education Center", "https://www.learningtrees.us/"],
