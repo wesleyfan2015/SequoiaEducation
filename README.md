@@ -2,9 +2,16 @@
 
 Basic bilingual static website for Sequoia Education Group / 红衫教育集团.
 
+Website files are organized in `website/`.
+
+Website images are organized in `website/images/`.
+
+Original planning files are organized in `content-brief/`.
+
 Open `index.html` directly in a browser, or run a local server:
 
 ```powershell
+cd website
 python -m http.server 8097 --bind 127.0.0.1
 ```
 

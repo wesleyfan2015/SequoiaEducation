@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --ink: #17312b;
   --muted: #63736d;
   --leaf: #2f6f5e;
@@ -103,7 +103,7 @@ img {
   overflow: hidden;
   background:
     linear-gradient(90deg, rgba(18, 52, 43, 0.72), rgba(90, 14, 8, 0.34), rgba(18, 52, 43, 0.3)),
-    url("assets/sequoia-hero-top.jpg") top center / 100% auto no-repeat;
+    url("images/sequoia-redwood-hero-top.jpg") top center / 100% auto no-repeat;
   background-color: #17312b;
   color: #fff;
 }
@@ -465,7 +465,7 @@ li {
   max-width: none;
   background:
     linear-gradient(90deg, rgba(116, 0, 0, 0.96), rgba(150, 0, 0, 0.9)),
-    url("assets/sequoia-red-logo.jpg") center / cover;
+    url("images/sequoia-education-group-red-logo.jpg") center / cover;
   color: #fff;
 }
 
@@ -488,7 +488,7 @@ li {
   max-width: none;
   background:
     linear-gradient(180deg, rgba(150, 0, 0, 0.95), rgba(150, 0, 0, 0.78)),
-    url("assets/sequoia-red-logo.jpg") center / cover;
+    url("images/sequoia-education-group-red-logo.jpg") center / cover;
 }
 
 .schools-surface .section-inner {
