@@ -1,17 +1,17 @@
 const data = window.SEQUOIA_DATA;
 
 const pages = [
-  ["index.html", "Home"],
-  ["about.html", "About"],
-  ["schools-brands.html", "Schools & Brands"],
-  ["programs.html", "Programs"],
-  ["agentech-education.html", "Agentech Education"],
-  ["ai-club.html", "AI Club"],
-  ["news-events.html", "News & Events"],
-  ["community-impact.html", "Community Impact"],
-  ["partnership.html", "Partnership"],
-  ["careers.html", "Careers"],
-  ["contact.html", "Contact"]
+  ["/", "Home", "home"],
+  ["/about", "About", "about"],
+  ["/schools-brands", "Schools & Brands", "schools"],
+  ["/programs", "Programs", "programs"],
+  ["/agentech-education", "Agentech Education", "agentech"],
+  ["/ai-club", "AI Club", "ai-club"],
+  ["/news-events", "News & Events", "news"],
+  ["/community-impact", "Community Impact", "community"],
+  ["/partnership", "Partnership", "partnership"],
+  ["/careers", "Careers", "careers"],
+  ["/contact", "Contact", "contact"]
 ];
 
 function pageName() {
@@ -23,8 +23,8 @@ function brandSlug() {
 }
 
 function activeHref() {
-  const file = location.pathname.split("/").pop() || "index.html";
-  return file;
+  const path = location.pathname.replace(/\/$/, "") || "/";
+  return path.replace(/\.html$/, "");
 }
 
 function nav() {
@@ -32,12 +32,12 @@ function nav() {
   return `
     <header class="site-header">
       <div class="nav">
-        <a class="brand-lockup" href="index.html">
+        <a class="brand-lockup" href="/">
           <img src="images/sequoia-education-group-white-logo.png" alt="Sequoia Education Group logo">
           <span>${data.name}<br>${data.zhName}</span>
         </a>
         <nav class="nav-links" aria-label="Main navigation">
-          ${pages.map(([href, label]) => `<a class="${active === href ? "active" : ""}" href="${href}" ${href.startsWith("https://") ? 'target="_blank" rel="noreferrer"' : ""}>${label}</a>`).join("")}
+          ${pages.map(([href, label]) => `<a class="${active === href ? "active" : ""}" href="${href}">${label}</a>`).join("")}
         </nav>
       </div>
     </header>`;
@@ -85,7 +85,7 @@ function brandCard(brand) {
   const extra = `
     <p><strong>Location:</strong> ${brand.location}</p>
     <div class="button-row">
-      <a class="button light" href="brand-${brand.slug}.html">Learn More / \u4e86\u89e3\u66f4\u591a</a>
+      <a class="button light" href="/brand-${brand.slug}">Learn More / \u4e86\u89e3\u66f4\u591a</a>
       ${brand.url ? `<a class="button light" href="${brand.url}" target="_blank" rel="noreferrer">Official Site</a>` : ""}
     </div>`;
   return `
@@ -109,9 +109,9 @@ function renderHome() {
           <h1>${data.name}</h1>
           <p class="lede">${data.slogan}<br>${data.zhSlogan}</p>
           <div class="button-row">
-            <a class="button" href="schools-brands.html">Explore Our Schools</a>
-            <a class="button secondary" href="news-events.html">News & Events</a>
-            <a class="button secondary" href="partnership.html">Partner With Us</a>
+            <a class="button" href="/schools-brands">Explore Our Schools</a>
+            <a class="button secondary" href="/news-events">News & Events</a>
+            <a class="button secondary" href="/partnership">Partner With Us</a>
           </div>
         </div>
         <div class="hero-card">
@@ -182,9 +182,9 @@ function renderHome() {
           <p class="eyebrow">Final CTA / \u884c\u52a8\u5165\u53e3</p>
           <h3>Enroll Now / Join Our Team / Partner With Us</h3>
           <div class="button-row">
-            <a class="button" href="contact.html">Enroll Now</a>
-            <a class="button light" href="careers.html">Join Our Team</a>
-            <a class="button light" href="partnership.html">Partner With Us</a>
+            <a class="button" href="/contact">Enroll Now</a>
+            <a class="button light" href="/careers">Join Our Team</a>
+            <a class="button light" href="/partnership">Partner With Us</a>
           </div>
         </div>
       </div>
@@ -383,7 +383,7 @@ function renderBrand() {
             <li><strong>CTA / \u884c\u52a8\u5165\u53e3:</strong> Schedule a Tour, Enrollment Inquiry, Contact the Campus.</li>
           </ul>
           <div class="button-row">
-            <a class="button" href="contact.html">Contact / \u8054\u7cfb</a>
+            <a class="button" href="/contact">Contact / \u8054\u7cfb</a>
             ${brand.url ? `<a class="button light" href="${brand.url}" target="_blank" rel="noreferrer">Official Website</a>` : ""}
           </div>
         </div>
@@ -411,7 +411,7 @@ function renderAgentech() {
           <p>Agentech Education \u9762\u5411\u4e0d\u540c\u5e74\u9f84\u6bb5\u5b66\u751f\u63d0\u4f9b\u9002\u9f84 AI\u3001\u521b\u9020\u529b\u3001\u673a\u5668\u4eba\u3001\u65e0\u4eba\u673a\u3001\u8ba1\u7b97\u673a\u89c6\u89c9\u4e0e\u52a8\u624b\u5de5\u7a0b\u6311\u6218\u3002</p>
           <div class="button-row">
             <a class="button" href="https://www.agent-tech.ai/talents" target="_blank" rel="noreferrer">AI Robotics Club</a>
-            <a class="button light" href="contact.html">Request Program Info</a>
+            <a class="button light" href="/contact">Request Program Info</a>
           </div>
         </div>
         <img src="images/agentech-robotics-club-preview.png" alt="Agentech robotics project preview">
