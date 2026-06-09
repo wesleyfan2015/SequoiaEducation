@@ -32,7 +32,6 @@ function activeHref() {
 function nav() {
   const active = activeHref();
   const mainPages = pages.filter(([href]) => !utilityPages.has(href));
-  const bottomPages = pages.filter(([href]) => utilityPages.has(href));
   return `
     <header class="site-header">
       <div class="nav">
@@ -43,9 +42,6 @@ function nav() {
         <div class="nav-panel">
           <nav class="nav-links nav-links-main" aria-label="Main navigation">
             ${mainPages.map(([href, label]) => `<a class="${active === href ? "active" : ""}" href="${href}">${label}</a>`).join("")}
-          </nav>
-          <nav class="nav-links nav-links-bottom" aria-label="Secondary navigation">
-            ${bottomPages.map(([href, label]) => `<a class="${active === href ? "active" : ""}" href="${href}">${label}</a>`).join("")}
           </nav>
         </div>
       </div>
@@ -60,6 +56,7 @@ function footer() {
           <strong>${data.name} / ${data.zhName}</strong>
           <p>${data.slogan}<br>${data.zhSlogan}</p>
           <p>${data.address}<br>${data.email}<br>${data.domain}</p>
+          <p class="footer-utility-links"><a href="/careers">Careers</a><span>|</span><a href="/contact">Contact</a></p>
         </div>
         <div>
           <strong>Website links / \u7b2c\u4e09\u6587\u4ef6\u94fe\u63a5</strong>
