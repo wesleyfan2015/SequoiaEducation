@@ -46,23 +46,25 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  max-width: 1180px;
-  min-height: 76px;
+  gap: 34px;
+  width: 100%;
+  max-width: 1720px;
+  min-height: 112px;
   margin: 0 auto;
-  padding: 0 22px;
+  padding: 0 56px;
 }
 
 .brand-lockup {
   display: flex;
   align-items: center;
-  gap: 12px;
+  flex: 0 0 auto;
+  gap: 18px;
   text-decoration: none;
 }
 
 .brand-lockup img {
-  width: 86px;
-  height: 70px;
+  width: 132px;
+  height: 96px;
   border-radius: 0;
   object-fit: contain;
   object-position: center;
@@ -70,24 +72,33 @@ img {
 
 .brand-lockup span {
   display: block;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 800;
-  letter-spacing: 0.15em;
+  line-height: 1.18;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
 }
 
 .nav-links {
   display: flex;
-  flex-wrap: wrap;
+  flex: 1 1 auto;
+  flex-wrap: nowrap;
   justify-content: flex-end;
-  gap: 6px;
+  gap: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.nav-links::-webkit-scrollbar {
+  display: none;
 }
 
 .nav-links a {
   border-radius: 999px;
-  padding: 10px 12px;
+  padding: 12px 14px;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   text-decoration: none;
 }
@@ -218,7 +229,7 @@ p {
 
 .hero-card img {
   width: 100%;
-  max-height: 220px;
+  max-height: 330px;
   object-fit: cover;
   object-position: center;
   border-radius: 6px;
@@ -463,6 +474,8 @@ li {
 
 .page-hero-section {
   max-width: none;
+  padding-top: 112px;
+  padding-bottom: 104px;
   background:
     linear-gradient(90deg, rgba(116, 0, 0, 0.96), rgba(150, 0, 0, 0.9)),
     url("images/sequoia-education-group-red-logo.jpg") center / cover;
@@ -480,8 +493,14 @@ li {
   color: #fff;
 }
 
+.page-hero-section h1 {
+  max-width: 1040px;
+  font-size: clamp(56px, 6vw, 92px);
+}
+
 .page-hero-section .page-lede {
   color: rgba(255, 255, 255, 0.86);
+  font-size: 22px;
 }
 
 .schools-surface {
@@ -609,7 +628,28 @@ li {
   .nav {
     align-items: flex-start;
     flex-direction: column;
-    padding: 16px 22px;
+    gap: 14px;
+    min-height: 0;
+    padding: 16px 22px 14px;
+  }
+
+  .brand-lockup img {
+    width: 108px;
+    height: 80px;
+  }
+
+  .brand-lockup span {
+    font-size: 15px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    padding: 10px 12px;
   }
 
   .hero-inner,
@@ -630,5 +670,18 @@ li {
   .hero-inner {
     min-height: auto;
     padding-top: 54px;
+  }
+
+  .page-hero-section {
+    padding-top: 72px;
+    padding-bottom: 70px;
+  }
+
+  .page-hero-section h1 {
+    font-size: 44px;
+  }
+
+  .page-hero-section .page-lede {
+    font-size: 18px;
   }
 }

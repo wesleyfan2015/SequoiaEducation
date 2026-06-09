@@ -143,7 +143,7 @@ window.SEQUOIA_DATA = {
       zhType: "\u5173\u8054\u8eab\u5fc3\u5065\u5eb7\u54c1\u724c",
       location: "TBD",
       image: "images/yoga-me-beyond-logo.jpg",
-      url: "",
+      url: "https://yogamebeyond.com/",
       summary: "An affiliated wellness brand for parents, teachers, and community members. It should be grouped as wellness, not under schools.",
       zhSummary: "\u5efa\u8bae\u5f52\u7c7b\u4e3a Affiliated Wellness Brand,\u4e0d\u653e\u5728 School \u4e0b;\u670d\u52a1\u5bb6\u957f\u3001\u6559\u5e08\u3001\u793e\u533a\u6210\u5458\u8eab\u5fc3\u5065\u5eb7\u3002"
     },
@@ -156,7 +156,7 @@ window.SEQUOIA_DATA = {
       zhType: "AI \u6559\u80b2 / \u673a\u5668\u4eba / \u672a\u6765\u5b66\u4e60",
       location: "TBD",
       image: "images/agentech-education-logo.png",
-      url: "",
+      url: "https://www.agent-tech.ai/",
       summary: "A future-ready learning initiative or affiliated education technology project for K-12 AI literacy, robotics, data thinking, and project-based learning. Legal and brand relationship must be confirmed.",
       zhSummary: "\u5efa\u8bae\u4f5c\u4e3a Sequoia \u7684 future-ready learning initiative \u6216\u5173\u8054\u6559\u80b2\u79d1\u6280\u9879\u76ee;\u9762\u5411 K-12 \u7684 AI literacy\u3001robotics\u3001data/project learning\u3002\u4e0a\u7ebf\u524d\u9700\u786e\u8ba4\u4e0e\u96c6\u56e2\u7684\u6cd5\u5f8b/\u54c1\u724c\u5173\u7cfb\u3002"
     }
@@ -308,6 +308,8 @@ window.SEQUOIA_DATA = {
     ["Walnut International Montessori Preschool", "https://walnutmontessori.com/"],
     ["Learning Tree Montessori of Arcadia", "https://www.montessori-arcadia.com/"],
     ["Montessori Teacher Preparation of California", "https://www.calmtc.org/"],
-    ["Montessori of Anaheim", "https://www.montessorianaheim.com/"]
+    ["Montessori of Anaheim", "https://www.montessorianaheim.com/"],
+    ["Yoga Me & Beyond", "https://yogamebeyond.com/"],
+    ["Agentech", "https://www.agent-tech.ai/"]
   ]
 };

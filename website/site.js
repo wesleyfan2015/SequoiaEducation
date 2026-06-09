@@ -152,7 +152,7 @@ function renderHome() {
           <h2>AI literacy, robotics, and future-ready learning for K-12</h2>
           <p>${data.agentech.role}</p>
           <p>${data.agentech.zhRole}</p>
-          <div class="button-row"><a class="button" href="https://www.agent-tech.ai/agentech-education" target="_blank" rel="noreferrer">View Agentech Education</a></div>
+          <div class="button-row"><a class="button" href="https://www.agent-tech.ai/" target="_blank" rel="noreferrer">View Agentech</a></div>
         </div>
       </div>
     </section>
@@ -410,7 +410,7 @@ function renderAgentech() {
           <p>Agentech Education introduces students to age-appropriate AI, creativity, robotics, drones, computer vision, and hands-on engineering challenges.</p>
           <p>Agentech Education \u9762\u5411\u4e0d\u540c\u5e74\u9f84\u6bb5\u5b66\u751f\u63d0\u4f9b\u9002\u9f84 AI\u3001\u521b\u9020\u529b\u3001\u673a\u5668\u4eba\u3001\u65e0\u4eba\u673a\u3001\u8ba1\u7b97\u673a\u89c6\u89c9\u4e0e\u52a8\u624b\u5de5\u7a0b\u6311\u6218\u3002</p>
           <div class="button-row">
-            <a class="button" href="https://www.agent-tech.ai/talents" target="_blank" rel="noreferrer">AI Robotics Club</a>
+            <a class="button" href="https://www.agent-tech.ai/" target="_blank" rel="noreferrer">View Agentech</a>
             <a class="button light" href="/contact">Request Program Info</a>
           </div>
         </div>
@@ -441,7 +441,7 @@ function renderAiClub() {
           <h2>Join a real AI robotics engineering team.</h2>
           <p>${data.roboticsClub.intro}</p>
           <p>${data.roboticsClub.zhIntro}</p>
-          <div class="button-row"><a class="button" href="https://www.agent-tech.ai/talents" target="_blank" rel="noreferrer">View Agentech Talents</a></div>
+          <div class="button-row"><a class="button" href="https://www.agent-tech.ai/" target="_blank" rel="noreferrer">View Agentech</a></div>
         </div>
       </div>
       <div class="split" style="margin-top:34px">
