@@ -5,8 +5,7 @@ const pages = [
   ["/about", "About", "about"],
   ["/schools-brands", "Schools & Brands", "schools"],
   ["/programs", "Programs", "programs"],
-  ["/agentech-education", "Agentech Education", "agentech"],
-  ["/ai-club", "AI Club", "ai-club"],
+  ["agentech-menu", "Agentech", "agentech-menu"],
   ["/news-events", "News & Events", "news"],
   ["/community-impact", "Community Impact", "community"],
   ["/partnership", "Partnership", "partnership"],
@@ -15,6 +14,10 @@ const pages = [
 ];
 
 const utilityPages = new Set(["/careers", "/contact"]);
+const agentechPages = [
+  ["/agentech-education", "Agentech Education"],
+  ["/ai-club", "AI Club"]
+];
 
 function pageName() {
   return document.body.dataset.page || "home";
@@ -32,6 +35,20 @@ function activeHref() {
 function nav() {
   const active = activeHref();
   const mainPages = pages.filter(([href]) => !utilityPages.has(href));
+  const navItem = ([href, label]) => {
+    if (href !== "agentech-menu") {
+      return `<a class="${active === href ? "active" : ""}" href="${href}">${label}</a>`;
+    }
+
+    const isAgentechActive = agentechPages.some(([pageHref]) => active === pageHref);
+    return `
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger ${isAgentechActive ? "active" : ""}" type="button" aria-haspopup="true" aria-expanded="false">Agentech</button>
+        <div class="nav-dropdown-menu">
+          ${agentechPages.map(([pageHref, pageLabel]) => `<a class="${active === pageHref ? "active" : ""}" href="${pageHref}">${pageLabel}</a>`).join("")}
+        </div>
+      </div>`;
+  };
   return `
     <header class="site-header">
       <div class="nav">
@@ -41,7 +58,7 @@ function nav() {
         </a>
         <div class="nav-panel">
           <nav class="nav-links nav-links-main" aria-label="Main navigation">
-            ${mainPages.map(([href, label]) => `<a class="${active === href ? "active" : ""}" href="${href}">${label}</a>`).join("")}
+            ${mainPages.map(navItem).join("")}
           </nav>
         </div>
       </div>
