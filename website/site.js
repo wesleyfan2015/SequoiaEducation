@@ -14,6 +14,8 @@ const pages = [
   ["/contact", "Contact", "contact"]
 ];
 
+const utilityPages = new Set(["/careers", "/contact"]);
+
 function pageName() {
   return document.body.dataset.page || "home";
 }
@@ -29,6 +31,8 @@ function activeHref() {
 
 function nav() {
   const active = activeHref();
+  const mainPages = pages.filter(([href]) => !utilityPages.has(href));
+  const bottomPages = pages.filter(([href]) => utilityPages.has(href));
   return `
     <header class="site-header">
       <div class="nav">
@@ -36,9 +40,14 @@ function nav() {
           <img src="images/sequoia-education-group-white-logo.png" alt="Sequoia Education Group logo">
           <span>${data.name}<br>${data.zhName}</span>
         </a>
-        <nav class="nav-links" aria-label="Main navigation">
-          ${pages.map(([href, label]) => `<a class="${active === href ? "active" : ""}" href="${href}">${label}</a>`).join("")}
-        </nav>
+        <div class="nav-panel">
+          <nav class="nav-links nav-links-main" aria-label="Main navigation">
+            ${mainPages.map(([href, label]) => `<a class="${active === href ? "active" : ""}" href="${href}">${label}</a>`).join("")}
+          </nav>
+          <nav class="nav-links nav-links-bottom" aria-label="Secondary navigation">
+            ${bottomPages.map(([href, label]) => `<a class="${active === href ? "active" : ""}" href="${href}">${label}</a>`).join("")}
+          </nav>
+        </div>
       </div>
     </header>`;
 }
