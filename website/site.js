@@ -6,17 +6,20 @@ const pages = [
   ["/schools-brands", "Schools & Brands", "schools"],
   ["/programs", "Programs", "programs"],
   ["agentech-menu", "Agentech", "agentech-menu"],
-  ["/news-events", "News & Events", "news"],
-  ["/community-impact", "Community Impact", "community"],
+  ["news-menu", "News & Events", "news-menu"],
   ["/partnership", "Partnership", "partnership"],
   ["/careers", "Careers", "careers"],
   ["/contact", "Contact", "contact"]
 ];
 
-const utilityPages = new Set(["/careers", "/contact"]);
+const utilityPages = new Set(["/partnership", "/careers", "/contact"]);
 const agentechPages = [
   ["/agentech-education", "Agentech Education"],
   ["/ai-club", "AI Club"]
+];
+const newsPages = [
+  ["/news-events", "News & Events"],
+  ["/community-impact", "Community Impact"]
 ];
 
 function pageName() {
@@ -35,19 +38,22 @@ function activeHref() {
 function nav() {
   const active = activeHref();
   const mainPages = pages.filter(([href]) => !utilityPages.has(href));
+  const dropdown = (label, items, isActive) => `
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger ${isActive ? "active" : ""}" type="button" aria-haspopup="true" aria-expanded="false">${label}</button>
+        <div class="nav-dropdown-menu">
+          ${items.map(([pageHref, pageLabel]) => `<a class="${active === pageHref ? "active" : ""}" href="${pageHref}">${pageLabel}</a>`).join("")}
+        </div>
+      </div>`;
   const navItem = ([href, label]) => {
     if (href !== "agentech-menu") {
+      if (href === "news-menu") {
+        return dropdown(label, newsPages, newsPages.some(([pageHref]) => active === pageHref));
+      }
       return `<a class="${active === href ? "active" : ""}" href="${href}">${label}</a>`;
     }
 
-    const isAgentechActive = agentechPages.some(([pageHref]) => active === pageHref);
-    return `
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger ${isAgentechActive ? "active" : ""}" type="button" aria-haspopup="true" aria-expanded="false">Agentech</button>
-        <div class="nav-dropdown-menu">
-          ${agentechPages.map(([pageHref, pageLabel]) => `<a class="${active === pageHref ? "active" : ""}" href="${pageHref}">${pageLabel}</a>`).join("")}
-        </div>
-      </div>`;
+    return dropdown(label, agentechPages, agentechPages.some(([pageHref]) => active === pageHref));
   };
   return `
     <header class="site-header">
@@ -73,7 +79,7 @@ function footer() {
           <strong>${data.name} / ${data.zhName}</strong>
           <p>${data.slogan}<br>${data.zhSlogan}</p>
           <p>${data.address}<br>${data.email}<br>${data.domain}</p>
-          <p class="footer-utility-links"><a href="/careers">Careers</a><span>|</span><a href="/contact">Contact</a></p>
+          <p class="footer-utility-links"><a href="/partnership">Partnership</a><span>|</span><a href="/careers">Careers</a><span>|</span><a href="/contact">Contact</a></p>
         </div>
         <div>
           <strong>Website links / \u7b2c\u4e09\u6587\u4ef6\u94fe\u63a5</strong>
