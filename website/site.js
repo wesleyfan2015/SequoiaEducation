@@ -1,4 +1,4 @@
-const data = window.SEQUOIA_DATA;
+﻿const data = window.SEQUOIA_DATA;
 
 const pages = [
   ["/", "Home", "home"],
@@ -194,7 +194,7 @@ function renderHome() {
           ["2020", "Learning Tree Walnut Education Center / Walnut \u8bfe\u540e\u6559\u80b2\u4e2d\u5fc3"],
           ["2023", "Montessori of Anaheim / Anaheim \u6821\u533a"],
           ["2024", "Montessori Teacher Preparation of California / \u6559\u5e08\u57f9\u8bad"],
-          ["2025", "Nuts Education Institute and Yoga Me & Beyond / \u5b66\u672f\u89c4\u5212\u4e0e\u8eab\u5fc3\u5065\u5eb7"],
+          ["2025", "Yoga Me & Beyond / Wellness and community learning"],
           ["Coming Next", "Agentech Education / AI Future Learning"]
         ].map(([year, text]) => `<div class="timeline-item"><strong>${year}</strong><p>${text}</p></div>`).join("")}
       </div>
@@ -498,25 +498,354 @@ function renderAiClub() {
     </div></section>`;
 }
 
-function renderNews() {
-  const categories = [
-    ["Group News", "\u96c6\u56e2\u65b0\u95fb", "Milestones, strategic updates, anniversaries, awards, and group-wide announcements.", "\u96c6\u56e2\u91cc\u7a0b\u7891\u3001\u6218\u7565\u66f4\u65b0\u3001\u5468\u5e74\u6d3b\u52a8\u3001\u5956\u9879\u8363\u8a89\u4e0e\u96c6\u56e2\u516c\u544a\u3002"],
-    ["School Events", "\u6821\u56ed\u6d3b\u52a8", "Campus activities, open houses, seasonal celebrations, classroom moments, and family events.", "\u6821\u533a\u6d3b\u52a8\u3001\u5f00\u653e\u65e5\u3001\u8282\u65e5\u5e86\u795d\u3001\u8bfe\u5802\u77ac\u95f4\u4e0e\u5bb6\u5ead\u6d3b\u52a8\u3002"],
-    ["Community Events", "\u793e\u533a\u6d3b\u52a8", "Volunteer service, foundation activities, civic engagement, and local partnerships.", "\u5fd7\u613f\u670d\u52a1\u3001\u57fa\u91d1\u4f1a\u6d3b\u52a8\u3001\u793e\u533a\u53c2\u4e0e\u4e0e\u672c\u5730\u5408\u4f5c\u3002"],
-    ["Student Highlights", "\u5b66\u751f\u4eae\u70b9", "Student work, presentations, camp showcases, robotics demos, and growth stories.", "\u5b66\u751f\u4f5c\u54c1\u3001\u5c55\u793a\u6d3b\u52a8\u3001\u8425\u5730\u6210\u679c\u3001\u673a\u5668\u4eba demo \u4e0e\u6210\u957f\u6545\u4e8b\u3002"],
-    ["Teacher Stories", "\u6559\u5e08\u6545\u4e8b", "Teacher recognition, classroom practice, professional growth, and team culture.", "\u6559\u5e08\u8868\u5f70\u3001\u8bfe\u5802\u5b9e\u8df5\u3001\u4e13\u4e1a\u6210\u957f\u4e0e\u56e2\u961f\u6587\u5316\u3002"],
-    ["Parent Workshops", "\u5bb6\u957f\u8bfe\u5802", "Parent education, wellness, academic planning, AI literacy, and school-family partnership.", "\u5bb6\u957f\u6559\u80b2\u3001\u8eab\u5fc3\u5065\u5eb7\u3001\u5b66\u672f\u89c4\u5212\u3001AI \u7d20\u517b\u4e0e\u5bb6\u6821\u5408\u4f5c\u3002"]
-  ];
 
-  return `
-    ${pageHeader("News & Events", "\u65b0\u95fb\u6d3b\u52a8", "Stories from Sequoia's group growth, schools, classrooms, teachers, students, families, and community events.", "\u5c55\u793a\u96c6\u56e2\u53d1\u5c55\u3001\u5b66\u6821\u6d3b\u52a8\u3001\u8bfe\u5802\u6545\u4e8b\u3001\u6559\u5e08\u6545\u4e8b\u3001\u5b66\u751f\u4eae\u70b9\u3001\u5bb6\u957f\u8bfe\u5802\u4e0e\u793e\u533a\u6d3b\u52a8\u3002")}
-    <section class="section alt"><div class="section-inner">
-      <div class="card-grid">
-        ${categories.map((item) => card(item[0], item[1], item[2], item[3])).join("")}
-      </div>
-    </div></section>`;
+const sequoiaNewsArticle = {
+  "date": "2026-06-16",
+  "displayDate": "June 16, 2026",
+  "zhDisplayDate": "2026\u5e746\u670816\u65e5",
+  "category": "Group News / AI Education",
+  "zhCategory": "\u96c6\u56e2\u65b0\u95fb / AI \u6559\u80b2",
+  "title": "Sequoia Education Group Joins Faraday Future as First Institutional Partner \u2014 and Brings AI Robots Directly into the Classroom",
+  "zhTitle": "\u7ea2\u6749\u6559\u80b2\u96c6\u56e2\u4f5c\u4e3a\u9996\u6279\u673a\u6784\u5408\u4f5c\u4f19\u4f34\u51fa\u5e2d FF EAI \u53d1\u5e03\u4f1a\u2014\u2014\u5e76\u5c06 AI \u673a\u5668\u4eba\u76f4\u63a5\u5e26\u5165\u8bfe\u5802",
+  "excerpt": "After acquiring 20 FF Navi quadruped educational robots at the Faraday Future EAI launch, Sequoia has already launched its K-12 AI Summer Camp at Learning Tree Walnut \u2014 where students are now learning with real robots, real AI engineers, and real projects.",
+  "zhExcerpt": "\u5728 Faraday Future EAI \u53d1\u5e03\u4f1a\u4e0a\u6b63\u5f0f\u91c7\u8d2d20\u53f0 FX Navi \u56db\u8db3\u6559\u5b66\u673a\u5668\u4eba\u540e\uff0c\u7ea2\u6749\u6559\u80b2\u96c6\u56e2\u968f\u5373\u5728 Learning Tree Walnut \u6821\u533a\u542f\u52a8 K-12 AI \u6691\u671f\u8425\u2014\u2014\u5b66\u751f\u4eec\u5df2\u5728\u4f7f\u7528\u771f\u5b9e\u7684\u673a\u5668\u4eba\u3001\u771f\u6b63\u7684 AI \u5de5\u7a0b\u5e08\u5f00\u5c55\u771f\u5b9e\u7684\u9879\u76ee\u5b66\u4e60\u3002",
+  "images": [
+    {
+      "src": "images/news/sequoia-ff-robots-2026/01-connie-keynote.jpg",
+      "alt": "Connie Sun speaking on stage at the Faraday Future EAI Robot Education Ecosystem Launch",
+      "caption": "Connie Sun, Founder & CEO of Sequoia Educational Group, on stage at the Faraday Future EAI Robot Education Ecosystem Launch, June 16, 2026, Los Angeles.",
+      "zhCaption": "Connie Sun\u5973\u58eb\u5728 Faraday Future EAI \u673a\u5668\u4eba\u6559\u80b2\u751f\u6001\u6218\u7565\u53d1\u5e03\u4f1a\u4e0a\u53d1\u8868\u4e3b\u65e8\u6f14\u8bb2\uff0c2026\u5e746\u670816\u65e5\uff0c\u6d1b\u6749\u77f6\u3002"
+    },
+    {
+      "src": "images/news/sequoia-ff-robots-2026/02-ff-launch-group.jpg",
+      "alt": "Sequoia Education Group and AgentTech team at the Faraday Future EAI launch",
+      "caption": "Sequoia Educational Group and AgentTech team at the Faraday Future EAI launch, June 16, 2026, Los Angeles.",
+      "zhCaption": "\u7ea2\u6749\u6559\u80b2\u96c6\u56e2\u53ca AgentTech \u56e2\u961f\u5728 Faraday Future EAI \u53d1\u5e03\u4f1a\u73b0\u573a\u5408\u5f71\uff0c2026\u5e746\u670816\u65e5\uff0c\u6d1b\u6749\u77f6\u3002"
+    },
+    {
+      "src": "images/news/sequoia-ff-robots-2026/03-humanoid-classroom.jpg",
+      "alt": "AgentTech AI engineer introducing a humanoid robot to students",
+      "caption": "An AgentTech AI engineer introduces a humanoid robot to students at Learning Tree Walnut Education Center as part of the AI Summer Camp program.",
+      "zhCaption": "AgentTech AI \u5de5\u7a0b\u5e08\u5728 Learning Tree Walnut \u6821\u533a\u5411\u5b66\u751f\u5c55\u793a\u4eba\u5f62\u673a\u5668\u4eba\uff0c\u5b69\u5b50\u4eec\u56f4\u5750\u4e13\u6ce8\u89c2\u770b\u3002"
+    },
+    {
+      "src": "images/news/sequoia-ff-robots-2026/04-navi-classroom.jpg",
+      "alt": "Learning Tree Walnut students experiencing the FF Navi robot dog",
+      "caption": "Young students at Learning Tree Walnut Education Center experience the FF Navi robot dog up close \u2014 their first hands-on encounter with embodied AI.",
+      "zhCaption": "Learning Tree Walnut \u6821\u533a\u5b66\u751f\u8fd1\u8ddd\u79bb\u4f53\u9a8c FX Navi \u673a\u5668\u72d7\u3002"
+    },
+    {
+      "src": "images/news/sequoia-ff-robots-2026/05-lab-team.jpg",
+      "alt": "Sequoia Education Group representatives at the California EAI Robotics Education and Innovation Lab",
+      "caption": "Sequoia Educational Group representatives at the California EAI Robotics Education & Innovation Lab, Faraday Future HQ.",
+      "zhCaption": "\u7ea2\u6749\u6559\u80b2\u96c6\u56e2\u4ee3\u8868\u5728 Faraday Future \u603b\u90e8 California EAI Robotics Education & Innovation Lab \u7559\u5f71\u3002"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Overview",
+      "zhTitle": "\u65b0\u95fb\u6982\u89c8",
+      "body": [
+        "LOS ANGELES, CA \u2014 June 16, 2026.   Sequoia Educational Group was honored to participate as a featured institutional partner at the Faraday Future (FF) EAI Robot Education Ecosystem Strategy Launch, held at FF's \"Silicon Beach\" headquarters in Los Angeles. Founder and CEO Connie Sun took the stage to deliver a keynote address alongside FF executives, investors, educators, and representatives from surrounding school districts. California State Treasurer Fiona Ma also sent a special congratulatory video message for the event."
+      ],
+      "zhBody": [
+        "\u3010\u7f8e\u56fd\u52a0\u5229\u798f\u5c3c\u4e9a\u5dde\u6d1b\u6749\u77f6\uff0c2026\u5e746\u670816\u65e5\u3011\u7ea2\u6749\u6559\u80b2\u96c6\u56e2\uff08Sequoia Educational Group\uff09\u4f5c\u4e3a\u91cd\u8981\u673a\u6784\u5408\u4f5c\u4f19\u4f34\uff0c\u53d7\u9080\u51fa\u5e2d Faraday Future\uff08FF\uff09\u5728\u6d1b\u6749\u77f6\"\u7845\u6ee9\"\u65b0\u603b\u90e8\u4e3e\u529e\u7684EAI \u673a\u5668\u4eba\u6559\u80b2\u751f\u6001\u6218\u7565\u53d1\u5e03\u4f1a\u3002\u96c6\u56e2\u521b\u59cb\u4eba\u517cCEOConnie Sun\u5973\u58eb\u767b\u53f0\u53d1\u8868\u4e3b\u65e8\u6f14\u8bb2\uff0c\u4e0e FF \u9ad8\u7ba1\u3001\u6295\u8d44\u4eba\u53ca\u5468\u8fb9\u5b66\u533a\u4ee3\u8868\u5171\u540c\u89c1\u8bc1\u8fd9\u4e00\u5386\u53f2\u65f6\u523b\u3002\u52a0\u5dde\u8d22\u957f Fiona Ma \u4ea6\u7279\u522b\u5f55\u5236\u795d\u8d3a\u89c6\u9891\u81f4\u8f9e\u3002"
+      ]
+    },
+    {
+      "title": "The Handover: 20 FF Navi Robots, Now in the Classroom",
+      "zhTitle": "\u6b63\u5f0f\u4ea4\u63a5\uff1a20\u53f0 FX Navi \u673a\u5668\u4eba\uff0c\u73b0\u5df2\u8fdb\u5165\u8bfe\u5802",
+      "body": [
+        "At the launch event, Sequoia Educational Group was recognized as the first institution in the world to acquire 20 units of the FF Navi quadruped educational robot \u2014 priced at $1,990 per unit and the only robot dog in the United States under $2,000 with full secondary development capabilities. A formal on-stage handover ceremony marked the beginning of this active, classroom-ready partnership.",
+        "Sequoia's decision to partner with FF and be among the first to deploy these robots in the classroom was driven by a clear mission: to bring FF's most advanced education platform \u2014 including their humanoid robots, robot dogs, and EAI technology \u2014 directly into our schools and into the hands of families across our surrounding community in Walnut, Arcadia, and Irvine. We believe the future of AI education should not be limited to tech hubs. It belongs in every classroom, in every neighborhood.",
+        "\"AI education is no longer something far away. It is already becoming part of our children's future. We are not only using FF's education products \u2014 we are proud to become a cooperation partner and education developer with FF, working side by side to build a real learning system for students.\"  \u2014 Connie Sun, Founder & CEO, Sequoia Educational Group"
+      ],
+      "zhBody": [
+        "\u53d1\u5e03\u4f1a\u4e0a\uff0c\u7ea2\u6749\u6559\u80b2\u96c6\u56e2\u4ee5\u5168\u7403\u9996\u6279\u673a\u6784\u8eab\u4efd\u6b63\u5f0f\u91c7\u8d2d20\u53f0 FX Navi \u56db\u8db3\u6559\u5b66\u673a\u5668\u4eba\uff0c\u672c\u4f53\u552e\u4ef71,990\u7f8e\u5143\uff0c\u662f\u5168\u7f8e\u552f\u4e00\u552e\u4ef7\u4f4e\u4e8e2,000\u7f8e\u5143\u3001\u4e14\u652f\u6301\u5b8c\u6574\u4e8c\u6b21\u5f00\u53d1\u529f\u80fd\u7684\u6559\u80b2\u673a\u5668\u72d7\u3002\u73b0\u573a\u4e3e\u884c\u7684\u6b63\u5f0f\u4ea4\u63a5\u4eea\u5f0f\uff0c\u6807\u5fd7\u7740\u8fd9\u6bb5\u5207\u5b9e\u53ef\u843d\u5730\u7684\u6559\u80b2\u5408\u4f5c\u4f19\u4f34\u5173\u7cfb\u6b63\u5f0f\u5f00\u542f\u3002",
+        "\u7ea2\u6749\u6559\u80b2\u96c6\u56e2\u9009\u62e9\u4e0e FF \u5408\u4f5c\u3001\u5e76\u6210\u4e3a\u9996\u6279\u5c06\u8fd9\u6279\u673a\u5668\u4eba\u5e26\u8fdb\u8bfe\u5802\u7684\u673a\u6784\uff0c\u80cc\u540e\u6709\u660e\u786e\u7684\u4f7f\u547d\uff1a\u5c06 FF \u6700\u5148\u8fdb\u7684\u6559\u80b2\u5e73\u53f0\u2014\u2014\u5305\u62ec\u4eba\u5f62\u673a\u5668\u4eba\u3001\u673a\u5668\u72d7\u53ca EAI \u5177\u8eab\u667a\u80fd\u6280\u672f\u2014\u2014\u771f\u6b63\u5f15\u5165\u6211\u4eec\u7684\u6559\u80b2\u4f53\u7cfb\uff0c\u9001\u8fdb Walnut\u3001Arcadia\u3001Irvine \u53ca\u5468\u8fb9\u793e\u533a\u6bcf\u4e2a\u5bb6\u5ead\u7684\u624b\u4e2d\u3002\u6211\u4eec\u76f8\u4fe1\uff0cAI \u6559\u80b2\u7684\u672a\u6765\u4e0d\u5e94\u6b62\u6b65\u4e8e\u79d1\u6280\u56ed\u533a\uff0c\u800c\u5e94\u8d70\u8fdb\u6bcf\u4e00\u95f4\u6559\u5ba4\u3001\u6bcf\u4e00\u4e2a\u793e\u533a\u3002",
+        "\"AI\u6559\u80b2\u4e0d\u518d\u662f\u9065\u8fdc\u7684\u672a\u6765\uff0c\u5b83\u5df2\u7ecf\u6210\u4e3a\u5b69\u5b50\u4eec\u672a\u6765\u7684\u4e00\u90e8\u5206\u3002\u6211\u4eec\u4e0d\u53ea\u662f\u4f7f\u7528 FF \u7684\u6559\u80b2\u4ea7\u54c1\uff0c\u66f4\u8363\u5e78\u5730\u6210\u4e3a FF \u7684\u5408\u4f5c\u4f19\u4f34\u548c\u6559\u80b2\u5f00\u53d1\u8005\uff0c\u643a\u624b\u5171\u5efa\u771f\u5b9e\u6709\u6548\u7684 AI \u5b66\u4e60\u4f53\u7cfb\u3002\"  \u2014\u2014 Connie Sun\uff0c\u7ea2\u6749\u6559\u80b2\u96c6\u56e2\u521b\u59cb\u4eba\u517cCEO"
+      ]
+    },
+    {
+      "title": "From Launch to Classroom: Already in Action",
+      "zhTitle": "\u4ece\u53d1\u5e03\u5230\u8bfe\u5802\uff1a\u5408\u4f5c\u5df2\u5728\u771f\u5b9e\u843d\u5730",
+      "body": [
+        "Sequoia's partnership with FF is not only a milestone announcement \u2014 it is already producing real results on the ground. Within weeks of the launch, the K-12 AI Summer Camp powered by this partnership has opened its doors at Learning Tree Walnut Education Center, with students from Kindergarten through Grade 12 now learning AI and robotics using the FF Navi robots and humanoid robots in real classroom sessions.",
+        "The curriculum is developed by AgentTech Inc. \u2014 an AI software development company collaborating with Sequoia Educational Group \u2014 whose team also presented at the FF launch event. This makes Sequoia one of the first institutions in the United States to move from partnership announcement to active classroom deployment of FF's EAI education ecosystem."
+      ],
+      "zhBody": [
+        "\u5bf9\u7ea2\u6749\u6559\u80b2\u96c6\u56e2\u800c\u8a00\uff0c\u4e0e FF \u7684\u5408\u4f5c\u4e0d\u53ea\u662f\u4e00\u4e2a\u91cc\u7a0b\u7891\u5f0f\u7684\u5ba3\u544a\u2014\u2014\u5b83\u5df2\u7ecf\u8f6c\u5316\u4e3a\u771f\u5b9e\u7684\u8bfe\u5802\u884c\u52a8\u3002\u53d1\u5e03\u4f1a\u540e\u6570\u5468\u5185\uff0c\u4f9d\u6258\u672c\u6b21\u5408\u4f5c\u7684 K-12 AI \u6691\u671f\u8425\u5df2\u5728 Learning Tree Walnut Education Center \u6b63\u5f0f\u5f00\u8425\uff0cK-12 \u5404\u5e74\u9f84\u6bb5\u5b66\u751f\u6b63\u5728\u4f7f\u7528 FX Navi \u673a\u5668\u4eba\u53ca\u4eba\u5f62\u673a\u5668\u4eba\u5f00\u5c55\u771f\u5b9e\u7684 AI \u8bfe\u7a0b\u5b66\u4e60\u3002",
+        "\u8bfe\u7a0b\u5185\u5bb9\u7531\u7ea2\u6749\u6559\u80b2\u96c6\u56e2\u5408\u4f5c\u7684 AI \u8f6f\u4ef6\u5f00\u53d1\u516c\u53f8 AgentTech Inc. \u8d1f\u8d23\u7814\u53d1\uff0cAgentTech \u56e2\u961f\u540c\u6837\u5728\u672c\u6b21 FF \u53d1\u5e03\u4f1a\u4e0a\u53d1\u8868\u4e86\u6f14\u8bb2\u3002\u8fd9\u4f7f\u7ea2\u6749\u6559\u80b2\u96c6\u56e2\u6210\u4e3a\u5168\u7f8e\u6700\u65e9\u5b9e\u73b0\u4ece\u5408\u4f5c\u5ba3\u5e03\u5230 FF EAI \u6559\u80b2\u751f\u6001\u8bfe\u5802\u771f\u5b9e\u843d\u5730\u7684\u673a\u6784\u4e4b\u4e00\u3002"
+      ]
+    },
+    {
+      "title": "Part of the World's First EAI Robot Education Ecosystem",
+      "zhTitle": "\u5168\u7403\u9996\u4e2a\"\u4e09\u4f4d\u4e00\u4f53\"EAI \u673a\u5668\u4eba\u6559\u80b2\u751f\u6001",
+      "body": [
+        "The launch also marked the debut of FF's \"Three-in-One\" EAI Robot Education Ecosystem Strategy \u2014 the world's first platform designed simultaneously for B2B education institutions and B2C family education. FF also launched an open-source developer platform for youth, a new Futurist humanoid robot, and the FX Navi robot line. As an official FF Robotics PAR partner, Sequoia will continue to collaborate with FF on curriculum development, teacher training, and expanding AI education access across Southern California.",
+        "\"Our vision is bigger than one classroom. We hope to work with FF to develop, promote, and bring AI education solutions to more schools, more families, and more students in our surrounding communities. We believe this is not only a strong education direction \u2014 it is also a great opportunity to shape the next generation.\"  \u2014 Connie Sun"
+      ],
+      "zhBody": [
+        "\u672c\u6b21\u53d1\u5e03\u4f1a\u540c\u6b65\u63ed\u5f00\u4e86 FF \u5168\u7403\u9996\u4e2a\"\u4e09\u4f4d\u4e00\u4f53\"EAI \u673a\u5668\u4eba\u6559\u80b2\u751f\u6001\u6218\u7565\uff0c\u8fd9\u662f\u5168\u7403\u9996\u4e2a\u540c\u65f6\u9762\u5411 To B \u6559\u80b2\u673a\u6784\u4e0e To C \u5bb6\u5ead\u6559\u80b2\u7684\u673a\u5668\u4eba\u6559\u80b2\u5e73\u53f0\uff0c\u5e76\u53d1\u5e03\u4e86\u9762\u5411\u9752\u5c11\u5e74\u7684\u5f00\u6e90\u5f00\u653e\u5f00\u53d1\u8005\u5e73\u53f0\u3001\u5168\u65b0 Futurist \u4eba\u5f62\u673a\u5668\u4eba\u4e0e FX Navi \u56db\u8db3\u673a\u5668\u4eba\u5168\u7cfb\u3002\u4f5c\u4e3a FF Robotics \u5b98\u65b9 PAR \u5408\u4f5c\u4f19\u4f34\uff0c\u7ea2\u6749\u6559\u80b2\u96c6\u56e2\u5c06\u6301\u7eed\u4e0e FF \u5728\u8bfe\u7a0b\u7814\u53d1\u3001\u6559\u5e08\u57f9\u8bad\u53ca\u5357\u52a0\u5dde AI \u6559\u80b2\u8986\u76d6\u6269\u5c55\u7b49\u65b9\u5411\u6df1\u5ea6\u534f\u4f5c\u3002",
+        "\"\u6211\u4eec\u7684\u613f\u666f\u4e0d\u6b62\u4e8e\u4e00\u95f4\u6559\u5ba4\u3002\u6211\u4eec\u5e0c\u671b\u4e0e FF \u5171\u540c\u5f00\u53d1\u3001\u63a8\u5e7f AI \u6559\u80b2\u89e3\u51b3\u65b9\u6848\uff0c\u5c06\u8fd9\u5957\u771f\u5b9e\u6709\u6548\u7684\u5b66\u4e60\u4f53\u7cfb\u5e26\u5230\u66f4\u591a\u5b66\u6821\u3001\u66f4\u591a\u5bb6\u5ead\u3001\u66f4\u591a\u5b69\u5b50\u8eab\u8fb9\u3002\"  \u2014\u2014 Connie Sun"
+      ]
+    },
+    {
+      "title": "FX Navi: The Robot Built for Classrooms and Homes",
+      "zhTitle": "FX Navi\uff1a\u4e13\u4e3a\u8bfe\u5802\u4e0e\u5bb6\u5ead\u6253\u9020\u7684\u673a\u5668\u4eba",
+      "body": [
+        "Central to the FF EAI education ecosystem is the FX Navi quadruped educational robot \u2014 the only robot dog in the United States priced under $2,000 ($1,990) with full secondary development capabilities. Weighing just 8kg and measuring 46.5\u00d720\u00d751.5cm, it is designed to move between classrooms and living rooms with ease.",
+        "What sets Navi apart is its integrated learning ecosystem: a built-in graphical programming platform, an official curriculum spanning nine progressive levels, and a Skill Store \u2014 all running in parallel. Students plug in an iOS or Android smartphone as the robot's brain, giving it full computational power, camera, and microphone capabilities instantly.",
+        "FF has also released the Navi's 3D dog-head model as open source, allowing students to design and 3D-print their own custom heads \u2014 making every Navi uniquely theirs. Ongoing OTA upgrades will continuously unlock new AI capabilities, including autonomous following, multi-modal perception, and interactive responses combining language, expression, and movement."
+      ],
+      "zhBody": [
+        "FF EAI \u6559\u80b2\u751f\u6001\u7684\u6838\u5fc3\u4ea7\u54c1\u2014\u2014FX Navi \u56db\u8db3\u6559\u80b2\u673a\u5668\u4eba\uff0c\u662f\u5168\u7f8e\u552f\u4e00\u4e00\u6b3e\u552e\u4ef7\u4f4e\u4e8e2,000\u7f8e\u5143\uff081,990\u7f8e\u5143\uff09\u3001\u4e14\u652f\u6301\u5b8c\u6574\u4e8c\u6b21\u5f00\u53d1\u529f\u80fd\u7684\u673a\u5668\u72d7\u3002\u6574\u673a\u91cd\u91cf\u4ec58kg\uff0c\u673a\u8eab\u5c3a\u5bf846.5\u00d720\u00d751.5cm\uff0c\u53ef\u8f7b\u677e\u5728\u8bfe\u5802\u4e0e\u5ba2\u5385\u4e4b\u95f4\u7a7f\u884c\u3002",
+        "Navi \u7684\u72ec\u7279\u4e4b\u5904\u5728\u4e8e\u5176\u4e00\u4f53\u5316\u5b66\u4e60\u751f\u6001\uff1a\u5185\u7f6e\u56fe\u5f62\u5316\u7f16\u7a0b\u5e73\u53f0\u3001\u5171\u4e5d\u4e2a\u8fdb\u9636\u7b49\u7ea7\u7684\u5b98\u65b9\u8bfe\u7a0b\uff0c\u4ee5\u53ca Skill Store\uff0c\u4e09\u5c42\u5e76\u884c\u3002\u5b66\u751f\u5c06 iOS \u6216 Android \u624b\u673a\u63d2\u5165\u72d7\u5934\u6a21\u5757\uff0c\u624b\u673a\u77ac\u95f4\u6210\u4e3a\u673a\u5668\u4eba\u7684\u5927\u8111\u4e0e\u611f\u5b98\uff0c\u7b97\u529b\u3001\u6444\u50cf\u5934\u3001\u9ea6\u514b\u98ce\u5168\u90e8\u6fc0\u6d3b\u3002",
+        "FF \u540c\u6b65\u5f00\u653e\u4e86 Navi \u72d7\u5934\u7684 3D \u6a21\u578b\uff0c\u5b66\u751f\u53ef\u81ea\u884c\u8bbe\u8ba1\u6253\u5370\u4e13\u5c5e\u72d7\u5934\uff0c\u8ba9\u6bcf\u4e00\u53ea Navi \u90fd\u4e0e\u4f17\u4e0d\u540c\u3002\u6301\u7eed\u7684 OTA \u5347\u7ea7\u5c06\u4e0d\u65ad\u89e3\u9501\u65b0 AI \u529f\u80fd\uff0c\u5305\u62ec\u81ea\u4e3b\u8ddf\u968f\u3001\u591a\u6a21\u6001\u611f\u77e5\uff0c\u4ee5\u53ca\u7ed3\u5408\u8bed\u8a00\u3001\u8868\u60c5\u4e0e\u52a8\u4f5c\u7684\u4ea4\u4e92\u56de\u5e94\u3002"
+      ]
+    },
+    {
+      "title": "Open Developer Platform for Young Creators",
+      "zhTitle": "\u5f00\u6e90\u5f00\u653e\u5f00\u53d1\u8005\u5e73\u53f0\uff08\u9752\u5c11\u5e74\u7248\uff09\uff1a\u8ba9\u5b69\u5b50\u4ece\u4f7f\u7528\u8005\u53d8\u4e3a\u521b\u9020\u8005",
+      "body": [
+        "FF has officially launched its Open Source Developer Platform (Youth Edition), built around the principles of openness and creation. The platform's first tools, released at the launch event, include:",
+        "\u2022Brain Blocks \u2014 a block-based programming platform supporting the full pathway from visual blocks to ROS2 deployment, with one-code-to-multiple-robots deployment and Vibe Coding (natural language to program generation)",
+        "\u2022EAI Soul \u2014 an engine for shaping a robot's personality, voice, and knowledge base",
+        "\u2022SDK/API \u2014 a local development toolkit for advanced developers and engineers",
+        "The platform also introduces the Youth Agent Skill Store, where students can publish their own Agent Skills, build portfolios, and see their work run on real robots. Teachers can share outstanding student projects with the entire class. FF has also launched a developer incentive program offering revenue sharing, hackathons, campus programs, and global community exposure \u2014 so every creator can benefit from what they build."
+      ],
+      "zhBody": [
+        "FF \u6b63\u5f0f\u4e0a\u7ebf\u5f00\u6e90\u5f00\u653e\u5f00\u53d1\u8005\u5e73\u53f0\uff08\u9752\u5c11\u5e74\u7248\uff09\uff0c\u4ee5\"\u5f00\u653e\"\u4e0e\"\u5f00\u53d1\"\u4e3a\u6838\u5fc3\uff0c\u9996\u6279\u5de5\u5177\u4eca\u65e5\u5f00\u653e\uff1a",
+        "\u2022Brain Blocks\u2014\u2014\u79ef\u6728\u5f0f\u7f16\u7a0b\u5e73\u53f0\uff0c\u652f\u6301\u4ece Block \u5230 ROS2 \u7684\u5b8c\u6574\u8def\u5f84\u3001\u4e00\u7801\u591a\u673a\u90e8\u7f72\uff0c\u4ee5\u53ca\u7528\u81ea\u7136\u8bed\u8a00\u751f\u6210\u7a0b\u5e8f\u7684 Vibe Coding",
+        "\u2022EAI Soul\u2014\u2014\u5851\u9020\u673a\u5668\u4eba\u4e2a\u6027\u3001\u97f3\u8272\u4e0e\u4e13\u5c5e\u77e5\u8bc6\u5e93\u7684\"\u7075\u9b42\"\u5f15\u64ce",
+        "\u2022SDK/API\u2014\u2014\u9762\u5411\u4e13\u4e1a\u5f00\u53d1\u8005\u4e0e\u5de5\u7a0b\u5e08\u7684\u672c\u5730\u5f00\u53d1\u5957\u4ef6",
+        "\u5e73\u53f0\u540c\u6b65\u53d1\u5e03 Youth Agent Skill Store\uff1a\u5b66\u751f\u53ef\u53d1\u5e03\u81ea\u5df1\u7684 Agent Skill\u3001\u5efa\u7acb\u4f5c\u54c1\u96c6\uff0c\u5e76\u4eb2\u773c\u770b\u5230\u81ea\u5df1\u7684\u521b\u4f5c\u5728\u771f\u5b9e\u673a\u5668\u4eba\u4e0a\u8fd0\u884c\uff1b\u8001\u5e08\u53ef\u5c06\u4f18\u79c0\u4f5c\u54c1\u5206\u4eab\u7ed9\u5168\u73ed\u3002FF \u8fd8\u542f\u52a8\u4e86\u5f00\u53d1\u8005\u751f\u6001\u6fc0\u52b1\u8ba1\u5212\uff0c\u901a\u8fc7\u6536\u76ca\u5206\u6210\u3001\u9ed1\u5ba2\u677e\u3001\u6821\u56ed\u8ba1\u5212\u548c\u5168\u7403\u793e\u533a\u66dd\u5149\uff0c\u8ba9\u6bcf\u4e00\u4f4d\u5f00\u53d1\u8005\u90fd\u80fd\u56e0\u521b\u9020\u83b7\u5f97\u56de\u62a5\u3002"
+      ]
+    },
+    {
+      "title": "FF Robotics PAR Partner Program: Building a Global EAI Education Ecosystem",
+      "zhTitle": "FF Robotics PAR \u5408\u4f5c\u4f19\u4f34\u8ba1\u5212\uff1a\u5171\u5efa\u5168\u7403 EAI \u6559\u80b2\u751f\u6001",
+      "body": [
+        "At the launch, FF formally announced the FF Robotics PAR (Partner) Program, inviting institutions worldwide to join in three categories:",
+        "\u2022Regional Channel Partners \u2014 expanding FF's sales and service network",
+        "\u2022Education Content Partners \u2014 co-developing curriculum, teaching content, and educational applications",
+        "\u2022Ecosystem Co-builders \u2014 deep collaboration around products, data, operations, and services",
+        "Sequoia Educational Group joins as an Education Content Partner and institutional purchaser \u2014 one of the first PAR members to move from agreement to active classroom deployment. Through AgentTech Inc., Sequoia is already co-developing the curriculum framework that will power this ecosystem across its K\u201312 campuses."
+      ],
+      "zhBody": [
+        "\u53d1\u5e03\u4f1a\u4e0a\uff0cFF \u6b63\u5f0f\u542f\u52a8 FF Robotics PAR\uff08\u5408\u4f5c\u4f19\u4f34\uff09\u8ba1\u5212\uff0c\u9762\u5411\u5168\u7403\u63a8\u52a8\u4e09\u7c7b\u5408\u4f5c\uff1a",
+        "\u2022\u533a\u57df\u6e20\u9053\u4f19\u4f34\u2014\u2014\u5171\u540c\u6269\u5c55 FF \u7684\u9500\u552e\u4e0e\u670d\u52a1\u7f51\u7edc",
+        "\u2022\u6559\u80b2\u5185\u5bb9\u4f19\u4f34\u2014\u2014\u5171\u540c\u5f00\u53d1\u8bfe\u7a0b\u4f53\u7cfb\u3001\u6559\u5b66\u5185\u5bb9\u53ca\u6559\u80b2\u5e94\u7528",
+        "\u2022\u751f\u6001\u5171\u5efa\u4f19\u4f34\u2014\u2014\u56f4\u7ed5\u4ea7\u54c1\u3001\u6570\u636e\u3001\u8fd0\u8425\u4e0e\u670d\u52a1\u6df1\u5ea6\u5408\u4f5c",
+        "\u7ea2\u6749\u6559\u80b2\u96c6\u56e2\u4ee5\u6559\u80b2\u5185\u5bb9\u4f19\u4f34\u4e0e\u9996\u6279\u673a\u6784\u91c7\u8d2d\u5546\u7684\u53cc\u91cd\u8eab\u4efd\u52a0\u5165 PAR \u8ba1\u5212\uff0c\u6210\u4e3a\u6700\u65e9\u5b9e\u73b0\u4ece\u7b7e\u7ea6\u5230\u8bfe\u5802\u771f\u5b9e\u843d\u5730\u7684 PAR \u6210\u5458\u4e4b\u4e00\u3002\u4f9d\u6258 AgentTech Inc.\uff0c\u7ea2\u6749\u6559\u80b2\u96c6\u56e2\u6b63\u5728\u5171\u540c\u7814\u53d1\u8bfe\u7a0b\u6846\u67b6\uff0c\u5e76\u5df2\u5728\u65d7\u4e0b K\u201312 \u6821\u533a\u5168\u9762\u63a8\u8fdb EAI \u6559\u80b2\u751f\u6001\u7684\u843d\u5730\u3002"
+      ]
+    },
+    {
+      "title": "About Sequoia Educational Group",
+      "zhTitle": "\u5173\u4e8e\u7ea2\u6749\u6559\u80b2\u96c6\u56e2",
+      "body": [
+        "Sequoia Educational Group is a K-12 education organization serving children and families across Los Angeles and Orange County, California, with over ten years of experience in early childhood education, after-school programs, and Montessori teacher training. Learning Tree Walnut Education Center is Sequoia's flagship campus, located at 20781 Amar Rd., Unit 7, Walnut, CA 91789.",
+        "Media inquiries: learningtreewalnut@gmail.com  |  909-612-7668  |  www.learningtrees.us",
+        "Sequoia Educational Group  x  AgentTech Education  x  Faraday Future"
+      ],
+      "zhBody": [
+        "\u7ea2\u6749\u6559\u80b2\u96c6\u56e2\uff08Sequoia Educational Group\uff09\u662f\u670d\u52a1\u6d1b\u6749\u77f6\u53ca\u6a59\u53bf\u5730\u533a\u7684\u7efc\u5408\u6027 K-12 \u6559\u80b2\u673a\u6784\uff0c\u6df1\u8015\u5e7c\u513f\u6559\u80b2\u3001\u8bfe\u540e\u5b66\u672f\u8f85\u5bfc\u53ca\u8499\u53f0\u68ad\u5229\u6559\u5e08\u57f9\u8bad\u903e\u5341\u5e74\u3002Learning Tree Walnut Education Center \u662f\u7ea2\u6749\u6559\u80b2\u96c6\u56e2\u65d7\u4e0b\u6838\u5fc3\u6821\u533a\uff0c\u5730\u5740\uff1a20781 Amar Rd., Unit 7, Walnut, CA 91789\u3002",
+        "\u5a92\u4f53\u8054\u7cfb\u53ca\u5408\u4f5c\u54a8\u8be2\uff1alearningtreewalnut@gmail.com  |  \u7535\u8bdd\uff1a909-612-7668  |  www.learningtrees.us",
+        "Sequoia Educational Group  x  AgentTech Education  x  Faraday Future"
+      ]
+    }
+  ]
+};
+
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
+function renderNewsParagraph(text) {
+  const clean = text.startsWith("•") ? text.slice(1).trim() : text;
+  if (text.startsWith("•")) {
+    return `<li>${escapeHtml(clean)}</li>`;
+  }
+  if (clean.startsWith('"') || clean.startsWith('â€œ')) {
+    return `<blockquote>${escapeHtml(clean)}</blockquote>`;
+  }
+  return `<p>${escapeHtml(clean)}</p>`;
+}
+
+function renderNewsSections(article, language) {
+  return article.sections.map((section) => {
+    const title = language === "zh" ? section.zhTitle : section.title;
+    const body = language === "zh" ? section.zhBody : section.body;
+    let html = "";
+    let listOpen = false;
+
+    body.forEach((paragraph) => {
+      if (paragraph.startsWith("•") && !listOpen) {
+        html += '<ul class="news-article-list">';
+        listOpen = true;
+      }
+      if (!paragraph.startsWith("•") && listOpen) {
+        html += "</ul>";
+        listOpen = false;
+      }
+      html += renderNewsParagraph(paragraph);
+    });
+
+    if (listOpen) html += "</ul>";
+
+    return `
+      <section class="news-story-section">
+        <h3>${escapeHtml(title)}</h3>
+        ${html}
+      </section>`;
+  }).join("");
+}
+
+function renderNewsArticlePanel(article, language) {
+  const title = language === "zh" ? article.zhTitle : article.title;
+  const excerpt = language === "zh" ? article.zhExcerpt : article.excerpt;
+  const date = language === "zh" ? article.zhDisplayDate : article.displayDate;
+  const category = language === "zh" ? article.zhCategory : article.category;
+
+  return `
+    <div class="news-language-panel" data-lang-panel="${language}" ${language === "zh" ? "hidden" : ""}>
+      <div class="news-article-title-row">
+        <div>
+          <p class="eyebrow">${escapeHtml(category)}</p>
+          <h2>${escapeHtml(title)}</h2>
+        </div>
+        <div class="news-article-meta">
+          <strong>${escapeHtml(date)}</strong>
+        </div>
+      </div>
+      <p class="news-article-deck">${escapeHtml(excerpt)}</p>
+      ${renderNewsSections(article, language)}
+    </div>`;
+}
+
+function renderNewsGallery(article, language = "en") {
+  return article.images.map((image) => `
+    <figure class="news-gallery-item">
+      <img src="${image.src}" alt="${escapeHtml(image.alt)}" loading="lazy">
+      <figcaption>${escapeHtml(language === "zh" ? image.zhCaption : image.caption)}</figcaption>
+    </figure>`).join("");
+}
+
+function renderNews() {
+  const article = sequoiaNewsArticle;
+  const featured = article.images[0];
+  return `
+    <section class="news-list-hero">
+      <div class="news-list-inner">
+        <p class="eyebrow">Sequoia Updates</p>
+        <h1>News</h1>
+        <a class="news-list-card" href="#sequoia-ff-robots-2026" data-news-open>
+          <div>
+            <div class="news-list-meta"><span>${article.displayDate}</span></div>
+            <h2>${escapeHtml(article.title)}</h2>
+            <p>${escapeHtml(article.excerpt)}</p>
+            <span class="news-read-more">Read more</span>
+          </div>
+          <img src="${featured.src}" alt="${escapeHtml(featured.alt)}">
+        </a>
+      </div>
+    </section>
+    <article class="news-article" id="sequoia-ff-robots-2026" hidden>
+      <section class="news-slideshow" aria-label="Article image gallery">
+        <div class="news-slideshow-main">
+          <img data-slide-image src="${featured.src}" alt="${escapeHtml(featured.alt)}">
+          <div class="news-slide-caption">
+            <p data-slide-caption="en">${escapeHtml(featured.caption)}</p>
+            <p data-slide-caption="zh" hidden>${escapeHtml(featured.zhCaption)}</p>
+          </div>
+          <div class="news-slide-dots">${article.images.map((_, index) => `<button type="button" class="${index === 0 ? "active" : ""}" data-slide-dot="${index}" aria-label="Show image ${index + 1}"></button>`).join("")}</div>
+        </div>
+        <div class="news-filmstrip">
+          ${article.images.map((image, index) => `
+            <button type="button" class="${index === 0 ? "active" : ""}" data-slide-index="${index}" data-src="${image.src}" data-alt="${escapeHtml(image.alt)}" data-caption-en="${escapeHtml(image.caption)}" data-caption-zh="${escapeHtml(image.zhCaption)}" aria-label="View image ${index + 1}">
+              <img src="${image.src}" alt="${escapeHtml(image.alt)}">
+            </button>`).join("")}
+        </div>
+      </section>
+      <section class="news-article-body">
+        <a class="news-back-link" href="#top" data-news-close>Back to News</a>
+        <div class="news-language-bar" aria-label="Article language">
+          <button type="button" class="active" data-news-lang="en">English</button>
+          <button type="button" data-news-lang="zh">中文</button>
+        </div>
+        ${renderNewsArticlePanel(article, "en")}
+        ${renderNewsArticlePanel(article, "zh")}
+      </section>
+    </article>`;
+}
+
+function initNewsLanguageToggles() {
+  const buttons = document.querySelectorAll("[data-news-lang]");
+  if (!buttons.length) return;
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const language = button.dataset.newsLang;
+      buttons.forEach((item) => item.classList.toggle("active", item === button));
+      document.querySelectorAll("[data-lang-panel]").forEach((panel) => {
+        panel.hidden = panel.dataset.langPanel !== language;
+      });
+      document.querySelectorAll("[data-slide-caption]").forEach((caption) => {
+        caption.hidden = caption.dataset.slideCaption !== language;
+      });
+    });
+  });
+}
+
+function initNewsSlideshow() {
+  const image = document.querySelector("[data-slide-image]");
+  const captions = {
+    en: document.querySelector('[data-slide-caption="en"]'),
+    zh: document.querySelector('[data-slide-caption="zh"]')
+  };
+  const thumbs = [...document.querySelectorAll("[data-slide-index]")];
+  const dots = [...document.querySelectorAll("[data-slide-dot]")];
+  if (!image || !thumbs.length) return;
+
+  const setSlide = (index) => {
+    const thumb = thumbs[index];
+    if (!thumb) return;
+    image.src = thumb.dataset.src;
+    image.alt = thumb.dataset.alt || "";
+    if (captions.en) captions.en.textContent = thumb.dataset.captionEn || "";
+    if (captions.zh) captions.zh.textContent = thumb.dataset.captionZh || "";
+    thumbs.forEach((item, itemIndex) => item.classList.toggle("active", itemIndex === index));
+    dots.forEach((item, itemIndex) => item.classList.toggle("active", itemIndex === index));
+  };
+
+  thumbs.forEach((thumb, index) => thumb.addEventListener("click", () => setSlide(index)));
+  dots.forEach((dot, index) => dot.addEventListener("click", () => setSlide(index)));
+}
+
+function initNewsArticleOpen() {
+  const openLink = document.querySelector("[data-news-open]");
+  const closeLink = document.querySelector("[data-news-close]");
+  const article = document.querySelector(".news-article");
+  if (!openLink || !article) return;
+
+  openLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    article.hidden = false;
+    article.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  if (closeLink) {
+    closeLink.addEventListener("click", (event) => {
+      event.preventDefault();
+      article.hidden = true;
+      document.querySelector(".news-list-hero")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+}
 function render() {
   let html = "";
   const page = pageName();
@@ -535,6 +864,14 @@ function render() {
   document.body.insertAdjacentHTML("afterbegin", nav());
   document.querySelector("main").innerHTML = html;
   document.body.insertAdjacentHTML("beforeend", footer());
+  if (page === "news") {
+    initNewsLanguageToggles();
+    initNewsSlideshow();
+    initNewsArticleOpen();
+  }
 }
 
 render();
+
+
+

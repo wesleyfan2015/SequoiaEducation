@@ -109,19 +109,6 @@ window.SEQUOIA_DATA = {
       zhSummary: "\u57f9\u517b\u4e13\u4e1a\u8499\u7279\u68ad\u5229\u6559\u5e08;I-20 \u6216\u5408\u89c4\u8d44\u8d28\u5982\u8981\u5199\u5fc5\u987b\u5148\u6838\u5b9e\u3002"
     },
     {
-      slug: "nuts-education-institute",
-      name: "Nuts Education Institute",
-      zhName: "Nuts Education Institute",
-      year: "2025",
-      type: "Academic Development / High School Planning / College Counseling",
-      zhType: "\u5b66\u672f\u53d1\u5c55 / \u9ad8\u4e2d\u89c4\u5212 / \u5347\u5b66\u54a8\u8be2",
-      location: "TBD",
-      image: "images/nuts-education-institute-logo-crop.jpg",
-      url: "",
-      summary: "Academic development, high school planning, and personalized counseling. The service scope and teacher credentials need to be completed.",
-      zhSummary: "Academic development\u3001high school planning\u3001personalized counseling;\u9700\u8865\u5145\u5177\u4f53\u670d\u52a1\u8303\u56f4\u3001\u8001\u5e08\u8d44\u8d28\u3002"
-    },
-    {
       slug: "sequoia-forest-foundation",
       name: "Sequoia Forest Foundation",
       zhName: "Sequoia Forest Foundation",
@@ -241,7 +228,7 @@ window.SEQUOIA_DATA = {
   newsFields: [
     ["Title", "English title plus Chinese subtitle recommended.", "\u6807\u9898", "\u4e2d\u82f1\u6587\u6807\u9898;\u5efa\u8bae\u82f1\u6587\u4e3b\u6807\u9898 + \u4e2d\u6587\u526f\u6807\u9898\u3002", "Required"],
     ["Date", "Specific event or publish date; avoid only saying recently.", "\u65e5\u671f", "\u6d3b\u52a8\u6216\u53d1\u5e03\u7684\u5177\u4f53\u65e5\u671f;\u907f\u514d\u53ea\u5199\"recently\"\u3002", "Required"],
-    ["Brand / School", "Walnut / Arcadia / Education Center / Anaheim / MTPCA / Nuts / Foundation / Agentech Education / Group.", "\u6240\u5c5e\u5b9e\u4f53", "\u9009\u62e9 Walnut / Arcadia / Education Center / Anaheim / MTPCA / Nuts / Foundation / Agentech Education / Group\u3002", "Required"],
+    ["Brand / School", "Walnut / Arcadia / Education Center / Anaheim / MTPCA / Foundation / Agentech Education / Group.", "\u6240\u5c5e\u5b9e\u4f53", "\u9009\u62e9 Walnut / Arcadia / Education Center / Anaheim / MTPCA / Foundation / Agentech Education / Group\u3002", "Required"],
     ["Category", "Group News, School Events, Community Events, Student Highlights, Teacher Stories, Parent Workshops, Media Coverage.", "\u5206\u7c7b", "Group News\u3001School Events\u3001Community Events\u3001Student Highlights\u3001Teacher Stories\u3001Parent Workshops\u3001Media Coverage\u3002", "Required"],
     ["Location", "City, campus, or event venue.", "\u5730\u70b9", "\u57ce\u5e02\u3001\u6821\u533a\u6216\u6d3b\u52a8\u5730\u70b9\u3002", "Required"],
     ["Summary", "80-160 words explaining what happened, who participated, and why it matters.", "\u6458\u8981", "80-160 \u5b57,\u8bf4\u660e\u53d1\u751f\u4e86\u4ec0\u4e48\u3001\u8c01\u53c2\u4e0e\u3001\u6709\u4ec0\u4e48\u610f\u4e49\u3002", "Required"],
