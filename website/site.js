@@ -3,8 +3,8 @@
 const pages = [
   ["/index.html", "Home", "home"],
   ["/about.html", "About", "about"],
-  ["/schools-brands.html", "Schools & Brands", "schools"],
   ["/programs.html", "Programs", "programs"],
+  ["/schools-brands.html", "Schools & Brands", "schools"],
   ["agentech-menu", "Agentech", "agentech-menu"],
   ["news-menu", "News & Events", "news-menu"],
   ["/partnership.html", "Partnership", "partnership"],
