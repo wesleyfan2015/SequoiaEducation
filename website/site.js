@@ -85,10 +85,9 @@ function applyLanguage(language, persist = true) {
 
   const toggle = document.querySelector("[data-language-toggle]");
   if (toggle) {
-    const nextLanguage = activeLanguage === "zh" ? "English" : "\u4e2d\u6587";
-    toggle.textContent = nextLanguage;
     toggle.setAttribute("aria-label", activeLanguage === "zh" ? "Switch to English" : "\u5207\u6362\u5230\u4e2d\u6587");
     toggle.setAttribute("aria-pressed", String(activeLanguage === "zh"));
+    toggle.dataset.activeLanguage = activeLanguage;
   }
 }
 
@@ -136,7 +135,10 @@ function nav() {
           <nav class="nav-links nav-links-main" aria-label="Main navigation">
             ${mainPages.map(navItem).join("")}
           </nav>
-          <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">中文</button>
+          <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">
+            <span class="language-toggle-option" data-language-option="en">English</span>
+            <span class="language-toggle-option" data-language-option="zh">\u4e2d\u6587</span>
+          </button>
         </div>
       </div>
     </header>`;
