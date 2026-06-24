@@ -1,26 +1,96 @@
 ﻿const data = window.SEQUOIA_DATA;
 
 const pages = [
-  ["/", "Home", "home"],
-  ["/about", "About", "about"],
-  ["/schools-brands", "Schools & Brands", "schools"],
-  ["/programs", "Programs", "programs"],
+  ["/index.html", "Home", "home"],
+  ["/about.html", "About", "about"],
+  ["/schools-brands.html", "Schools & Brands", "schools"],
+  ["/programs.html", "Programs", "programs"],
   ["agentech-menu", "Agentech", "agentech-menu"],
   ["news-menu", "News & Events", "news-menu"],
-  ["/partnership", "Partnership", "partnership"],
-  ["/careers", "Careers", "careers"],
-  ["/contact", "Contact", "contact"]
+  ["/partnership.html", "Partnership", "partnership"],
+  ["/careers.html", "Careers", "careers"],
+  ["/contact.html", "Contact", "contact"]
 ];
 
-const utilityPages = new Set(["/partnership", "/careers", "/contact"]);
+const utilityPages = new Set(["/partnership.html", "/careers.html", "/contact.html"]);
 const agentechPages = [
-  ["/agentech-education", "Agentech Education"],
-  ["/ai-club", "AI Club"]
+  ["/agentech-education.html", "Agentech Education"],
+  ["/ai-club.html", "AI Club"]
 ];
 const newsPages = [
-  ["/news-events", "News & Events"],
-  ["/community-impact", "Community Impact"]
+  ["/news-events.html", "News & Events"],
+  ["/community-impact.html", "Community Impact"]
 ];
+
+const languageStorageKey = "sequoia-language";
+const validLanguages = new Set(["en", "zh"]);
+const navTranslations = {
+  Home: "\u9996\u9875",
+  About: "\u5173\u4e8e",
+  "Schools & Brands": "\u5b66\u6821\u4e0e\u54c1\u724c",
+  Programs: "\u8bfe\u7a0b\u9879\u76ee",
+  Agentech: "Agentech",
+  "News & Events": "\u65b0\u95fb\u6d3b\u52a8",
+  Partnership: "\u5408\u4f5c",
+  Careers: "\u62db\u8058",
+  Contact: "\u8054\u7cfb",
+  "Agentech Education": "Agentech \u6559\u80b2",
+  "Community Impact": "\u793e\u533a\u5f71\u54cd",
+  "AI Club": "AI Club"
+};
+
+function savedLanguage() {
+  try {
+    const language = localStorage.getItem(languageStorageKey);
+    if (validLanguages.has(language)) return language;
+  } catch (error) {
+    return "en";
+  }
+  return "en";
+}
+
+function currentLanguage() {
+  const language = document.body?.dataset.language || savedLanguage();
+  return validLanguages.has(language) ? language : "en";
+}
+
+function i18nText(en, zh = navTranslations[en] || en) {
+  const language = currentLanguage();
+  return `<span data-i18n-text data-en="${escapeHtml(en)}" data-zh="${escapeHtml(zh)}">${escapeHtml(language === "zh" ? zh : en)}</span>`;
+}
+
+function localizedCopy(en, zh, className = "") {
+  const classAttr = className ? ` class="${className}"` : "";
+  return `
+    <p${classAttr} data-lang-content="en">${escapeHtml(en)}</p>
+    <p${classAttr} data-lang-content="zh">${escapeHtml(zh)}</p>`;
+}
+
+function applyLanguage(language, persist = true) {
+  const activeLanguage = validLanguages.has(language) ? language : "en";
+  document.documentElement.lang = activeLanguage === "zh" ? "zh-Hans" : "en";
+  document.body.dataset.language = activeLanguage;
+
+  if (persist) {
+    try {
+      localStorage.setItem(languageStorageKey, activeLanguage);
+    } catch (error) {
+      // Some private browsing contexts block storage; the visible toggle still works.
+    }
+  }
+
+  document.querySelectorAll("[data-i18n-text]").forEach((item) => {
+    item.textContent = item.dataset[activeLanguage] || item.dataset.en || "";
+  });
+
+  const toggle = document.querySelector("[data-language-toggle]");
+  if (toggle) {
+    const nextLanguage = activeLanguage === "zh" ? "English" : "\u4e2d\u6587";
+    toggle.textContent = nextLanguage;
+    toggle.setAttribute("aria-label", activeLanguage === "zh" ? "Switch to English" : "\u5207\u6362\u5230\u4e2d\u6587");
+    toggle.setAttribute("aria-pressed", String(activeLanguage === "zh"));
+  }
+}
 
 function pageName() {
   return document.body.dataset.page || "home";
@@ -32,7 +102,7 @@ function brandSlug() {
 
 function activeHref() {
   const path = location.pathname.replace(/\/$/, "") || "/";
-  return path.replace(/\.html$/, "");
+  return path === "/" ? "/index.html" : path;
 }
 
 function nav() {
@@ -40,9 +110,9 @@ function nav() {
   const mainPages = pages.filter(([href]) => !utilityPages.has(href));
   const dropdown = (label, items, isActive) => `
       <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger ${isActive ? "active" : ""}" type="button" aria-haspopup="true" aria-expanded="false">${label}</button>
+        <button class="nav-dropdown-trigger ${isActive ? "active" : ""}" type="button" aria-haspopup="true" aria-expanded="false">${i18nText(label)}</button>
         <div class="nav-dropdown-menu">
-          ${items.map(([pageHref, pageLabel]) => `<a class="${active === pageHref ? "active" : ""}" href="${pageHref}">${pageLabel}</a>`).join("")}
+          ${items.map(([pageHref, pageLabel]) => `<a class="${active === pageHref ? "active" : ""}" href="${pageHref}">${i18nText(pageLabel)}</a>`).join("")}
         </div>
       </div>`;
   const navItem = ([href, label]) => {
@@ -50,7 +120,7 @@ function nav() {
       if (href === "news-menu") {
         return dropdown(label, newsPages, newsPages.some(([pageHref]) => active === pageHref));
       }
-      return `<a class="${active === href ? "active" : ""}" href="${href}">${label}</a>`;
+      return `<a class="${active === href ? "active" : ""}" href="${href}">${i18nText(label)}</a>`;
     }
 
     return dropdown(label, agentechPages, agentechPages.some(([pageHref]) => active === pageHref));
@@ -58,7 +128,7 @@ function nav() {
   return `
     <header class="site-header">
       <div class="nav">
-        <a class="brand-lockup" href="/">
+        <a class="brand-lockup" href="/index.html">
           <img src="images/sequoia-education-group-white-logo.png" alt="Sequoia Education Group logo">
           <span>${data.name}<br>${data.zhName}</span>
         </a>
@@ -66,6 +136,7 @@ function nav() {
           <nav class="nav-links nav-links-main" aria-label="Main navigation">
             ${mainPages.map(navItem).join("")}
           </nav>
+          <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">中文</button>
         </div>
       </div>
     </header>`;
@@ -79,7 +150,7 @@ function footer() {
           <strong>${data.name} / ${data.zhName}</strong>
           <p>${data.slogan}<br>${data.zhSlogan}</p>
           <p>${data.address}<br>${data.email}<br>${data.domain}</p>
-          <p class="footer-utility-links"><a href="/partnership">Partnership</a><span>|</span><a href="/careers">Careers</a><span>|</span><a href="/contact">Contact</a></p>
+          <p class="footer-utility-links"><a href="/partnership.html">Partnership</a><span>|</span><a href="/careers.html">Careers</a><span>|</span><a href="/contact.html">Contact</a></p>
         </div>
         <div>
           <strong>Website links / \u7b2c\u4e09\u6587\u4ef6\u94fe\u63a5</strong>
@@ -93,38 +164,114 @@ function pageHeader(title, zhTitle, text, zhText) {
   return `
     <section class="section page-hero-section">
       <p class="eyebrow">${data.name}</p>
-      <h1>${title}</h1>
-      <p class="page-lede">${text}</p>
-      <p class="page-lede">${zhText}</p>
+      <h1>${i18nText(title, zhTitle)}</h1>
+      ${localizedCopy(text, zhText, "page-lede")}
     </section>`;
 }
 
-function card(title, meta, text, zhText, extra = "") {
+function card(title, meta, text, zhText, extra = "", zhTitle = title, zhMeta = meta, articleClass = "card", articleAttrs = "") {
   return `
-    <article class="card">
-      <p class="meta">${meta}</p>
-      <h3>${title}</h3>
-      <p>${text}</p>
-      ${zhText ? `<p>${zhText}</p>` : ""}
+    <article class="${articleClass}" ${articleAttrs}>
+      <div data-lang-content="en">
+        <p class="meta">${meta}</p>
+        <h3>${title}</h3>
+        <p>${text}</p>
+      </div>
+      <div data-lang-content="zh">
+        <p class="meta">${zhMeta}</p>
+        <h3>${zhTitle}</h3>
+        <p>${zhText || text}</p>
+      </div>
       ${extra}
     </article>`;
+}
+
+const programEntityGroups = {
+  "Montessori Preschool Programs": [
+    "walnut-international-montessori",
+    "learning-tree-arcadia",
+    "montessori-of-anaheim"
+  ],
+  "After-School Programs": [
+    "learning-tree-walnut"
+  ],
+  "Chinese Language & Culture": [
+    "learning-tree-walnut"
+  ],
+  "Summer/ Winter Camps & Enrichment": [
+    "learning-tree-walnut",
+    "agentech-education"
+  ],
+  "Teacher Training Programs": [
+    "montessori-teacher-preparation"
+  ],
+  "Academic Planning & Tutoring": [
+    "walnut-international-montessori",
+    "learning-tree-walnut"
+  ],
+  "AI & Future Education": [
+    "agentech-education"
+  ],
+  "Community & Wellness Programs": [
+    "sequoia-forest-foundation",
+    "yoga-me-beyond"
+  ]
+};
+
+function programEntityPanel(programTitle) {
+  const slugs = programEntityGroups[programTitle];
+  if (!slugs) return "";
+
+  const schools = slugs
+    .map((slug) => data.brands.find((brand) => brand.slug === slug))
+    .filter(Boolean);
+
+  return `
+    <div class="program-entity-panel" data-program-entity-panel hidden>
+      <p class="program-entity-note" data-lang-content="en">Choose a related school, brand, or program to view its page.</p>
+      <p class="program-entity-note" data-lang-content="zh">\u9009\u62e9\u76f8\u5173\u5b66\u6821\u3001\u54c1\u724c\u6216\u9879\u76ee\u67e5\u770b\u8be6\u60c5\u9875\u3002</p>
+      <div class="program-entity-grid">
+        ${schools.map((school) => `
+          <a class="program-entity-logo-card" href="/brand-${school.slug}.html" aria-label="View ${school.name}">
+            <img src="${school.image}" alt="${school.name} logo">
+            <strong data-lang-content="en">${school.name}</strong>
+            <strong data-lang-content="zh">${school.zhName}</strong>
+            <span class="program-entity-summary" data-lang-content="en">${school.summary}</span>
+            <span class="program-entity-summary" data-lang-content="zh">${school.zhSummary}</span>
+          </a>`).join("")}
+      </div>
+    </div>`;
+}
+
+function programCard(program) {
+  const [title, meta, text, zhText, zhTitle, zhMeta] = program;
+  const hasEntities = Boolean(programEntityGroups[title]);
+  const attrs = hasEntities
+    ? 'data-program-card="expand" role="button" tabindex="0" aria-expanded="false"'
+    : "";
+  const classes = `card program-card${hasEntities ? " has-entities" : ""}`;
+  return card(title, meta, text, zhText, programEntityPanel(title), zhTitle, zhMeta, classes, attrs);
 }
 
 function brandCard(brand) {
   const extra = `
     <p><strong>Location:</strong> ${brand.location}</p>
     <div class="button-row">
-      <a class="button light" href="/brand-${brand.slug}">Learn More / \u4e86\u89e3\u66f4\u591a</a>
-      ${brand.url ? `<a class="button light" href="${brand.url}" target="_blank" rel="noreferrer">Official Site</a>` : ""}
+      <a class="button light" href="/brand-${brand.slug}.html">Learn More / \u4e86\u89e3\u66f4\u591a</a>
     </div>`;
   return `
     <article class="card">
       <div class="card-logo"><img src="${brand.image}" alt="${brand.name} logo or image"></div>
-      <p class="meta">${brand.year} / ${brand.type}</p>
-      <h3>${brand.name}</h3>
-      <p>${brand.zhType}</p>
-      <p>${brand.summary}</p>
-      <p>${brand.zhSummary}</p>
+      <div data-lang-content="en">
+        <p class="meta">${brand.year} / ${brand.type}</p>
+        <h3>${brand.name}</h3>
+        <p>${brand.summary}</p>
+      </div>
+      <div data-lang-content="zh">
+        <p class="meta">${brand.year} / ${brand.zhType}</p>
+        <h3>${brand.zhName}</h3>
+        <p>${brand.zhSummary}</p>
+      </div>
       ${extra}
     </article>`;
 }
@@ -138,33 +285,28 @@ function renderHome() {
           <h1>${data.name}</h1>
           <p class="lede">${data.slogan}<br>${data.zhSlogan}</p>
           <div class="button-row">
-            <a class="button" href="/schools-brands">Explore Our Schools</a>
-            <a class="button secondary" href="/news-events">News & Events</a>
-            <a class="button secondary" href="/partnership">Partner With Us</a>
+            <a class="button" href="/schools-brands.html">Explore Our Schools</a>
+            <a class="button secondary" href="/news-events.html">News & Events</a>
+            <a class="button secondary" href="/partnership.html">Partner With Us</a>
           </div>
         </div>
         <div class="hero-card">
           <img src="images/sequoia-education-group-red-logo.jpg" alt="Sequoia Education Group logo">
-          <h3>Official Positioning / \u5b98\u65b9\u5b9a\u4f4d</h3>
-          <p>${data.positioning.en}</p>
-          <p>${data.positioning.zh}</p>
+          <h3>${i18nText("About Sequoia Education Group", "\u5173\u4e8e\u7ea2\u6749\u6559\u80b2\u96c6\u56e2")}</h3>
+          ${localizedCopy(data.positioning.en, data.positioning.zh)}
         </div>
       </div>
-    </section>
-    <section class="section stats-grid">
-      ${data.stats.map(([en, zh]) => `<div class="stat"><strong>${en}</strong><span>${zh}</span></div>`).join("")}
     </section>
     <section class="section">
       <div class="section-head">
         <div>
-          <p class="eyebrow">About Snapshot / \u5173\u4e8e\u5feb\u7167</p>
-          <h2>A ten-year Southern California education ecosystem</h2>
-          <p>Started in Walnut in 2015, Sequoia has grown from one Montessori preschool into a multi-brand education group spanning preschool, after-school learning, teacher training, academic planning, community service, wellness, and future AI education.</p>
-          <p>Sequoia \u4e8e 2015 \u5e74\u4ece Walnut \u7684\u7b2c\u4e00\u6240\u8499\u7279\u68ad\u5229\u5e7c\u513f\u56ed\u8d77\u6b65,\u5341\u5e74\u53d1\u5c55\u4e3a\u8986\u76d6\u5e7c\u513f\u6559\u80b2\u3001\u8bfe\u540e\u6559\u80b2\u3001\u6559\u5e08\u57f9\u8bad\u3001\u5347\u5b66\u89c4\u5212\u3001\u516c\u76ca\u793e\u533a\u3001\u8eab\u5fc3\u5065\u5eb7\u4e0e\u672a\u6765 AI \u6559\u80b2\u7684\u591a\u54c1\u724c\u6559\u80b2\u751f\u6001\u3002</p>
+          <p class="eyebrow">${i18nText("About Snapshot", "\u5173\u4e8e\u5feb\u7167")}</p>
+          <h2 class="about-snapshot-title">${i18nText("A Ten-Year Southern California Education Ecosystem", "\u6df1\u8015\u5357\u52a0\u5dde\u5341\u5e74\u7684\u7efc\u5408\u6559\u80b2\u751f\u6001")}</h2>
+          ${localizedCopy("Founded in Walnut, California in 2015, Sequoia Education Group has grown over the past decade from one Montessori preschool into a multi-brand education group serving children, families, and communities across Southern California. Today, Sequoia's education ecosystem includes Montessori preschools, K-12 after-school programs, academic enrichment, Chinese language and culture programs, teacher training, summer and winter camps, nonprofit community initiatives, wellness education, and future-focused AI learning. With nearly 80 team members and multiple campuses and programs, Sequoia is committed to building a complete educational pathway that supports children from early childhood through future-ready learning.", "Sequoia Education Group \u7ea2\u6749\u6559\u80b2\u96c6\u56e2\u4e8e2015\u5e74\u8d77\u6b65\u4e8e\u52a0\u5dde Walnut\uff0c\u4ece\u7b2c\u4e00\u6240\u8499\u7279\u68ad\u5229\u5e7c\u513f\u56ed\u53d1\u5c55\u81f3\u4eca\uff0c\u5df2\u6210\u957f\u4e3a\u670d\u52a1\u5357\u52a0\u5dde\u513f\u7ae5\u3001\u5bb6\u5ead\u4e0e\u793e\u533a\u7684\u591a\u54c1\u724c\u6559\u80b2\u96c6\u56e2\u3002\u96c6\u56e2\u76ee\u524d\u6db5\u76d6\u8499\u7279\u68ad\u5229\u5e7c\u513f\u56ed\u3001K-12\u8bfe\u540e\u6559\u80b2\u3001\u5b66\u672f\u63d0\u5347\u3001\u4e2d\u6587\u8bed\u8a00\u4e0e\u6587\u5316\u8bfe\u7a0b\u3001\u6559\u5e08\u57f9\u8bad\u3001\u5bd2\u6691\u5047\u8425\u3001\u516c\u76ca\u793e\u533a\u9879\u76ee\u3001\u8eab\u5fc3\u5065\u5eb7\u6559\u80b2\u53ca\u9762\u5411\u672a\u6765\u7684AI\u6559\u80b2\u3002\u7ecf\u8fc7\u5341\u5e74\u53d1\u5c55\uff0cSequoia \u62e5\u6709\u8fd180\u4eba\u7684\u4e13\u4e1a\u56e2\u961f\uff0c\u5e76\u901a\u8fc7\u591a\u4e2a\u6821\u533a\u4e0e\u9879\u76ee\uff0c\u6301\u7eed\u6253\u9020\u4ece\u65e9\u671f\u6559\u80b2\u5230\u672a\u6765\u80fd\u529b\u57f9\u517b\u7684\u5b8c\u6574\u6559\u80b2\u751f\u6001\u3002")}
         </div>
       </div>
       <div class="program-grid">
-        ${data.programs.slice(0, 8).map((program) => card(program[0], program[1], program[2], program[3])).join("")}
+        ${data.programs.slice(0, 8).map(programCard).join("")}
       </div>
     </section>
     <section class="section alt"><div class="section-inner">
@@ -211,9 +353,9 @@ function renderHome() {
           <p class="eyebrow">Final CTA / \u884c\u52a8\u5165\u53e3</p>
           <h3>Enroll Now / Join Our Team / Partner With Us</h3>
           <div class="button-row">
-            <a class="button" href="/contact">Enroll Now</a>
-            <a class="button light" href="/careers">Join Our Team</a>
-            <a class="button light" href="/partnership">Partner With Us</a>
+            <a class="button" href="/contact.html">Enroll Now</a>
+            <a class="button light" href="/careers.html">Join Our Team</a>
+            <a class="button light" href="/partnership.html">Partner With Us</a>
           </div>
         </div>
       </div>
@@ -270,7 +412,7 @@ function renderPrograms() {
   return `
     ${pageHeader("Programs", "\u6559\u80b2\u9879\u76ee", "Programs are organized by audience and learning need, from Montessori preschool to AI future learning.", "\u6559\u80b2\u9879\u76ee\u6309\u670d\u52a1\u5bf9\u8c61\u548c\u5b66\u4e60\u9700\u6c42\u5206\u7c7b,\u4ece\u8499\u7279\u68ad\u5229\u5e7c\u513f\u6559\u80b2\u5230 AI \u672a\u6765\u5b66\u4e60\u3002")}
     <section class="section alt"><div class="section-inner">
-      <div class="program-grid">${data.programs.map((p) => card(p[0], p[1], p[2], p[3])).join("")}</div>
+      <div class="program-grid">${data.programs.map(programCard).join("")}</div>
     </div></section>`;
 }
 
@@ -325,12 +467,42 @@ function renderCommunity() {
 
 function renderPartnership() {
   return `
-    ${pageHeader("Partnership & Strategic Growth", "\u5408\u4f5c\u4e0e\u6218\u7565\u53d1\u5c55", "A quiet page for VC investors, partners, employers, and education institutions.", "\u7ed9 VC\u3001\u5408\u4f5c\u65b9\u3001\u96c7\u4e3b\u3001\u6559\u80b2\u673a\u6784\u770b\u7684\u4f4e\u8c03\u9875\u9762;\u5efa\u8bae\u653e footer \u548c\u9996\u9875\u6309\u94ae,\u4e0d\u4e00\u5b9a\u653e\u4e3b\u5bfc\u822a\u3002")}
+    ${pageHeader("Partnership & Strategic Growth", "\u5408\u4f5c\u4e0e\u6218\u7565\u53d1\u5c55", "Sequoia Education Group is building an integrated K-12-to-career AI education ecosystem in Southern California. We partner selectively with investors, institutions, employers, and innovators who share our long-term vision.", "\u7ea2\u6749\u6559\u80b2\u96c6\u56e2\u6b63\u5728\u5357\u52a0\u5dde\u6784\u5efa\u5b8c\u6574\u7684 K-12 \u81f3\u804c\u4e1a\u53d1\u5c55 AI \u6559\u80b2\u751f\u6001\u3002\u6211\u4eec\u4e0e\u8ba4\u540c\u957f\u671f\u613f\u666f\u7684\u6295\u8d44\u4eba\u3001\u6559\u80b2\u673a\u6784\u3001\u96c7\u4e3b\u53ca\u521b\u65b0\u4f19\u4f34\u5f00\u5c55\u6df1\u5ea6\u5408\u4f5c\u3002")}
     <section class="section alt"><div class="section-inner">
-      <div class="card-grid">
-        ${card("Education ecosystem", "Investor angle / \u6295\u8d44\u4eba\u89d2\u5ea6", "Sequoia is a Southern California multi-brand, multi-stage education ecosystem, not a single preschool.", "Sequoia \u4e0d\u662f\u5355\u4e00\u5e7c\u513f\u56ed,\u800c\u662f\u5357\u52a0\u5dde\u591a\u54c1\u724c\u3001\u591a\u9636\u6bb5\u6559\u80b2\u751f\u6001\u3002")}
-        ${card("Partnership form fields", "Form / \u8868\u5355", "Organization, Contact Person, Role, Partnership Type, Budget/Timeline optional, Message.", "Organization\u3001Contact Person\u3001Role\u3001Partnership Type\u3001Budget/Timeline(\u53ef\u9009)\u3001Message\u3002")}
-        ${card("Agentech partnerships", "Future learning / \u672a\u6765\u5b66\u4e60", "Partner for school programs, camps, curriculum pilots, or community workshops.", "\u5b66\u6821\u9879\u76ee\u3001\u8425\u5730\u3001\u8bfe\u7a0b\u8bd5\u70b9\u3001\u793e\u533a\u5de5\u4f5c\u574a\u5408\u4f5c\u5165\u53e3\u3002")}
+      <div class="partnership-grid">
+        ${card("Integrated AI education ecosystem", "Investor angle / \u6295\u8d44\u4eba\u89d2\u5ea6", "Sequoia is expanding from a Southern California multi-brand education group into a long-term AI learning pathway that connects children, schools, families, institutions, employers, and future workforce needs.", "\u7ea2\u6749\u6b63\u4ece\u5357\u52a0\u5dde\u591a\u54c1\u724c\u6559\u80b2\u96c6\u56e2\uff0c\u8fdb\u4e00\u6b65\u53d1\u5c55\u4e3a\u8fde\u63a5\u513f\u7ae5\u3001\u5b66\u6821\u3001\u5bb6\u5ead\u3001\u6559\u80b2\u673a\u6784\u3001\u96c7\u4e3b\u4e0e\u672a\u6765\u4eba\u624d\u9700\u6c42\u7684\u957f\u671f AI \u5b66\u4e60\u8def\u5f84\u3002")}
+        <article class="card partnership-form-card">
+          <p class="meta">Form / \u8868\u5355</p>
+          <h3>Start a conversation.</h3>
+          <p>Whether you're an investor exploring the education sector, an institution looking to co-develop curriculum, an employer seeking AI-trained talent pipelines, or a community organization interested in bringing AI programming to your audience — we'd like to hear from you.</p>
+          <p>\u65e0\u8bba\u60a8\u662f\u5173\u6ce8\u6559\u80b2\u8d5b\u9053\u7684\u6295\u8d44\u4eba\u3001\u5e0c\u671b\u5171\u540c\u5f00\u53d1\u8bfe\u7a0b\u7684\u6559\u80b2\u673a\u6784\u3001\u5bfb\u6c42 AI \u4eba\u624d\u8f93\u9001\u6e20\u9053\u7684\u96c7\u4e3b\uff0c\u8fd8\u662f\u5e0c\u671b\u5c06 AI \u9879\u76ee\u5f15\u5165\u793e\u533a\u7684\u7ec4\u7ec7\u2014\u2014\u6b22\u8fce\u4e0e\u6211\u4eec\u53d6\u5f97\u8054\u7cfb\u3002</p>
+          <form class="partnership-form">
+            <label>Organization / \u673a\u6784\u540d\u79f0<input type="text" name="organization"></label>
+            <label>Contact Person / \u8054\u7cfb\u4eba<input type="text" name="contact"></label>
+            <label>Role / \u804c\u4f4d<input type="text" name="role"></label>
+            <label>Partnership Type / \u5408\u4f5c\u7c7b\u578b
+              <select name="partnership-type">
+                <option>Strategic Investment / \u6218\u7565\u6295\u8d44</option>
+                <option>Curriculum Partnership / \u8bfe\u7a0b\u5408\u4f5c</option>
+                <option>Employer & Talent Pipeline / \u96c7\u4e3b\u53ca\u4eba\u624d\u5408\u4f5c</option>
+                <option>Campus or Program Expansion / \u6821\u533a\u4e0e\u9879\u76ee\u6269\u5c55</option>
+                <option>Community & Government / \u793e\u533a\u4e0e\u653f\u5e9c\u5408\u4f5c</option>
+                <option>Other / \u5176\u4ed6</option>
+              </select>
+            </label>
+            <label>Budget / Timeline (optional / \u9009\u586b)<input type="text" name="budget-timeline"></label>
+            <label>Message / \u7559\u8a00<textarea name="message" rows="4"></textarea></label>
+            <button class="button" type="button">Submit Inquiry / \u63d0\u4ea4\u5408\u4f5c\u610f\u5411</button>
+          </form>
+        </article>
+        <article class="card">
+          <p class="meta">Future Learning / \u672a\u6765\u5b66\u4e60</p>
+          <h3>Partner with AgentTech &amp; Sequoia</h3>
+          <p>AgentTech is Sequoia's AI education and software ally, delivering curriculum, camps, and workforce training programs built around real-world AI tools and systems. We partner with schools, districts, community colleges, and corporations to bring structured AI learning to new audiences.</p>
+          <p>Partnership formats include: co-branded AI camp programs, curriculum licensing and pilot partnerships, after-school AI lab partnerships, adult AI workforce training cohorts, and community workshop sponsorships.</p>
+          <p>AgentTech \u662f\u7ea2\u6749\u6559\u80b2\u96c6\u56e2\u5408\u4f5c\u7684 AI \u6559\u80b2\u4e0e\u8f6f\u4ef6\u5f00\u53d1\u90e8\u95e8\uff0c\u9762\u5411\u5b66\u6821\u3001\u793e\u533a\u53ca\u4f01\u4e1a\u63d0\u4f9b\u4ee5\u771f\u5b9e AI \u5de5\u5177\u4e3a\u6838\u5fc3\u7684\u8bfe\u7a0b\u3001\u8425\u5730\u548c\u804c\u4e1a\u57f9\u8bad\u9879\u76ee\u3002</p>
+          <p>\u5408\u4f5c\u5f62\u5f0f\u5305\u62ec\uff1a\u8054\u5408\u54c1\u724c AI \u8425\u5730\u9879\u76ee\u3001\u8bfe\u7a0b\u6388\u6743\u4e0e\u8bd5\u70b9\u5408\u4f5c\u3001\u8bfe\u540e AI \u5b9e\u9a8c\u5ba4\u5408\u4f5c\u3001\u6210\u4eba AI \u804c\u4e1a\u57f9\u8bad\uff0c\u4ee5\u53ca\u793e\u533a\u5de5\u4f5c\u574a\u8d5e\u52a9\u3002</p>
+        </article>
       </div>
     </div></section>`;
 }
@@ -389,6 +561,17 @@ function renderTechnical() {
 function renderBrand() {
   const brand = data.brands.find((item) => item.slug === brandSlug()) || data.brands[0];
   const brandImages = brand.galleryImages ?? [brand.image];
+  const serviceNotes = {
+    "walnut-international-montessori": ["Montessori preschool", "Toddler, preschool, Pre-K, and kindergarten readiness", "Language, math, sensorial exploration, practical life, culture, art, and social-emotional development"],
+    "learning-tree-arcadia": ["Montessori preschool", "Preschool and early childhood learning", "Montessori classroom environment, social-emotional growth, language, math, culture, and practical life"],
+    "montessori-of-anaheim": ["Montessori campus", "Early childhood Montessori learning", "Campus-based Montessori environment, classroom routines, child-centered development, and family communication"],
+    "learning-tree-walnut": ["K-12 after-school and enrichment", "Homework guidance, English reading and writing, math support, Chinese learning, camps, and enrichment", "Academic planning, study habit development, and seasonal programs"],
+    "montessori-teacher-preparation": ["Montessori teacher training", "Certification courses and professional development", "Montessori philosophy, child development, classroom management, practicum, I-20 eligible training pathway, and 16 Early Childhood Education units"],
+    "sequoia-forest-foundation": ["Community service and student volunteering", "Family and community initiatives", "Volunteer service, civic awareness, social responsibility, and leadership development"],
+    "yoga-me-beyond": ["Wellness education", "Family, teacher, and community wellness", "Yoga, mindful movement, wellness learning, and community-centered programs"],
+    "agentech-education": ["AI and future education", "K-12 AI literacy, robotics, creative technology, and workforce-facing learning", "AI camps, AI labs, curriculum pilots, robotics, and project-based technology learning"]
+  };
+  const notes = serviceNotes[brand.slug] || [brand.type, brand.zhType, brand.summary];
   const brandMedia = brandImages.length > 1
     ? `<div class="brand-gallery">
         <img class="brand-gallery-logo" src="${brandImages[0]}" alt="${brand.name} logo">
@@ -406,14 +589,21 @@ function renderBrand() {
           <p class="eyebrow">${brand.year} / ${brand.location}</p>
           <h2>${brand.type}</h2>
           <p>${brand.zhType}</p>
-          <ul class="detail-list">
-            <li><strong>Services / \u670d\u52a1:</strong> add age range, programs, address, contact, photos, related news, and tour CTA for each campus or brand.</li>
-            <li><strong>Required check / \u5fc5\u987b\u6838\u5b9e:</strong> legal name, license, exact address, phone, email, student numbers, credential claims, and photo permission.</li>
-            <li><strong>CTA / \u884c\u52a8\u5165\u53e3:</strong> Schedule a Tour, Enrollment Inquiry, Contact the Campus.</li>
-          </ul>
+          <p>${brand.summary}</p>
+          <p>${brand.zhSummary}</p>
+          <div class="brand-detail-block">
+            <h3>Programs & Services / \u9879\u76ee\u4e0e\u670d\u52a1</h3>
+            <ul class="detail-list">
+              ${notes.map((item) => `<li>${item}</li>`).join("")}
+            </ul>
+          </div>
+          <div class="brand-detail-block">
+            <h3>Contact Path / \u54a8\u8be2\u5165\u53e3</h3>
+            <p>For enrollment, program details, campus visits, teacher training, or partnership questions, please contact Sequoia Education Group directly so the inquiry can be routed to the right school or program.</p>
+            <p>\u5982\u9700\u54a8\u8be2\u62db\u751f\u3001\u8bfe\u7a0b\u3001\u6821\u56ed\u53c2\u89c2\u3001\u6559\u5e08\u57f9\u8bad\u6216\u5408\u4f5c\u4e8b\u9879\uff0c\u8bf7\u76f4\u63a5\u8054\u7cfb\u7ea2\u6749\u6559\u80b2\u96c6\u56e2\uff0c\u6211\u4eec\u4f1a\u5c06\u54a8\u8be2\u5206\u6d41\u81f3\u5bf9\u5e94\u5b66\u6821\u6216\u9879\u76ee\u3002</p>
+          </div>
           <div class="button-row">
-            <a class="button" href="/contact">Contact / \u8054\u7cfb</a>
-            ${brand.url ? `<a class="button light" href="${brand.url}" target="_blank" rel="noreferrer">Official Website</a>` : ""}
+            <a class="button" href="/contact.html">Contact / \u8054\u7cfb</a>
           </div>
         </div>
       </div>
@@ -440,7 +630,7 @@ function renderAgentech() {
           <p>Agentech Education \u9762\u5411\u4e0d\u540c\u5e74\u9f84\u6bb5\u5b66\u751f\u63d0\u4f9b\u9002\u9f84 AI\u3001\u521b\u9020\u529b\u3001\u673a\u5668\u4eba\u3001\u65e0\u4eba\u673a\u3001\u8ba1\u7b97\u673a\u89c6\u89c9\u4e0e\u52a8\u624b\u5de5\u7a0b\u6311\u6218\u3002</p>
           <div class="button-row">
             <a class="button" href="https://www.agent-tech.ai/" target="_blank" rel="noreferrer">View Agentech</a>
-            <a class="button light" href="/contact">Request Program Info</a>
+            <a class="button light" href="/contact.html">Request Program Info</a>
           </div>
         </div>
         <img src="images/agentech-robotics-club-preview.png" alt="Agentech robotics project preview">
@@ -846,9 +1036,40 @@ function initNewsArticleOpen() {
     });
   }
 }
+
+function initProgramCards() {
+  document.querySelectorAll("[data-program-card]").forEach((cardElement) => {
+    const panel = cardElement.querySelector("[data-program-entity-panel]");
+    const destination = cardElement.dataset.programHref;
+
+    const activate = () => {
+      if (panel) {
+        const isOpen = !panel.hidden;
+        panel.hidden = isOpen;
+        cardElement.setAttribute("aria-expanded", String(!isOpen));
+        return;
+      }
+      if (destination) {
+        window.location.href = destination;
+      }
+    };
+
+    cardElement.addEventListener("click", (event) => {
+      if (event.target.closest("a, button, input, select, textarea")) return;
+      activate();
+    });
+
+    cardElement.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      activate();
+    });
+  });
+}
 function render() {
   let html = "";
   const page = pageName();
+  applyLanguage(savedLanguage(), false);
   if (page === "home") html = renderHome();
   if (page === "about") html = renderAbout();
   if (page === "schools") html = renderSchools();
@@ -864,6 +1085,13 @@ function render() {
   document.body.insertAdjacentHTML("afterbegin", nav());
   document.querySelector("main").innerHTML = html;
   document.body.insertAdjacentHTML("beforeend", footer());
+  applyLanguage(currentLanguage(), false);
+  document.querySelector("[data-language-toggle]")?.addEventListener("click", () => {
+    applyLanguage(currentLanguage() === "zh" ? "en" : "zh");
+  });
+  if (page === "home" || page === "programs") {
+    initProgramCards();
+  }
   if (page === "news") {
     initNewsLanguageToggles();
     initNewsSlideshow();
