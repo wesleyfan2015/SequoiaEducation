@@ -608,6 +608,11 @@ p {
   object-fit: contain;
 }
 
+.brand-card-agentech-education h3 {
+  font-size: clamp(18px, 1.35vw, 20px);
+  white-space: nowrap;
+}
+
 .card .meta {
   color: var(--gold);
   font-size: 12px;

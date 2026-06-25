@@ -262,7 +262,7 @@ function brandCard(brand) {
       <a class="button light" href="/brand-${brand.slug}.html">Learn More / \u4e86\u89e3\u66f4\u591a</a>
     </div>`;
   return `
-    <article class="card">
+    <article class="card brand-card brand-card-${brand.slug}">
       <div class="card-logo"><img src="${brand.image}" alt="${brand.name} logo or image"></div>
       <div data-lang-content="en">
         <p class="meta">${brand.year} / ${brand.type}</p>
@@ -338,7 +338,7 @@ function renderHome() {
           ["2023", "Montessori of Anaheim / Anaheim \u6821\u533a"],
           ["2024", "Montessori Teacher Preparation of California / \u6559\u5e08\u57f9\u8bad"],
           ["2025", "Yoga Me & Beyond / Wellness and community learning"],
-          ["Coming Next", "Agentech Education / AI Future Learning"]
+          ["2026", "Agentech Education / AI Future Learning"]
         ].map(([year, text]) => `<div class="timeline-item"><strong>${year}</strong><p>${text}</p></div>`).join("")}
       </div>
     </section>
