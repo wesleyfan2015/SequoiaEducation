@@ -352,9 +352,8 @@ function renderHome() {
         </div>
         <div class="card">
           <p class="eyebrow">Final CTA / \u884c\u52a8\u5165\u53e3</p>
-          <h3>Enroll Now / Join Our Team / Partner With Us</h3>
+          <h3>Join Our Team / Partner With Us</h3>
           <div class="button-row">
-            <a class="button" href="/contact.html">Enroll Now</a>
             <a class="button light" href="/careers.html">Join Our Team</a>
             <a class="button light" href="/partnership.html">Partner With Us</a>
           </div>

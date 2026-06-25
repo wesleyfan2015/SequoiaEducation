@@ -39,7 +39,7 @@ window.SEQUOIA_DATA = {
     ["News & Events Preview", "Show the latest three posts with filters for Group News, School Events, and Community Events.", "\u65b0\u95fb\u6d3b\u52a8\u9884\u89c8", "\u6700\u65b0 3 \u7bc7,\u53ef\u7b5b\u9009 Group News / School Events / Community Events\u3002"],
     ["Community Impact", "Foundation, volunteer service, city honors, and team or long-term employee recognition.", "\u793e\u533a\u5f71\u54cd\u529b", "\u57fa\u91d1\u4f1a\u3001\u5fd7\u613f\u670d\u52a1\u3001\u57ce\u5e02\u8363\u8a89\u3001\u56e2\u961f/\u8001\u5458\u5de5\u8868\u5f70\u3002"],
     ["Founder Message", "A short message from Connie and a professional photo.", "\u521b\u59cb\u4eba\u5bc4\u8bed", "Connie \u4e00\u6bb5\u77ed\u5bc4\u8bed\u548c\u4e13\u4e1a\u7167\u7247\u3002"],
-    ["Final CTA", "Enroll Now, Join Our Team, Partner With Us.", "\u6700\u7ec8\u884c\u52a8\u5165\u53e3", "Enroll Now\u3001Join Our Team\u3001Partner With Us\u3002"]
+    ["Final CTA", "Join Our Team, Partner With Us.", "\u6700\u7ec8\u884c\u52a8\u5165\u53e3", "Join Our Team\u3001Partner With Us\u3002"]
   ],
   brands: [
     {
@@ -136,8 +136,8 @@ window.SEQUOIA_DATA = {
     },
     {
       slug: "agentech-education",
-      name: "Agentech Education / Agentech EDU",
-      zhName: "Agentech Education / Agentech EDU",
+      name: "Agentech Education",
+      zhName: "Agentech Education",
       year: "2026",
       type: "AI Education / Robotics / Future Learning",
       zhType: "AI \u6559\u80b2 / \u673a\u5668\u4eba / \u672a\u6765\u5b66\u4e60",
