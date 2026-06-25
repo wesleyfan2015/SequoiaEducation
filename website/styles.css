@@ -58,14 +58,13 @@ img {
   display: flex;
   align-items: center;
   flex: 0 0 auto;
-  gap: 18px;
   width: max-content;
   text-decoration: none;
 }
 
 .brand-lockup img {
-  width: 168px;
-  height: 116px;
+  width: 198px;
+  height: 132px;
   border-radius: 0;
   object-fit: contain;
   object-position: center;
@@ -266,6 +265,7 @@ h2,
 h3 {
   margin: 0;
   letter-spacing: 0;
+  text-wrap: balance;
 }
 
 h1 {
@@ -275,8 +275,8 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(30px, 4vw, 48px);
-  line-height: 1.06;
+  font-size: clamp(30px, 3.2vw, 40px);
+  line-height: 1.08;
 }
 
 h3 {
@@ -409,6 +409,10 @@ p {
 .section-head > div {
   width: 100%;
   min-width: 0;
+}
+
+.section-head h2 {
+  white-space: nowrap;
 }
 
 .section-head p {
@@ -609,6 +613,12 @@ p {
   font-weight: 900;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+
+.program-card .meta {
+  font-size: 22px;
+  line-height: 1.25;
+  letter-spacing: 0.08em;
 }
 
 .card p,
@@ -919,12 +929,8 @@ li {
   }
 
   .brand-lockup img {
-    width: 132px;
-    height: 92px;
-  }
-
-  .brand-lockup span {
-    font-size: 15px;
+    width: 154px;
+    height: 104px;
   }
 
   .nav-links {
@@ -983,6 +989,10 @@ li {
 
   .section-head .about-snapshot-title,
   .section-head .about-snapshot-zh-title {
+    white-space: normal;
+  }
+
+  .section-head h2 {
     white-space: normal;
   }
 

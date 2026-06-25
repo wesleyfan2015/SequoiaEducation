@@ -129,7 +129,6 @@ function nav() {
       <div class="nav">
         <a class="brand-lockup" href="/index.html">
           <img src="images/sequoia-education-group-white-logo.png" alt="Sequoia Education Group logo">
-          <span>${data.name}<br>${data.zhName}</span>
         </a>
         <div class="nav-panel">
           <nav class="nav-links nav-links-main" aria-label="Main navigation">
@@ -197,7 +196,7 @@ const programEntityGroups = {
   "After-School Programs": [
     "learning-tree-walnut"
   ],
-  "Chinese Language & Culture": [
+  "Chinese School": [
     "learning-tree-walnut"
   ],
   "Summer/ Winter Camps & Enrichment": [
@@ -207,14 +206,14 @@ const programEntityGroups = {
   "Teacher Training Programs": [
     "montessori-teacher-preparation"
   ],
-  "Academic Planning & Tutoring": [
+  "Academic Tutoring": [
     "walnut-international-montessori",
     "learning-tree-walnut"
   ],
   "AI & Future Education": [
     "agentech-education"
   ],
-  "Community & Wellness Programs": [
+  "Non-Profit Organization": [
     "sequoia-forest-foundation",
     "yoga-me-beyond"
   ]
@@ -312,7 +311,7 @@ function renderHome() {
       </div>
     </section>
     <section class="section alt"><div class="section-inner">
-      <div class="section-head"><div><p class="eyebrow">Brand Matrix / \u54c1\u724c\u77e9\u9635</p><h2>Schools, programs, foundation, wellness, and future learning</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow">Brand Matrix / \u54c1\u724c\u77e9\u9635</p><h2>Schools, Programs, Foundation, Wellness, and Future Learning</h2></div></div>
       <div class="card-grid">${data.brands.map(brandCard).join("")}</div>
     </div></section>
     <section class="section">
