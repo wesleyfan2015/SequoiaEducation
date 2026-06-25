@@ -128,7 +128,8 @@ function nav() {
     <header class="site-header">
       <div class="nav">
         <a class="brand-lockup" href="/index.html">
-          <img src="images/sequoia-education-group-white-logo.png" alt="Sequoia Education Group logo">
+          <img src="images/favicon.png?v=20260608" alt="Sequoia Education Group logo">
+          <span>${data.name}<br>${data.zhName}</span>
         </a>
         <div class="nav-panel">
           <nav class="nav-links nav-links-main" aria-label="Main navigation">
@@ -292,7 +293,6 @@ function renderHome() {
           </div>
         </div>
         <div class="hero-card">
-          <img src="images/sequoia-education-group-red-logo.jpg" alt="Sequoia Education Group logo">
           <h3>${i18nText("About Sequoia Education Group", "\u5173\u4e8e\u7ea2\u6749\u6559\u80b2\u96c6\u56e2")}</h3>
           ${localizedCopy(data.positioning.en, data.positioning.zh)}
         </div>

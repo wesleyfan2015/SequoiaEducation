@@ -58,13 +58,14 @@ img {
   display: flex;
   align-items: center;
   flex: 0 0 auto;
+  gap: 20px;
   width: max-content;
   text-decoration: none;
 }
 
 .brand-lockup img {
-  width: 198px;
-  height: 132px;
+  width: 112px;
+  height: 112px;
   border-radius: 0;
   object-fit: contain;
   object-position: center;
@@ -929,8 +930,12 @@ li {
   }
 
   .brand-lockup img {
-    width: 154px;
-    height: 104px;
+    width: 92px;
+    height: 92px;
+  }
+
+  .brand-lockup span {
+    font-size: 15px;
   }
 
   .nav-links {
