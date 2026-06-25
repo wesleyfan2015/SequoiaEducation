@@ -255,6 +255,12 @@ body[data-language="zh"] [data-lang-content="en"] {
   text-transform: uppercase;
 }
 
+.hero .eyebrow {
+  margin-bottom: 18px;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+}
+
 h1,
 h2,
 h3 {
