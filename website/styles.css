@@ -256,9 +256,10 @@ body[data-language="zh"] [data-lang-content="en"] {
 }
 
 .hero .eyebrow {
-  margin-bottom: 18px;
-  font-size: 18px;
-  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+  font-size: clamp(42px, 7vw, 82px);
+  line-height: 0.96;
+  letter-spacing: 0;
 }
 
 h1,
@@ -901,6 +902,36 @@ li {
   padding: 12px;
 }
 
+.photo-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.photo-gallery-item {
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.photo-gallery-item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.photo-gallery-item figcaption {
+  padding: 14px 16px 18px;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
 .footer-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -935,12 +966,21 @@ li {
   }
 
   .brand-lockup img {
-    width: 92px;
-    height: 92px;
+    width: 82px;
+    height: 82px;
+  }
+
+  .brand-lockup {
+    gap: 12px;
+    max-width: 100%;
+    width: 100%;
   }
 
   .brand-lockup span {
-    font-size: 15px;
+    min-width: 0;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    overflow-wrap: anywhere;
   }
 
   .nav-links {
@@ -973,10 +1013,37 @@ li {
   .stats-grid,
   .card-grid,
   .partnership-grid,
-  .program-grid,
   .timeline,
   .link-grid {
     grid-template-columns: 1fr;
+  }
+
+  .program-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .program-card {
+    min-width: 0;
+    padding: 14px;
+  }
+
+  .program-card .meta,
+  .program-card h3 {
+    overflow-wrap: anywhere;
+    font-size: 15px;
+    line-height: 1.25;
+  }
+
+  .program-card p {
+    overflow-wrap: anywhere;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .program-entity-grid,
+  .photo-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .hero-inner {

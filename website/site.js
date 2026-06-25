@@ -19,7 +19,8 @@ const agentechPages = [
 ];
 const newsPages = [
   ["/news-events.html", "News & Events"],
-  ["/community-impact.html", "Community Impact"]
+  ["/community-impact.html", "Community Impact"],
+  ["/photo-gallery.html", "Photo Gallery"]
 ];
 
 const languageStorageKey = "sequoia-language";
@@ -31,6 +32,7 @@ const navTranslations = {
   Programs: "\u8bfe\u7a0b\u9879\u76ee",
   Agentech: "Agentech",
   "News & Events": "\u65b0\u95fb\u6d3b\u52a8",
+  "Photo Gallery": "\u56fe\u7247\u76f8\u518c",
   Partnership: "\u5408\u4f5c",
   Careers: "\u62db\u8058",
   Contact: "\u8054\u7cfb",
@@ -461,6 +463,30 @@ function renderCommunity() {
           <p>\u5b66\u751f\u5fd7\u613f\u670d\u52a1\u3001\u793e\u533a\u53c2\u4e0e\u3001\u793e\u4f1a\u8d23\u4efb\u611f\u3001\u516c\u6c11\u610f\u8bc6\u4e0e\u9886\u5bfc\u529b,\u5e94\u4e0e\u65b0\u95fb\u6d3b\u52a8\u9875\u9762\u6253\u901a\u3002</p>
           <p class="notice">Confirm nonprofit registration before publishing formal nonprofit claims. / \u6b63\u5f0f\u516c\u76ca\u8d44\u8d28\u4e0e\u975e\u8425\u5229\u6ce8\u518c\u4fe1\u606f\u9700\u4e0a\u7ebf\u524d\u786e\u8ba4\u3002</p>
         </div>
+      </div>
+    </div></section>`;
+}
+
+function renderPhotoGallery() {
+  const photos = [
+    ["images/sequoia-education-group-collage.jpg", "Sequoia Education Group campus and community moments", "\u7ea2\u6749\u6559\u80b2\u96c6\u56e2\u6821\u56ed\u4e0e\u793e\u533a\u77ac\u95f4"],
+    ["images/sequoia-2025-banner.jpg", "Sequoia Education Group 2025 activities and milestones", "\u7ea2\u6749\u6559\u80b2\u96c6\u56e2 2025 \u6d3b\u52a8\u4e0e\u91cc\u7a0b\u7891"],
+    ["images/agentech-robotics-club-preview.png", "Agentech robotics and AI learning projects", "Agentech \u673a\u5668\u4eba\u4e0e AI \u5b66\u4e60\u9879\u76ee"],
+    ["images/walnut-best-montessori-school-2025-certificate.jpg", "Walnut Montessori recognition and awards", "Walnut \u6821\u533a\u8363\u8a89\u4e0e\u8bc1\u4e66"],
+    ["images/walnut-quality-business-awards-2025-badge.png", "Quality Business Awards 2025 recognition", "2025 Quality Business Awards \u8363\u8a89"],
+    ["images/sequoia-forest-foundation-logo.jpg", "Sequoia Forest Foundation community initiatives", "Sequoia Forest Foundation \u793e\u533a\u516c\u76ca\u9879\u76ee"]
+  ];
+
+  return `
+    ${pageHeader("Photo Gallery", "\u56fe\u7247\u76f8\u518c", "A bilingual visual archive for Sequoia schools, programs, community activities, awards, and future learning projects.", "\u8bb0\u5f55\u7ea2\u6749\u5b66\u6821\u3001\u9879\u76ee\u3001\u793e\u533a\u6d3b\u52a8\u3001\u8363\u8a89\u4e0e\u672a\u6765\u5b66\u4e60\u7684\u53cc\u8bed\u56fe\u7247\u76f8\u518c\u3002")}
+    <section class="section alt"><div class="section-inner">
+      <div class="photo-gallery-grid">
+        ${photos.map(([src, caption, zhCaption]) => `
+          <figure class="photo-gallery-item">
+            <img src="${src}" alt="${caption}" loading="lazy">
+            <figcaption data-lang-content="en">${caption}</figcaption>
+            <figcaption data-lang-content="zh">${zhCaption}</figcaption>
+          </figure>`).join("")}
       </div>
     </div></section>`;
 }
@@ -1078,6 +1104,7 @@ function render() {
   if (page === "ai-club") html = renderAiClub();
   if (page === "news") html = renderNews();
   if (page === "community") html = renderCommunity();
+  if (page === "photo-gallery") html = renderPhotoGallery();
   if (page === "partnership") html = renderPartnership();
   if (page === "careers") html = renderCareers();
   if (page === "contact") html = renderContact();
