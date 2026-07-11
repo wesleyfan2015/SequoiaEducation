@@ -364,7 +364,7 @@ function renderHome() {
     </div></section>`;
 }
 
-function renderAbout() {
+function renderVideoStoryGallery() {
   const storyVideos = [
     ["videos/about/sequoia-story-01.mp4", "Sequoia community story 1"],
     ["videos/about/sequoia-story-02.mp4", "Sequoia community story 2"],
@@ -372,27 +372,34 @@ function renderAbout() {
     ["videos/about/sequoia-story-04.mp4", "Sequoia community story 4"],
     ["videos/about/sequoia-story-05.mp4", "Sequoia community story 5"]
   ];
+
+  return `
+    <section class="section alt" id="events-video-gallery">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Events Video Gallery / \u6d3b\u52a8\u89c6\u9891\u8f6e\u64ad</p>
+            <h2>Sequoia events in motion</h2>
+          </div>
+        </div>
+        <div class="about-roll about-video-roll" aria-label="Sequoia events video carousel">
+          <div class="about-roll-track about-video-track">
+            ${[...storyVideos, ...storyVideos].map(([src, label], index) => `<article class="about-video-slide">
+              <video controls muted playsinline preload="metadata" aria-label="${label}">
+                <source src="${src}" type="video/mp4">
+                Your browser does not support embedded video.
+              </video>
+              <p>${label.replace(/ \d+$/, ` ${index % storyVideos.length + 1}`)}</p>
+            </article>`).join("")}
+          </div>
+        </div>
+      </div>
+    </section>`;
+}
+
+function renderAbout() {
   return `
     ${pageHeader("About Sequoia Education Group", "\u5173\u4e8e\u7ea2\u6749\u6559\u80b2\u96c6\u56e2", "Our Story, Mission & Values, 10-Year Milestone, Founder Message, Leadership/Team, Awards & Recognition.", "\u5305\u542b\u96c6\u56e2\u6545\u4e8b\u3001\u4f7f\u547d\u4ef7\u503c\u3001\u5341\u5e74\u91cc\u7a0b\u7891\u3001\u521b\u59cb\u4eba\u5bc4\u8bed\u3001\u9886\u5bfc\u56e2\u961f\u3001\u5956\u9879\u8363\u8a89\u3002")}
-    <section class="section"><div class="section-inner">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Video Story Gallery / \u89c6\u9891\u6545\u4e8b\u8f6e\u64ad</p>
-          <h2>Our community in motion</h2>
-        </div>
-      </div>
-      <div class="about-roll about-video-roll" aria-label="Sequoia video story carousel">
-        <div class="about-roll-track about-video-track">
-          ${[...storyVideos, ...storyVideos].map(([src, label], index) => `<article class="about-video-slide">
-            <video controls muted playsinline preload="metadata" aria-label="${label}">
-              <source src="${src}" type="video/mp4">
-              Your browser does not support embedded video.
-            </video>
-            <p>${label.replace(/ \d+$/, ` ${index % storyVideos.length + 1}`)}</p>
-          </article>`).join("")}
-        </div>
-      </div>
-    </div></section>
     <section class="section alt"><div class="section-inner">
       <div class="section-head">
         <div>
@@ -1023,7 +1030,8 @@ function renderNews() {
         ${renderNewsArticlePanel(article, "en")}
         ${renderNewsArticlePanel(article, "zh")}
       </section>
-    </article>`;
+    </article>
+    ${renderVideoStoryGallery()}`;
 }
 
 function initNewsLanguageToggles() {
