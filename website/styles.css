@@ -656,6 +656,37 @@ li {
   animation-play-state: paused;
 }
 
+.about-video-track {
+  animation-duration: 58s;
+}
+
+.about-video-slide {
+  width: 340px;
+  flex: 0 0 auto;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.about-video-slide video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  max-height: 540px;
+  background: #111;
+  object-fit: contain;
+}
+
+.about-video-slide p {
+  margin: 0;
+  padding: 14px 16px 16px;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 800;
+}
+
 .about-slide {
   width: 360px;
   min-height: 520px;
@@ -681,6 +712,12 @@ li {
   }
   to {
     transform: translateX(calc(-50% - 9px));
+  }
+}
+
+@media (max-width: 640px) {
+  .about-video-slide {
+    width: min(82vw, 320px);
   }
 }
 
